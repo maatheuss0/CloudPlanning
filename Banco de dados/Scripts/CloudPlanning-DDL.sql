@@ -8,10 +8,18 @@ GO
 Create table usuario(
 	idUsuario INT PRIMARY KEY IDENTITY,
 	email VARCHAR(50) NOT NULL UNIQUE,
-	senha VARCHAR(20) NOT NULL
+	senha VARCHAR(70) NOT NULL
 )
 GO
 
+Create table empresa(
+	idEmpresa INT PRIMARY KEY IDENTITY,
+	idUsuario INT FOREIGN KEY REFERENCES usuario(idUsuario),
+	CNPJ VARCHAR(14) UNIQUE ,
+	nomeFantasia VARCHAR(70),
+	telefone VARCHAR(14) UNIQUE
+);
+GO
 
 Create table usuarioComum(
 	idUsuarioComum INT PRIMARY KEY IDENTITY,
@@ -24,14 +32,15 @@ Create table usuarioComum(
 GO
 
 
-Create table empresa(
-	idEmpresa INT PRIMARY KEY IDENTITY,
-	idUsuario INT FOREIGN KEY REFERENCES usuario(idUsuario),
-	CNPJ VARCHAR(14) UNIQUE ,
-	nomeFantasia VARCHAR(70),
-	telefone VARCHAR(14) UNIQUE
+Create table Componentes(
+	idComponentes INT PRIMARY KEY IDENTITY,
+	nome VARCHAR(50),
+	codigo VARCHAR(300),  
+	imagemComponente VARCHAR(70), 
+	descricao VARCHAR(100)
 );
 GO
+
 
 
 Create table diagrama(
@@ -43,11 +52,3 @@ Create table diagrama(
 GO
 
 
-Create table Componentes(
-	idComponentes INT PRIMARY KEY IDENTITY,
-	nome VARCHAR(50),
-	codigo VARCHAR(300),  
-	imagemComponente VARCHAR(70), 
-	descricao VARCHAR(100)
-);
-GO
