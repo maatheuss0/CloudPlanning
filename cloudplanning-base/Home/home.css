@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300&display=swap');
+
+/*Grid*/
+
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/*Header*/
+
+header {
+    background-color: #1F2429;
+    height: 120px;
+    width: 100%;
+}
+
+
+.container_header {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+
+}
+
+.cabeçalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 590px;
+}
+
+header img {
+    width: 110px;
+    height: 130px;
+    margin-top: 15px;
+}
+
+nav{
+    width: 465px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+nav button {
+    border: none;
+    margin-left: -90px;
+    padding: 10px;
+    width: 150px;
+    height: 50px;
+    background-color: #3F9FE4;
+    color: #FFFFFF;
+    font-size: 20px;
+    text-transform: bold;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold; 
+
+} 
+.login {
+    font-weight: bold; 
+    margin-left: 30px;
+}
+
+
+p {
+    font-family: 'Red Hat Mono', monospace;    
+    color: white;
+    text-decoration:double;
+    margin-right: 340px;
+    font-size: 22px;
+    font-weight:unset;
+}
+
+
+/*Banner*/
+
+
+.banner {
+    background: linear-gradient(to right, #000306 0%, rgb(0, 0, 0) 77%, rgba(0,0,0,1) 100%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.caixa {
+    background: linear-gradient(to bottom, rgba(3,3,3,1) 0%, rgba(49,49,49,1) 26%, rgba(44,44,44,1) 77%, rgba(5,5,5,1) 100%);
+}
+
+
+.conteudo_banner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("./img/image\ 2.png");
+    height: 760px;
+    width: 1430px;
+}
+
+.caixa {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 20px;
+    border-radius: 50px;
+    font-weight: bold; 
+    width: 450px;
+    height: 650px;
+}
+
+
+
+
