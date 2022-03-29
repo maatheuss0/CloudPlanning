@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7lj2GogbzSClH8PDMC4KJLpGG7oGCbKbJsbK+bKtjqE7km9wN115oajz/tHK326DFGpUkj/qe+MZB5X/lDmVxA==",
+  "dgSpecHash": "2uy8/MXyoV2HPjEM/wsm+Etm4IFxVTRyAdjtA7vZ749lTnkQU2fYmJqIWqxIcR4sw2CUZHDzbuF2AhqFZSgidA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning_WebApi\\CloudPlanning_WebApi.csproj",
+  "projectFilePath": "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning\\API\\CloudPlanning_WebApi\\CloudPlanning_WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\47503739827.INFOSCS\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\47503739827.INFOSCS\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

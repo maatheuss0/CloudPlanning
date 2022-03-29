@@ -7784,11 +7784,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning_WebApi\\CloudPlanning_WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning\\API\\CloudPlanning_WebApi\\CloudPlanning_WebApi.csproj",
       "projectName": "CloudPlanning_WebApi",
-      "projectPath": "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning_WebApi\\CloudPlanning_WebApi.csproj",
+      "projectPath": "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning\\API\\CloudPlanning_WebApi\\CloudPlanning_WebApi.csproj",
       "packagesPath": "C:\\Users\\47503739827.INFOSCS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning_WebApi\\obj\\",
+      "outputPath": "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning\\API\\CloudPlanning_WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\47503739827.INFOSCS\\AppData\\Roaming\\NuGet\\NuGet.Config",
