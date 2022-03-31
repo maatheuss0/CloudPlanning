@@ -92,9 +92,12 @@ namespace CloudPlanning_WebApi
 
             services.AddTransient<DbContext, CloudPlanningContext>();
             services.AddTransient<IUsuarioRepository, UsuarioRepository>();
+            services.AddTransient<IComponenteRepository, ComponenteRepository>();
+            services.AddTransient<IDiagramaRepository, DiagramaRepository>();
+            services.AddTransient<IEmpresaRepository, EmpresaRepository>();
 
 
-             
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

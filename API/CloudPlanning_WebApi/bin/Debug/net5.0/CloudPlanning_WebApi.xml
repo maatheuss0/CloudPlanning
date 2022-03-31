@@ -12,6 +12,70 @@
             <returns>Retorna um token com as informações do usuário</returns>
             dominio/api/Login
         </member>
+        <member name="M:CloudPlanning_WebApi.Interfaces.IComponenteRepository.Listar">
+            <summary>
+            Lista todos os componentes
+            </summary>
+            <returns>Uma lista de componentes</returns>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Interfaces.IComponenteRepository.Cadastrar(CloudPlanning_WebApi.Domains.Componente)">
+            <summary>
+            Cadastra uma novo componente
+            </summary>
+            <param name="novoComponente">Objeto novoComponente que será cadastrado</param>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Interfaces.IComponenteRepository.Atualizar(System.Int32,CloudPlanning_WebApi.Domains.Componente)">
+            <summary>
+            Atualiza um existente
+            </summary>
+            <param name="id">ID de componentes que será atualizado</param>
+            <param name="componenteAtualizado">Objeto com as novas informações</param>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Interfaces.IComponenteRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um componente existente
+            </summary>
+            <param name="id">ID do componente que será deletado</param>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Interfaces.IComponenteRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um componente através do ID
+            </summary>
+            <param name="id">ID do componente que será buscada</param>
+            <returns>Um componente buscado</returns>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Interfaces.IEmpresaRepository.Listar">
+            <summary>
+            Lista todos as empresas
+            </summary>
+            <returns>Uma lista de empresas</returns>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Interfaces.IEmpresaRepository.Cadastrar(CloudPlanning_WebApi.Domains.Empresa)">
+            <summary>
+            Cadastra uma nova empresa
+            </summary>
+            <param name="novaEmpresa">Objeto novaEmpresa que será cadastrado</param>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Interfaces.IEmpresaRepository.Atualizar(System.Int32,CloudPlanning_WebApi.Domains.Empresa)">
+            <summary>
+            Atualiza uma empresa existente
+            </summary>
+            <param name="id">ID da empresa que será atualizado</param>
+            <param name="empresaAtualizado">Objeto com as novas informações</param>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Interfaces.IEmpresaRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um empresa existente
+            </summary>
+            <param name="id">ID da empresa que será deletada</param>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Interfaces.IEmpresaRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um empresa através do ID
+            </summary>
+            <param name="id">ID da empresa que será buscada</param>
+            <returns>Uma empresa buscada</returns>
+        </member>
         <member name="M:CloudPlanning_WebApi.Interfaces.IUsuarioRepository.Login(System.String,System.String)">
             <summary>
             Valida o usuário
