@@ -1,5 +1,6 @@
 ﻿using CloudPlanning_WebApi.Contexts;
 using CloudPlanning_WebApi.Domains;
+using CloudPlanning_WebApi.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CloudPlanning_WebApi.Repositories
 {
-    public class ComponenteRepository
+    public class ComponenteRepository : IComponenteRepository
     {
         private readonly CloudPlanningContext ctx = new();
 

@@ -1,4 +1,5 @@
-﻿using CloudPlanning_WebApi.Domains;
+﻿using CloudPlanning_WebApi.Contexts;
+using CloudPlanning_WebApi.Domains;
 using CloudPlanning_WebApi.Interfaces;
 using CloudPlanning_WebApi.Repositories;
 using Microsoft.AspNetCore.Mvc;
@@ -14,11 +15,11 @@ namespace CloudPlanning_WebApi.Controllers
     [ApiController]
     public class EmpresasController : ControllerBase
     {
-        private IEmpresaRepository _empresaRepository { get; set; }
+        private readonly CloudPlanningContext _context;
 
-        public EmpresasController()
+        public EmpresasController(CloudPlanningContext context)
         {
-            _empresaRepository = new EmpresaRepository();
+            _context = context;
         }
 
         [HttpGet]
@@ -26,7 +27,7 @@ namespace CloudPlanning_WebApi.Controllers
         {
             try
             {
-                return Ok(_empresaRepository.Listar());
+                return Ok( _context.Empresas.Listar());
             }
             catch (Exception Erro)
             {
@@ -39,7 +40,7 @@ namespace CloudPlanning_WebApi.Controllers
         {
             try
             {
-                return Ok(_empresaRepository.BuscarPorId(Id));
+                return Ok(_context.Empresas.BuscarPorId(Id));
             }
             catch (Exception Erro)
             {
@@ -54,7 +55,7 @@ namespace CloudPlanning_WebApi.Controllers
         {
             try
             {
-                _empresaRepository.Cadastrar(NovaEmpresa);
+                _context.Empresas.Cadastrar(NovaEmpresa);
 
                 return StatusCode(201);
             }
@@ -69,7 +70,7 @@ namespace CloudPlanning_WebApi.Controllers
         {
             try
             {
-                _empresaRepository.Deletar(Id);
+                _context.Empresas.Deletar(Id);
                 return StatusCode(204);
             }
             catch (Exception Erro)
@@ -83,7 +84,7 @@ namespace CloudPlanning_WebApi.Controllers
         {
             try
             {
-                _empresaRepository.Atualizar(Id, EmpresaAtualizada);
+                _context.Empresas.Atualizar(Id, EmpresaAtualizada);
                 return StatusCode(204);
             }
             catch (Exception Erro)
