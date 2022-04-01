@@ -10,7 +10,12 @@ namespace CloudPlanning_WebApi.Repositories
 {
     public class ComponenteRepository : IComponenteRepository
     {
-        private readonly CloudPlanningContext ctx = new();
+        private readonly CloudPlanningContext ctx;
+
+        public ComponenteRepository(CloudPlanningContext appContext)
+        {
+            ctx = appContext;
+        }
 
         public void Atualizar(int id, Componente ComponenteAtualizado)
         {

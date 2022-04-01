@@ -17,9 +17,9 @@ namespace CloudPlanning_WebApi.Controllers
     {
         private IComponenteRepository _componenteRepository { get; set; }
 
-        public ComponentesController()
+        public ComponentesController(IComponenteRepository componente)
         {
-            _componenteRepository = new ComponenteRepository();
+            _componenteRepository = componente;
         }
 
 

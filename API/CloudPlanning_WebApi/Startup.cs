@@ -112,7 +112,7 @@ namespace CloudPlanning_WebApi
 
             app.UseSwaggerUI(c => {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "CloudPlanning.webAPI");
-                c.RoutePrefix = string.Empty;
+                c.RoutePrefix = "swagger";
             });
 
             app.UseRouting();

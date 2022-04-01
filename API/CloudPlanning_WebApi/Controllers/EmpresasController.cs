@@ -15,11 +15,11 @@ namespace CloudPlanning_WebApi.Controllers
     [ApiController]
     public class EmpresasController : ControllerBase
     {
-        private readonly CloudPlanningContext _context;
+        private readonly IEmpresaRepository _empresaRepository;
 
-        public EmpresasController(CloudPlanningContext context)
+        public EmpresasController(IEmpresaRepository contexto)
         {
-            _context = context;
+            _empresaRepository = contexto;
         }
 
         [HttpGet]
@@ -27,7 +27,7 @@ namespace CloudPlanning_WebApi.Controllers
         {
             try
             {
-                return Ok( _context.Empresas.Listar());
+                return Ok( _empresaRepository.Listar());
             }
             catch (Exception Erro)
             {
@@ -40,7 +40,7 @@ namespace CloudPlanning_WebApi.Controllers
         {
             try
             {
-                return Ok(_context.Empresas.BuscarPorId(Id));
+                return Ok(_empresaRepository.BuscarPorId(Id));
             }
             catch (Exception Erro)
             {
@@ -55,7 +55,7 @@ namespace CloudPlanning_WebApi.Controllers
         {
             try
             {
-                _context.Empresas.Cadastrar(NovaEmpresa);
+                _empresaRepository.Cadastrar(NovaEmpresa);
 
                 return StatusCode(201);
             }
@@ -70,7 +70,7 @@ namespace CloudPlanning_WebApi.Controllers
         {
             try
             {
-                _context.Empresas.Deletar(Id);
+                _empresaRepository.Deletar(Id);
                 return StatusCode(204);
             }
             catch (Exception Erro)
@@ -84,7 +84,7 @@ namespace CloudPlanning_WebApi.Controllers
         {
             try
             {
-                _context.Empresas.Atualizar(Id, EmpresaAtualizada);
+                _empresaRepository.Atualizar(Id, EmpresaAtualizada);
                 return StatusCode(204);
             }
             catch (Exception Erro)

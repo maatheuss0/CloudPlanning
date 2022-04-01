@@ -10,7 +10,13 @@ namespace CloudPlanning_WebApi.Repositories
 {
     public class DiagramaRepository : IDiagramaRepository
     {
-        private readonly CloudPlanningContext ctx = new();
+        private readonly CloudPlanningContext ctx;
+
+        public DiagramaRepository(CloudPlanningContext appContext)
+        {
+            ctx = appContext;
+        }
+
 
         public void Atualizar(int id, Diagrama DiagramaAtualizado)
         {

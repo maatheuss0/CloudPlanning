@@ -13,7 +13,12 @@ namespace CloudPlanning_WebApi.Repositories
 {
     public class EmpresaRepository : IEmpresaRepository
     {
-        private readonly CloudPlanningContext ctx = new();
+        private readonly CloudPlanningContext ctx;
+
+        public EmpresaRepository(CloudPlanningContext appContext)
+        {
+            ctx = appContext;
+        }
 
         public void Atualizar(int id, Empresa empresaAtualizado)
         {

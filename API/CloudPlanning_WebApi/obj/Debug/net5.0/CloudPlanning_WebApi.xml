@@ -44,6 +44,38 @@
             <param name="id">ID do componente que será buscada</param>
             <returns>Um componente buscado</returns>
         </member>
+        <member name="M:CloudPlanning_WebApi.Interfaces.IDiagramaRepository.Listar">
+            <summary>
+            Lista todos os Diagramas
+            </summary>
+            <returns>Uma lista de Diagramas</returns>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Interfaces.IDiagramaRepository.Cadastrar(CloudPlanning_WebApi.Domains.Diagrama)">
+            <summary>
+            Cadastra um novo Diagrama
+            </summary>
+            <param name="novaDiagrama">Objeto novaDiagrama que será cadastrado</param>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Interfaces.IDiagramaRepository.Atualizar(System.Int32,CloudPlanning_WebApi.Domains.Diagrama)">
+            <summary>
+            Atualiza um Diagrama existente
+            </summary>
+            <param name="id">ID da Diagrama que será atualizado</param>
+            <param name="DiagramaAtualizado">Objeto com as novas informações</param>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Interfaces.IDiagramaRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um Diagrama existente
+            </summary>
+            <param name="id">ID do Diagrama que será deletada</param>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Interfaces.IDiagramaRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um Diagrama através do ID
+            </summary>
+            <param name="id">ID da Diagrama que será buscada</param>
+            <returns>Uma Diagrama buscada</returns>
+        </member>
         <member name="M:CloudPlanning_WebApi.Interfaces.IEmpresaRepository.Listar">
             <summary>
             Lista todos as empresas

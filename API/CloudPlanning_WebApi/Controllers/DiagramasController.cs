@@ -16,9 +16,9 @@ namespace CloudPlanning_WebApi.Controllers
     {
         private IDiagramaRepository _diagramaRepository { get; set; }
 
-        public DiagramasController()
+        public DiagramasController(IDiagramaRepository diagrama)
         {
-            _diagramaRepository = new DiagramaRepository();
+            _diagramaRepository = diagrama;
         }
 
 

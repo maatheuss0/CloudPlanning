@@ -10,7 +10,12 @@ namespace CloudPlanning_WebApi.Repositories
 {
     public class UsuarioRepository : IUsuarioRepository
     {
-        private readonly CloudPlanningContext ctx = new();
+        private readonly CloudPlanningContext ctx;
+
+        public UsuarioRepository(CloudPlanningContext appContext)
+        {
+            ctx = appContext;
+        }
 
         public void Atualizar(int id, Usuario usuarioAtualizado)
         {
