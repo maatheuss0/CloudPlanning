@@ -37,6 +37,7 @@ namespace CloudPlanning_WebApi.Controllers
         {
             try
             {
+                string claimAutorizacao;
                 Usuario usuarioBuscado = _usuarioRepository.Login(login.Email, login.Senha);
 
                 if (usuarioBuscado == null)
@@ -44,14 +45,15 @@ namespace CloudPlanning_WebApi.Controllers
                     return Unauthorized(new { msg = "Email ou senha incorretos" });
                 }
 
-                // Caso o usuário seja encontrado, prossegue para a criação do token
-
-                /*
-                    Dependências
-
-                    Criar e validar o JWT:      System.IdentityModel.Tokens.Jwt
-                    Integrar a autenticação:    Microsoft.AspNetCore.Authentication.JwtBearer (versão compatível com o .NET do projeto)
-                */
+                if (usuarioBuscado.Empresas == null)
+                {
+                    claimAutorizacao = "cliente";
+                }
+                else if(usuarioBuscado.UsuarioComums == null)
+                {
+                    claimAutorizacao = "empresa";
+                        
+                }
 
                 var minhasClaims = new[]
                 {
