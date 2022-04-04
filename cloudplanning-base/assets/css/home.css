@@ -274,3 +274,88 @@ footer span {
     color: white;
 }
 
+@media (max-width: 524px) {
+    
+    .alinhamento {
+        display: none;
+    }
+
+    .container_header p {
+        margin-right: 33px;
+    }
+
+    .cabeçalho button {
+        margin-left: -300px;
+    }
+
+    .container_header {
+        width: 545px;
+    }
+
+    .container_header img {
+        width: 65px;
+        height: 75px;
+        margin-left: 44px;
+    }
+
+    .conteudo_banner {
+        width: 904px;
+        height: 1236px
+    }
+
+    .conteudo_banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 43px;
+        margin-top: -15px;
+    }
+
+    .caixa {
+        margin-top: 34px;
+
+    }
+
+    .diagramas {
+        margin-left: -344px;
+        margin-top: 112px;
+    }
+
+    .diagramas h2 {
+        font-size: 31px;
+    }
+
+    .diagramas h3 {
+        font-size: 25px;
+    }
+
+    .diagramas hr {
+        width: 456px;
+    }
+
+    .diagramas img {
+        margin-top: 200px; 
+    }
+
+    .infra2 {
+        display: none;
+    }
+
+    .fundo2 {
+        display: flex;
+        flex-direction: column;
+        height: 957px;
+        width: 483px;
+    }
+
+    .fundo2 img {
+        height: 330px;
+        width: 422px;
+        margin-left: 10px;
+    }
+
+    .quem_somos button {
+        margin-left: 47px;
+    }
+
+}
