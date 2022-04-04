@@ -5,23 +5,23 @@ USE CloudPlanning;
 GO
 
 
-Create table usuario(
+CREATE TABLE usuario(
 	idUsuario INT PRIMARY KEY IDENTITY,
 	email VARCHAR(50) NOT NULL UNIQUE,
 	senha VARCHAR(70) NOT NULL
 )
 GO
 
-Create table empresa(
+CREATE TABLE empresa(
 	idEmpresa INT PRIMARY KEY IDENTITY,
 	idUsuario INT FOREIGN KEY REFERENCES usuario(idUsuario),
-	CNPJ VARCHAR(14) UNIQUE ,
-	nomeFantasia VARCHAR(70),
-	telefone VARCHAR(14) UNIQUE
+	CNPJ VARCHAR(14) NOT NULL UNIQUE,
+	nomeFantasia VARCHAR(70) NOT NULL UNIQUE,
+	telefone VARCHAR(14) NOT NULL UNIQUE
 );
 GO
 
-Create table usuarioComum(
+CREATE TABLE usuarioComum(
 	idUsuarioComum INT PRIMARY KEY IDENTITY,
 	idUsuario INT FOREIGN KEY REFERENCES usuario(idUsuario),
 	idEmpresa INT FOREIGN KEY REFERENCES empresa(IdEmpresa),
@@ -32,22 +32,38 @@ Create table usuarioComum(
 GO
 
 
-Create table Componentes(
-	idComponentes INT PRIMARY KEY IDENTITY,
-	nome VARCHAR(50),
-	codigo VARCHAR(300),  
+CREATE TABLE EC2(
+	idEC2 INT PRIMARY KEY IDENTITY,
+	idVPC INT FOREIGN KEY REFERENCES VPC(idVPC),
+	nome VARCHAR(50), 
 	imagemComponente VARCHAR(70), 
-	descricao VARCHAR(100)
-);
+	descricao VARCHAR(100),
+	sistemaOperacional VARCHAR(20) NOT NULL,
+	armazenamento INT NOT NULL,
+	quantidadeProcessadores INT NOT NULL,
+	RAM INT NOT NULL,
+	subRede VARCHAR(20) NOT NULL,
+	autoAssign BIT DEFAULT(0),
+	nomeChave VARCHAR(50)
+)
 GO
 
+CREATE TABLE VPC(
+	idVPC INT PRIMARY KEY IDENTITY,
+	nome VARCHAR(50), 
+	imagemComponente VARCHAR(70), 
+	descricao VARCHAR(100),
+	subRede VARCHAR(20) NOT NULL,
+	rota VARCHAR(20) NOT NULL,
+	natGateway varchar(20) NOT NULL,
+)
+GO
 
-
-Create table diagrama(
+CREATE TABLE diagrama(
 	idDiagrama INT PRIMARY KEY IDENTITY,
 	idEmpresa INT FOREIGN KEY REFERENCES empresa(idEmpresa),
-	idComponentes INT FOREIGN KEY REFERENCES componentes(idComponentes),
-	nome VARCHAR(70)
+	idEC2 INT FOREIGN KEY REFERENCES EC2(idEC2),
+	nome VARCHAR(70) NOT NULL UNIQUE,
 );
 GO
 
