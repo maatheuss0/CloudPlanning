@@ -19,7 +19,7 @@
 
 header {
   background-color: #1F2429;
-  height: 120px;
+  height: 100px;
   width: 100%;
 }
 
@@ -40,9 +40,10 @@ header {
 }
 
 header img {
-  width: 110px;
-  height: 130px;
-  margin-top: 15px;
+  width: 344px;
+  height: 210px;
+  margin-top: 45px;
+  margin-left: -100px;
 }
 
 nav{
@@ -67,11 +68,9 @@ nav button {
   background-color: #3F9FE4;
   color: #FFFFFF;
   font-size: 20px;
-  text-transform: bold;
   text-decoration: none;
   cursor: pointer;
-  border-radius: 10px;
-  font-weight: bold; 
+  border-radius: 10px; 
 
 } 
 .login {
@@ -80,7 +79,7 @@ nav button {
 }
 
 
-p {
+header p {
   font-family: 'Red Hat Mono', monospace;    
   color: white;
   text-decoration:double;
@@ -93,40 +92,181 @@ p {
 /*Banner*/
 
 
-.banner {
-  background: linear-gradient(to right, #000306 0%, rgb(0, 0, 0) 77%, rgba(0,0,0,1) 100%);
-  width: 100%;
+
+.container_banner {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  background-color: #120D0B;
 }
 
-.caixa {
-  background: linear-gradient(to bottom, rgba(3,3,3,1) 0%, rgba(49,49,49,1) 26%, rgba(44,44,44,1) 77%, rgba(5,5,5,1) 100%);
+.banner {
+
+  height: 700px;
+  width: 1400px
 }
 
+
+.fundo {
+  background-color: #0a0a0a;
+  width: 100%;
+}
 
 .conteudo_banner {
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-image: url("./img/image\ 2.png");
-  height: 760px;
-  width: 1430px;
+  justify-content: space-between;
+  width: 810px;
+  
 }
+
+.img1 {
+  height: 100px;
+  width: 200px;
+}
+
+.img2 {
+  width: 100px;
+  height: 100px;
+}
+
 
 .caixa {
+  width: 372px;
+  height: 471px;
+  background: #1F2429;
+  box-shadow: 1px 3px 4px black;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  background-color: #000000;
-  color: #FFFFFF;
-  font-size: 20px;
-  border-radius: 50px;
-  font-weight: bold; 
-  width: 450px;
-  height: 650px;
+  align-items: center;
+  margin-top: 400px;
+  border-radius: 10%;
+  padding: 10px  30px;
+}
+
+.caixa p {
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: justify;
+  font-weight: 100;
+  color: white;
+  margin-top: 40px;
+}
+
+.alinhar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
 
 
+.diagramas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 200px;
+  font-family: 'Open Sans', sans-serif;
+}
 
+.diagramas h2 {
+  font-weight:normal;
+  font-size: 45px;
+}
+
+.diagramas h3 {
+  margin-top: 12px;
+  font-size: 30px;
+  font-weight:normal;
+}
+
+.diagramas hr {
+  border-top: 1px solid rgb(0, 0, 0);
+  margin-top: 30px;
+  width: 100%;
+}
+
+.diagramas button {
+  border: none;
+  width: 300px;
+  height: 50px;
+  background-color: #3F9FE4;
+  color: #FFFFFF;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 55px;
+}
+
+.infra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -124px;
+}
+
+.infra2 {
+  margin-top: 400px;
+}
+
+
+.fundo2 {
+  background-color: #1F2429;
+  border-radius: 60px;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 40px;
+  height: 500px;
+  margin-top: 160px;
+  width: 1375px;
+  margin-left: -86px;
+  margin-bottom: 20px;
+}
+
+
+.quem_somos{
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+}
+
+.quem_somos span {
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: justify;
+  font-weight: 100;
+  color: white;
+  margin-top: 40px;
+}
+
+
+.quem_somos button {
+  border: none;
+  width: 300px;
+  height: 50px;
+  background-color: #3F9FE4;
+  color: #FFFFFF;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 55px;
+  margin-left: 440px;
+}
+
+footer{
+  background-color: #1F2429;
+  height: 50px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer span {
+  color: white;
+}
 

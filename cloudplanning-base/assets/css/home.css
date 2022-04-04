@@ -40,9 +40,10 @@ header {
 }
 
 header img {
-    width: 88px;
-    height: 100px;
-    margin-top: -12px;
+    width: 344px;
+    height: 210px;
+    margin-top: 45px;
+    margin-left: -100px;
 }
 
 nav{
@@ -102,11 +103,10 @@ header p {
 
 .banner {
     background-image: url(../img/image_fundo.png);
-    height: 700px;
-    width: 1430px;
-    background-repeat: no-repeat;
-
+    background-size: 2300px;
+    width: 100%;
 }
+
 
 .fundo {
     background-color: #0a0a0a;
@@ -116,35 +116,36 @@ header p {
 .conteudo_banner {
     display: flex;
     justify-content: space-between;
-    width: 810px;
+    width: 950px;
+    padding: 80px 1px
 }
 
 .img1 {
-    height: 100px;
-    width: 200px;
+    height: 131px;
+    width: 268px;
 }
 
 .img2 {
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
 }
 
 
 .caixa {
-    width: 372px;
-    height: 471px;
+    width: 445px;
+    height: 626px;
     background: #1F2429;
     box-shadow: 1px 3px 4px black;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 400px;
+    margin-top: -65;
     border-radius: 10%;
     padding: 10px  30px;
 }
 
 .caixa p {
-    font-size: 18px;
+    font-size: 21px;
     font-family: 'Open Sans', sans-serif;
     text-align: justify;
     font-weight: 100;
@@ -221,7 +222,7 @@ header p {
     height: 500px;
     margin-top: 160px;
     width: 1375px;
-    margin-left: -100px;
+    margin-left: -86px;
     margin-bottom: 20px;
 }
 
@@ -253,7 +254,7 @@ header p {
     cursor: pointer;
     border-radius: 10px;
     margin-top: 55px;
-    margin-left: 440px;
+    margin-left: 235px;
 }
 
 footer{
