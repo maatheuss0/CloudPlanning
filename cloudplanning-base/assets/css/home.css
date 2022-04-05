@@ -190,16 +190,16 @@ header p {
 }
 
 .diagramas button {
-    border: none;
+    border: n   one;
     width: 300px;
     height: 50px;
     background-color: #3F9FE4;
     color: #FFFFFF;
     font-size: 20px;
     text-decoration: none;
-    cursor: pointer;
     border-radius: 10px;
     margin-top: 31px;
+    cursor: pointer;
 }
 
 .infra {
@@ -276,16 +276,26 @@ footer span {
 
 @media (max-width: 524px) {
     
+
+    .login {
+        font-size: 16px;
+        display: none;
+    }
+
     .alinhamento {
         display: none;
     }
 
     .container_header p {
-        margin-right: 33px;
+        margin-right: 181px;
+        font-size: 20px;
     }
 
     .cabeçalho button {
-        margin-left: -300px;
+        margin-right: 68px;
+        height: 40px;
+        width: 146px;
+        font-size: 17px;
     }
 
     .container_header {
@@ -293,8 +303,8 @@ footer span {
     }
 
     .container_header img {
-        width: 65px;
-        height: 75px;
+        width: 54px;
+        height: 59px;
         margin-left: 44px;
     }
 
