@@ -1,9 +1,9 @@
-import '../../assets/css/login.css'
+import '../../assets/css/cadastro.css'
 import { Component } from 'react';
 
 import logo from '../../assets/img/logo.png'
 
-export default class Login extends Component {
+export default class Cadastro extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -25,20 +25,22 @@ export default class Login extends Component {
                     </div>
 
                     <div class="container-input">
-                        <a href="http://localhost:3000/">
+                         <a href="http://localhost:3000/">
                         <img class="logo" src={logo} alt="logo" />
                         </a>
-                        <p class="titulo-input">Realize login no sistema</p>
+                        <p class="titulo-input">Crie uma conta gratuita</p>
                         <hr />
-                        <form class="form-login" onSubmit={this.efetuaLogin}>
-                            <input class="input-login" placeholder="Email" type="email" name="email" required />
+
+                        <form class="form-login" action="">
+                            <input class="input-login" placeholder="Nome" type="name" name="Nome" required />
+                            <input class="input-login" placeholder="Empresa" type="name" name="Empresa" required />
+                            <input class="input-login" placeholder="Telefone" type="Telefone" name="Telefone" required />
+                            <input class="input-login" placeholder="Email" type="E   mail" name="Email" required />
                             <input class="input-login" placeholder="Senha" type="password" name="senha" required />
-                            <span class="esqueceu-senha"> Esqueceu sua senha?</span>
-                            <button class="btn-entrar" type="submit">Entrar</button>
+                            <button class="btn-entrar" type="submit">Cadastrar-se</button>
                         </form>
                     </div>
                 </main>
-
             </div>
         )
     }
