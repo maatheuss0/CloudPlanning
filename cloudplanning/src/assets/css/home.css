@@ -50,6 +50,7 @@ nav{
     font-size: 18px;
     display: flex;
     justify-content: space-evenly;
+    color:  #FFFFFF;
 }
 
 nav a{

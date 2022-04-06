@@ -1,5 +1,7 @@
 import '../../assets/css/login.css'
 import { Component } from 'react';
+import { Link } from 'react-router-dom'
+import React from 'react'
 import axios from 'axios';
 
 
@@ -23,35 +25,27 @@ export default class Login extends Component {
 
         this.setState({ erroMensagem: '', isLoading: true });
 
-        axios.post('http://localhost:5000/api/Login', {
+        axios.post('https://localhost:5001/api/Login', {
             email: this.state.email,
             senha: this.state.senha
         })
 
-            // recebe todo o conteúdo da resposta da requisição na variável resposta
             .then(resposta => {
                 if (resposta.status === 200) {
-                   
                     localStorage.setItem('usuario-login', resposta.data.token);
-
                     this.setState({ isLoading: false });
-
-                    let base64 = localStorage.getItem('usuario-login').split('.')[1];
-
-                    console.log(base64);
-
+                    this.props.history.push('/home');
                 }
             })
-
-            // Caso haja um erro,
             .catch(() => {
-                this.setState({ erroMensagem: 'E-mail e/ou senha inválidos!', isLoading: false })
+                this.setState({ erroMensagem: "Email e/ou senha inválidos!", isLoading: false });
             })
-    };
+    }
 
     atualizaStateCampo = (campo) => {
         this.setState({ [campo.target.name]: campo.target.value })
-    };
+        console.log([campo.target.name] + ' : ' + campo.target.value)
+    }
 
     render() {
         return (
@@ -92,8 +86,20 @@ export default class Login extends Component {
                                 placeholder="password"
                             />
                             <span class="esqueceu-senha"> Esqueceu sua senha?</span>
-                            <button class="btn-entrar" type="submit">Entrar</button>
+                            {
+                                this.state.isLoading === true &&
+                                <button type="submit" disabled>Loading...</button>
+                            }
+                            {
+                                this.state.isLoading === false &&
+                                <button className="btn-entrar" disabled={this.state.email === '' || this.state.senha === '' ? 'none' : ''} type="submit">Entrar</button>
+                            }
+                            <p className="erro" style={{ color: 'red' }}>{this.state.erroMensagem}</p>
+
                         </form>
+                        <div className="cadastrar">
+                            <p>Não possui uma conta?</p> <Link to="/cadastro" className="login">Cadastre-se</Link>
+                        </div>
                     </div>
                 </main>
 

@@ -19,6 +19,7 @@
 .main-login{
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,6 +41,7 @@
     flex-direction: column;
     align-items: center;
     padding-right: 63px;
+    margin-top: -110px;
 }
 
 .logo{
@@ -115,4 +117,27 @@
     cursor: pointer;
     border: none;
     font-weight: 100;
+}
+
+.cadastrar2 {
+    display: flex;
+    justify-content: space-between;
+    width: 186px;
+    margin-top: 20px;
+}
+
+.cadastrar2 p{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 23px;
+    text-decoration-line: underline;
+    color: #4E4E4E;
+}
+
+.cadastro {
+    text-decoration: none;
+    color: #197BC2;
+    margin-left: 10px;
 }

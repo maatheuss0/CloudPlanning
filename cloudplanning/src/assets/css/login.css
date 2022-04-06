@@ -22,6 +22,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
+
 }
 
 .container-fundo{
@@ -40,6 +42,7 @@
     flex-direction: column;
     align-items: center;
     padding-right: 63px;
+    margin-top: -44px;
 }
 
 .logo{
@@ -117,4 +120,31 @@
     cursor: pointer;
     border: none;
     font-weight: 100;
+}
+
+.cadastrar {
+    display: flex;
+    justify-content: space-between;
+    width: 229px;
+    margin-top: 30px;
+}
+
+.cadastrar p{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 23px;
+    text-decoration-line: underline;
+    color: #4E4E4E;
+}
+
+.login {
+    text-decoration: none;
+    color: #197BC2;
+    margin-left: 10px;
+}
+
+.erro {
+    margin-top: 20px;
 }
