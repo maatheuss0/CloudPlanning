@@ -1,0 +1,4 @@
+Situação Problema
+
+Envolve um ambiente de cadastramento de clientes e sua infraestrutura aws. Será necessário a automatização  a partir de uma aplicação de uma VPC, configuração de IP, máscara, gateway e rota
+Sua infraestrutura deverá ser automatizada pela web page.
