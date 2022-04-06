@@ -18,7 +18,7 @@ export default class Login extends Component {
     };
 
     efetuaLogin = (event) => {
-        
+
         event.preventDefault();
 
         this.setState({ erroMensagem: '', isLoading: true });
@@ -28,6 +28,30 @@ export default class Login extends Component {
             senha: this.state.senha
         })
 
+            // recebe todo o conteúdo da resposta da requisição na variável resposta
+            .then(resposta => {
+                if (resposta.status === 200) {
+                   
+                    localStorage.setItem('usuario-login', resposta.data.token);
+
+                    this.setState({ isLoading: false });
+
+                    let base64 = localStorage.getItem('usuario-login').split('.')[1];
+
+                    console.log(base64);
+
+                }
+            })
+
+            // Caso haja um erro,
+            .catch(() => {
+                this.setState({ erroMensagem: 'E-mail e/ou senha inválidos!', isLoading: false })
+            })
+    };
+
+    atualizaStateCampo = (campo) => {
+        this.setState({ [campo.target.name]: campo.target.value })
+    };
 
     render() {
         return (
