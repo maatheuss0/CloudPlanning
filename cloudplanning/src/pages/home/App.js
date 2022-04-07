@@ -25,7 +25,8 @@ function App() {
           <p>CloudPlanning</p>
           <nav className  ="cabeçalho">
             <a className="alinhamento" href="#início">INÍCIO</a>
-            <a className="alinhamento" href="#sobre nós">SOLUÇÕES</a>
+            {/* <a className="alinhamento" href="#sobre nós">SOLUÇÕES</a> */}
+            <a className="alinhamento" href="#tips">SOLUÇÕES</a>
             {/* <a className="login" href="#login">LOGIN</a> */}
             <Link to="/login" className="login1">LOGIN</Link>
             {/* <button className="butao" >Cadastrar</button> */}
@@ -90,7 +91,7 @@ function App() {
         </section>
 
         <section className="">
-          <div className="fundo2 container">
+          <div id="tips" className="fundo2 container">
             <img src={diagrama2} alt="" />
             <div className="quem_somos">
               <span>Os diagramas de rede são essenciais para ilustrar as entradas e saídas da sua rede. Como

@@ -18,6 +18,8 @@ export default class Cadastro extends Component {
             empresa: '',
             telefone: '',
             CNPJ: '',
+            CPF: '',
+            dataNasc: '',
             cadastroMensagem: '',
         };
     };
@@ -33,6 +35,8 @@ export default class Cadastro extends Component {
             senha: this.state.senha,
             empresa: this.state.empresa,
             telefone: this.state.telefone,
+            CPF: this.state.CPF,
+            dataNasc: this.state.dataNasc,
             CNPJ: this.state.CNPJ
         })
 
@@ -40,8 +44,11 @@ export default class Cadastro extends Component {
                 if (resposta.status === 200) {
                     localStorage.setItem('usuario-cadastro', resposta.data.token);
                     this.setState({ isLoading: false });
-                    this.props.history.push('/Login');
+                    this.props.history.push('/login');
                 }
+            })
+            .catch(() => {
+                this.setState({ erroMensagem: "Dados inseridos são inválidos!", isLoading: false });
             })
     }
 
@@ -59,6 +66,8 @@ export default class Cadastro extends Component {
             empresa: '',
             telefone: '',
             CNPJ: '',
+            CPF: '',
+            dataNasc: '',
             idUsuario: 0
         })
     };
@@ -88,7 +97,7 @@ export default class Cadastro extends Component {
                         <p class="titulo-input">Crie uma conta gratuita</p>
                         <hr />
 
-                        <button onClick={() => this.botaoDoMenu()}>a</button>
+                        {/* <button onClick={() => this.botaoDoMenu()}>a</button> */}
 
                         <form id="aaa" class="form-login" action="submit" onSubmit={this.cadastrarUsuario}>
                             
@@ -98,22 +107,22 @@ export default class Cadastro extends Component {
                                 value={this.state.nomeUsuario}
                             />
 
-                            <input className="input-login" type="name" placeholder="Empresa"
+                            {/* <input className="input-login" type="name" placeholder="Empresa"
                                 name='empresa'
                                 onChange={this.atualizaStateCampo}
                                 value={this.state.empresa}
+                            /> */}
+
+                            <input className="input-login" type="name" placeholder="Data de nascimento"
+                                name='dataNasc'
+                                onChange={this.atualizaStateCampo}
+                                value={this.state.dataNasc}
                             />
 
-                            <input className="input-login" type="name" placeholder="Telefone"
-                                name='telefone'
+                            <input className="input-login" type="name" placeholder="CPF"
+                                name='CPF'
                                 onChange={this.atualizaStateCampo}
-                                value={this.state.telefone}
-                            />
-
-                            <input className="input-login" type="name" placeholder="CJNP"
-                                name='CNPJ'
-                                onChange={this.atualizaStateCampo}
-                                value={this.state.CNPJ}
+                                value={this.state.CPF}
                             />
 
                             <input className="input-login" type="Email" placeholder="Email"
@@ -122,15 +131,15 @@ export default class Cadastro extends Component {
                                 value={this.state.email}
                             />
 
-                            <input className="input-login" type="password" placeholder="password"
+                            <input className="input-login" type="password" placeholder="Senha"
                                 name='senha'
                                 onChange={this.atualizaStateCampo}
                                 value={this.state.senha}
                             />
 
 
-                            <p style={{ color: 'green' }}>{this.state.cadastroMensagem}</p>
                             <button class="btn-entrar" type="submit">Cadastrar-se</button>
+                            <p style={{ color: 'green' }}>{this.state.cadastroMensagem}</p>
                         </form>
                         <div className="cadastrar2">
                             <p>Possui uma conta?</p> <Link to="/login" className="cadastro">Faça login</Link>

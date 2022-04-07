@@ -34,7 +34,7 @@ export default class Login extends Component {
                 if (resposta.status === 200) {
                     localStorage.setItem('usuario-login', resposta.data.token);
                     this.setState({ isLoading: false });
-                    this.props.history.push('/home');
+                    this.props.history.push('/diagramas');
                 }
             })
             .catch(() => {
@@ -83,12 +83,12 @@ export default class Login extends Component {
                                 value={this.state.senha}
                                 // faz a chamada para a função que atualiza o state, conforme o usuário altera o valor do input
                                 onChange={this.atualizaStateCampo}
-                                placeholder="password"
+                                placeholder="Senha"
                             />
                             <span class="esqueceu-senha"> Esqueceu sua senha?</span>
                             {
                                 this.state.isLoading === true &&
-                                <button type="submit" disabled>Loading...</button>
+                                <button className="btn-entrar" type="submit" disabled>Loading...</button>
                             }
                             {
                                 this.state.isLoading === false &&
