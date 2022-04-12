@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import React from 'react'
 
 
-
 import logo from '../../assets/img/logo.png'
 import axios from 'axios';
 
@@ -44,7 +43,7 @@ export default class Cadastro extends Component {
                 if (resposta.status === 200) {
                     localStorage.setItem('usuario-cadastro', resposta.data.token);
                     this.setState({ isLoading: false });
-                    this.props.history.push('/login');
+                    this.props.history.push('/diagramas');
                 }
             })
             .catch(() => {
@@ -72,11 +71,11 @@ export default class Cadastro extends Component {
         })
     };
 
-    botaoDoMenu(){
+    botaoDoMenu() {
         var menu = document.getElementById("aaa")
         if (menu.style.display === "flex") {
             menu.style.display = "none"
-        } else{
+        } else {
             menu.style.display = "flex"
         }
     }
@@ -100,7 +99,7 @@ export default class Cadastro extends Component {
                         {/* <button onClick={() => this.botaoDoMenu()}>a</button> */}
 
                         <form id="aaa" class="form-login" action="submit" onSubmit={this.cadastrarUsuario}>
-                            
+
                             <input className="input-login" type="name" placeholder="Nome"
                                 name='nomeUsuario'
                                 onChange={this.atualizaStateCampo}
@@ -114,31 +113,31 @@ export default class Cadastro extends Component {
                             /> */}
 
                             <input className="input-login" type="name" placeholder="Data de nascimento"
-                                name='dataNasc'
+                                name='dataNasc' 
                                 onChange={this.atualizaStateCampo}
                                 value={this.state.dataNasc}
                             />
 
-                            <input className="input-login" type="name" placeholder="CPF"
-                                name='CPF'
-                                onChange={this.atualizaStateCampo}
-                                value={this.state.CPF}
+                            <input className="input-login" type ="name" placeholder="CPF"
+                            name='CPF'
+                            onChange={this.atualizaStateCampo}
+                            value={this.state.CPF}
                             />
 
-                            <input className="input-login" type="Email" placeholder="Email"
-                                name='email'
-                                onChange={this.atualizaStateCampo}
-                                value={this.state.email}
+                            <input className="input-login" type ="Email" placeholder="Email"
+                            name='email'
+                            onChange={this.atualizaStateCampo}
+                            value={this.state.email}
                             />
 
-                            <input className="input-login" type="password" placeholder="Senha"
-                                name='senha'
-                                onChange={this.atualizaStateCampo}
-                                value={this.state.senha}
+                            <input className="input-login" type ="password" placeholder="Senha"
+                            name='senha'
+                            onChange={this.atualizaStateCampo}
+                            value={this.state.senha}
                             />
 
 
-                            <button class="btn-entrar" type="submit">Cadastrar-se</button>
+                            <button class ="btn-entrar" type ="submit">Cadastrar-se</button>
                             <p style={{ color: 'green' }}>{this.state.cadastroMensagem}</p>
                         </form>
                         <div className="cadastrar2">

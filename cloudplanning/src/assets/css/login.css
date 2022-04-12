@@ -126,7 +126,7 @@
     display: flex;
     justify-content: space-between;
     width: 229px;
-    margin-top: 30px;
+    margin-top: 7px;
 }
 
 .cadastrar p{
@@ -137,6 +137,7 @@
     line-height: 23px;
     text-decoration-line: underline;
     color: #4E4E4E;
+    text-decoration: none;
 }
 
 .login {
@@ -148,3 +149,41 @@
 .erro {
     margin-top: 20px;
 }
+
+.bg-modal {
+    width: 1600px;
+    height: 1000px;
+    background: rgba(0, 0, 0, 75);
+    position: fixed;
+    z-index: 2;
+    display: block;
+    top: -100%;
+    margin-left: -1096px;
+    margin-top: 250px;
+}
+
+.modal {
+    width: 1600px;
+    height: 1000px;
+    background-color: #FFFFFF;
+    /* border: 1px solid rgb(151, 151, 151); */
+    box-shadow: 0px 0px 0px black;
+    border-radius: 5px;
+    /* margin:  80px auto 0 auto; */
+}
+
+.modal span {
+    float: right;
+    font-size: 55px;
+    color: rgb(78, 78, 78);
+    margin: 20px 20px;
+    transition: 350ms;
+    cursor: pointer;
+}
+
+.modal span:hover {
+    color: #990000;
+    transition: 350ms;
+}
+
+

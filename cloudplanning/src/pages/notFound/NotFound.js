@@ -1,10 +1,18 @@
-import './App.css';
+import './notFound.css';
+import { Link } from 'react-router-dom'
+
+import not from '../../assets/img/notFound.png'
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>404 Página não encontrada</h1>
+        <img  src={not} alt="artigo" />
+        <h4>Opps! Página não encontrada</h4>
+        {/* <p>Essa página não existe. verifique o caminho, você pode retornar para o início</p> */}
+        {/* <a className="botao" href="#">Voltar para ínicio</a> */}
+        <Link to="/" className="botao">Voltar para ínicio</Link>
       </header>
     </div>
   );

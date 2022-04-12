@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+.App-header h4 {
+  margin-top: 20px;
+}
+
+.botao {
+  border: none;
+  width: 300px;
+  height: 50px;
+  background-color: #3F9FE4;
+  color: #FFFFFF;
+  font-size: 20px;
+  border: none;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-top: 31px;
+  padding: 10px 68px;
+  font-weight: 100;
+  margin-top: 50px;
+}
+
+.App-header img {
+  height: 200px;
+  width: 500px;
+}

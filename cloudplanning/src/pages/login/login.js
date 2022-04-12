@@ -1,12 +1,10 @@
 import '../../assets/css/login.css'
-import { Component } from 'react';
+import { Component, useState } from 'react';
 import { Link } from 'react-router-dom'
-import React from 'react'
+import React from 'react';
 import axios from 'axios';
-
-
-
 import logo from '../../assets/img/logo.png'
+
 
 export default class Login extends Component {
     constructor(props) {
@@ -18,6 +16,7 @@ export default class Login extends Component {
             isLoading: false
         };
     };
+
 
     efetuaLogin = (event) => {
 
@@ -46,6 +45,8 @@ export default class Login extends Component {
         this.setState({ [campo.target.name]: campo.target.value })
         console.log([campo.target.name] + ' : ' + campo.target.value)
     }
+
+
 
     render() {
         return (
@@ -85,7 +86,9 @@ export default class Login extends Component {
                                 onChange={this.atualizaStateCampo}
                                 placeholder="Senha"
                             />
-                            <span class="esqueceu-senha"> Esqueceu sua senha?</span>
+
+                            <a class="esqueceu-senha"> Esqueceu sua senha?</a>
+
                             {
                                 this.state.isLoading === true &&
                                 <button className="btn-entrar" type="submit" disabled>Loading...</button>
@@ -97,6 +100,7 @@ export default class Login extends Component {
                             <p className="erro" style={{ color: 'red' }}>{this.state.erroMensagem}</p>
 
                         </form>
+                        
                         <div className="cadastrar">
                             <p>Não possui uma conta?</p> <Link to="/cadastro" className="login">Cadastre-se</Link>
                         </div>
