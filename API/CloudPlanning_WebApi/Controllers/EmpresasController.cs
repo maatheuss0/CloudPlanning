@@ -2,6 +2,7 @@
 using CloudPlanning_WebApi.Domains;
 using CloudPlanning_WebApi.Interfaces;
 using CloudPlanning_WebApi.Repositories;
+using CloudPlanning_WebApi.Utils;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace CloudPlanning_WebApi.Controllers
     public class EmpresasController : ControllerBase
     {
         private readonly IEmpresaRepository _empresaRepository;
+        Email e = new();
 
         public EmpresasController(IEmpresaRepository contexto)
         {
@@ -56,6 +58,7 @@ namespace CloudPlanning_WebApi.Controllers
             try
             {
                 _empresaRepository.Cadastrar(NovaEmpresa);
+                e.SendEmail(NovaEmpresa.IdUsuarioNavigation.Email);
 
                 return StatusCode(201);
             }

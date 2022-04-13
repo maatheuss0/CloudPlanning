@@ -122,7 +122,7 @@
             </summary>
             <returns>Uma lista de usuários</returns>
         </member>
-        <member name="M:CloudPlanning_WebApi.Interfaces.IUsuarioRepository.Cadastrar(CloudPlanning_WebApi.Domains.Usuario)">
+        <member name="M:CloudPlanning_WebApi.Interfaces.IUsuarioRepository.Cadastrar(CloudPlanning_WebApi.Domains.UsuarioComum)">
             <summary>
             Cadastra um novo usuário
             </summary>

@@ -1,6 +1,7 @@
 ﻿
 using CloudPlanning_WebApi.Domains;
 using CloudPlanning_WebApi.Interfaces;
+using CloudPlanning_WebApi.Utils;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -14,6 +15,7 @@ namespace CloudPlanning_WebApi.Controllers
     [ApiController]
     public class UsuariosController : ControllerBase
     {
+        Email e = new();
         private readonly IUsuarioRepository _usuarioRepository;
 
         public UsuariosController(IUsuarioRepository contexto)
@@ -28,11 +30,12 @@ namespace CloudPlanning_WebApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post(Usuario user)
+        public IActionResult Post(UsuarioComum user)
         {
             try
             {
                 _usuarioRepository.Cadastrar(user);
+                e.SendEmail(user.IdUsuarioNavigation.Email);
 
                 return Created("Usuario Cadastrado", new { id = user.IdUsuario });
             }

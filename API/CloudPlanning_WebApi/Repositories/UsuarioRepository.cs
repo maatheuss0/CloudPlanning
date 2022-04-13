@@ -41,12 +41,12 @@ namespace CloudPlanning_WebApi.Repositories
             return ctx.Usuarios.FirstOrDefault(p => p.IdUsuario == id);
         }
 
-        public void Cadastrar(Usuario novoUsuario)
+        public void Cadastrar(UsuarioComum novoUsuario)
         {
 
-            novoUsuario.Senha = Cripto.GerarHash(novoUsuario.Senha);
+            novoUsuario.IdUsuarioNavigation.Senha = Cripto.GerarHash(novoUsuario.IdUsuarioNavigation.Senha);
 
-            ctx.Usuarios.Add(novoUsuario);
+            ctx.UsuarioComums.Add(novoUsuario);
 
             ctx.SaveChanges();
 

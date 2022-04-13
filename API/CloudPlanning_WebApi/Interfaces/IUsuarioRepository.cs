@@ -24,7 +24,7 @@ namespace CloudPlanning_WebApi.Interfaces
         /// Cadastra um novo usuário
         /// </summary>
         /// <param name="novoUsuario">Objeto novoUsuario que será cadastrado</param>
-        void Cadastrar(Usuario novoUsuario);
+        void Cadastrar(UsuarioComum novoUsuario);
 
         /// <summary>
         /// Atualiza um usuário existente
