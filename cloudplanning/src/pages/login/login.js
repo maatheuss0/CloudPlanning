@@ -87,7 +87,8 @@ export default class Login extends Component {
                                 placeholder="Senha"
                             />
 
-                            <a class="esqueceu-senha"> Esqueceu sua senha?</a>
+                            {/* <a class="esqueceu-senha"> Esqueceu sua senha?</a> */}
+                            <Link to="/esqueciSenha" className="esqueceu-senha">Esqueceu sua senha?</Link>
 
                             {
                                 this.state.isLoading === true &&
