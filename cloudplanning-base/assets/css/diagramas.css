@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300&display=swap');
+
+/*Grid*/
+
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/*Header*/
+
+header {
+    background: #FFFEFF;
+    box-shadow: 0px 3.35311px 7.5445px rgba(0, 0, 0, 0.13);
+    height: 125px;
+    width: 100%;
+}
+
+header img {
+    width: 105px;
+    height: 120px;
+}
+
+
+
+.container_header {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+.redirencionar {
+    margin-left: 400px;
+    display: flex;
+    align-items: center;
+}
+
+
+header p {
+    font-family: 'Red Hat Mono', monospace;    
+    color: white;
+    text-decoration:double;
+    margin-right: 340px;
+    font-size: 25px;
+    font-weight:unset;
+    width: 196px;
+    color: #3F9FE4;
+    margin-top: 10px;
+}
+
+/* Diagramas */
+
+.quadro {
+    background: #FFFEFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin-top: 50px;
+    width: 400px;
+    height: 750px;
+}
+
+.but_desing {
+    background: #3F9FE4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 0;
+}
+
+.but_budge {
+    background: #FFFEFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: rgba(88, 70, 70, 0.61);
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 0;
+}
+
+.but {
+    display: flex;
+}
+
+.comp_pesquisar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px 28px;
+}
+
+.comp_pesquisar span {
+    font-family: 'Open Sans', sans-serif;
+    color: #515151;
+}
+
+.comp_pesquisar input {
+    width: 100%;
+    border: none;
+    border-bottom: 1.07527px solid #000000;
+    margin: 12px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.83);
+}

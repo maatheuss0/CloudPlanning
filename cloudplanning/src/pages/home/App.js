@@ -1,5 +1,6 @@
 import './App.css';
 import { Link } from 'react-router-dom'
+import { Component } from 'react';
 
 import logo from '../../assets/img/CloudPlanning-_1_-1 1.png'
 import darede from '../../assets/img/DAREDE.png'
@@ -18,32 +19,34 @@ function App() {
 
 
       <header>
-        <div class="container container_header">
+        <div className
+        ="container container_header">
           <img src={logo} alt="logo_CloudPlanning" />
           <p>CloudPlanning</p>
-          <nav class="cabeçalho">
-            <a class="alinhamento" href="#início">INÍCIO</a>
-            <a class="alinhamento" href="#sobre nós">SOLUÇÕES</a>
-            {/* <a class="login" href="#login">LOGIN</a> */}
-            <Link to="/login" className="login">LOGIN</Link>
-            {/* <button class="butao" >Cadastrar</button> */}
+          <nav className  ="cabeçalho">
+            <a className="alinhamento" href="#início">INÍCIO</a>
+            {/* <a className="alinhamento" href="#sobre nós">SOLUÇÕES</a> */}
+            <a className="alinhamento" href="#tips">SOLUÇÕES</a>
+            {/* <a className="login" href="#login">LOGIN</a> */}
+            <Link to="/login" className="login1">LOGIN</Link>
+            {/* <button className="butao" >Cadastrar</button> */}
             <Link to="/cadastro" className="butao">Cadastrar</Link>
           </nav>
           <a href="">
-            <i class="fa-solid fa-bars"></i>
+            <i className="fa-solid fa-bars"></i>
           </a>
         </div>
       </header>
 
 
       <main>
-        <div class="fundo">
-          <section class="container_banner container  banner">
-            <div class="conteudo_banner">
+        <div className="fundo">
+          <section className="container_banner container  banner">
+            <div className="conteudo_banner">
               <div>
-                <article class="caixa">
-                  <div class="alinhar">
-                    <img class="img1" src={darede} alt="artigo" />
+                <article className="caixa">
+                  <div className="alinhar">
+                    <img className="img1" src={darede} alt="artigo" />
                     <p>Com vasta experiência no mercado e sendo parceira da Amazon
                       Web Services e Microsoft, duas das principais empresas de tecnologia do mundo, a
                       Darede
@@ -57,9 +60,9 @@ function App() {
                   </div>
                 </article>
               </div>
-              <div class="caixa">
-                <div class="alinhar"></div>
-                <img class="img2" src={aws} alt="artigo" />
+              <div className="caixa">
+                <div className="alinhar"></div>
+                <img className="img2" src={aws} alt="artigo" />
                 <p>A Amazon Web Services (AWS) é a plataforma de nuvem mais adotada e mais abrangente do
                   mundo,
                   oferecendo mais de 200 serviços completos de datacenters em todo o mundo. Os recursos de
@@ -74,23 +77,23 @@ function App() {
           </section>
         </div>
 
-        <section class="diagramas container">
+        <section className="diagramas container">
           <h2>Trabalhe como um profissional</h2>
           <h3>Crie diagramas da AWS</h3>
           <Link to="/login" className="botao">Crie seu diagrama</Link>
           {/* <button>Crie seu diagrama</button> */}
           <hr />
-          <div class="infra">
-            <img class="infra2" src={diagrama1} alt="" />
+          <div className="infra">
+            <img className="infra2" src={diagrama1} alt="" />
             <img src={diagrama2} alt="" />
-            <img class="infra2" src={diagrama3} alt="" />
+            <img className="infra2" src={diagrama3} alt="" />
           </div>
         </section>
 
-        <section class="">
-          <div class="fundo2 container">
+        <section className="">
+          <div id="tips" className="fundo2 container">
             <img src={diagrama2} alt="" />
-            <div class="quem_somos">
+            <div className="quem_somos">
               <span>Os diagramas de rede são essenciais para ilustrar as entradas e saídas da sua rede. Como
                 engenheiro de rede ou profissional de TI, você provavelmente precisará desenhar diagramas de
                 rede ao projetar, desenvolver e solucionar problemas de sua rede, ou para ajudar outras
@@ -112,9 +115,8 @@ function App() {
             </div>
           </div>
         </section>
-
       </main>
-      <footer class="">
+      <footer className="">
         <span>© 2022 Copyright - Programador</span>
       </footer>
     </div>
