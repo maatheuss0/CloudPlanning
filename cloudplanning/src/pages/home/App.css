@@ -15,11 +15,15 @@
   margin: 0 auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /*Header*/
 
 header {
   background-color: #1F2429;
-  height: 100px;
+  height: 120px;
   width: 100%;
 }
 

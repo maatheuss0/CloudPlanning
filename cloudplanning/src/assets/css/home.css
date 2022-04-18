@@ -29,7 +29,7 @@ header {
     justify-content: space-between;
     height: 100%;
     align-items: center;
-    
+
 }
 
 .cabeçalho {
@@ -50,7 +50,6 @@ nav{
     font-size: 18px;
     display: flex;
     justify-content: space-evenly;
-    color:  #FFFFFF;
 }
 
 nav a{
@@ -225,7 +224,7 @@ header p {
     height: 500px;
     margin-top: 160px;
     width: 1375px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 
 .fundo2 img {

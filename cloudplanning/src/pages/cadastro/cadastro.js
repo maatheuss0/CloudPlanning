@@ -141,7 +141,8 @@ export default class Cadastro extends Component {
                             <p style={{ color: 'green' }}>{this.state.cadastroMensagem}</p>
                         </form>
                         <div className="cadastrar2">
-                            <p>Possui uma conta?</p> <Link to="/login" className="cadastro">Faça login</Link>
+                            <p>Possui uma conta?</p> 
+                            <Link to="/login" className="cadastro">Faça login</Link>
                         </div>
                     </div>
                 </main>
