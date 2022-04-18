@@ -17,7 +17,7 @@ namespace CloudPlanning_WebApi.Controllers
     public class EmpresasController : ControllerBase
     {
         private readonly IEmpresaRepository _empresaRepository;
-        Email e = new();
+        
 
         public EmpresasController(IEmpresaRepository contexto)
         {
@@ -58,7 +58,7 @@ namespace CloudPlanning_WebApi.Controllers
             try
             {
                 _empresaRepository.Cadastrar(NovaEmpresa);
-                e.SendEmail(NovaEmpresa.IdUsuarioNavigation.Email);
+                
 
                 return StatusCode(201);
             }

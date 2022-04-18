@@ -57,6 +57,8 @@ namespace CloudPlanning_WebApi.Repositories
             novaEmpresa.IdUsuarioNavigation.Senha = Cripto.GerarHash(novaEmpresa.IdUsuarioNavigation.Senha);
 
             ctx.Empresas.Add(novaEmpresa);
+            Email e = new();
+            e.SendEmail(novaEmpresa.IdUsuarioNavigation.Email);
             ctx.SaveChanges();
         }
 
