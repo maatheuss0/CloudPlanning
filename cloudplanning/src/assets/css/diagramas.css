@@ -6,6 +6,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300&display=swap');
+/* @import 'node_modules/dragula/dragula'; */
+
 
 /*Grid*/
 
@@ -105,6 +107,9 @@ logo_diagramass {
     height: 60px;
     font-size: 20px;
     font-weight: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .but_budge:hover {

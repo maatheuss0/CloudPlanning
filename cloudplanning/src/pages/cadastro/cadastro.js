@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import React from 'react'
 
 
+
 import logo from '../../assets/img/logo.png'
 import axios from 'axios';
 
@@ -79,6 +80,7 @@ export default class Cadastro extends Component {
             menu.style.display = "flex"
         }
     }
+    
 
     render() {
         return (
@@ -112,36 +114,39 @@ export default class Cadastro extends Component {
                                 value={this.state.empresa}
                             /> */}
 
-                            <input className="input-login" type="name" placeholder="Data de nascimento"
-                                name='dataNasc' 
+                            <input className="input-login" type="date" placeholder="Data de nascimento"
+                                name='dataNasc'
                                 onChange={this.atualizaStateCampo}
                                 value={this.state.dataNasc}
                             />
 
-                            <input className="input-login" type ="name" placeholder="CPF"
-                            name='CPF'
-                            onChange={this.atualizaStateCampo}
-                            value={this.state.CPF}
+ 
+                            <input className="input-login"
+                                type="name"
+                                placeholder="CPF"
+                                name='CPF' maxLength="14"
+                                onChange={this.atualizaStateCampo}
+                                value={this.state.CPF}
                             />
 
-                            <input className="input-login" type ="Email" placeholder="Email"
-                            name='email'
-                            onChange={this.atualizaStateCampo}
-                            value={this.state.email}
+                            <input className="input-login" type="Email" placeholder="Email"
+                                name='email'
+                                onChange={this.atualizaStateCampo}
+                                value={this.state.email}
                             />
 
-                            <input className="input-login" type ="password" placeholder="Senha"
-                            name='senha'
-                            onChange={this.atualizaStateCampo}
-                            value={this.state.senha}
+                            <input className="input-login" type="password" placeholder="Senha"
+                                name='senha'
+                                onChange={this.atualizaStateCampo}
+                                value={this.state.senha}
                             />
 
 
-                            <button class ="btn-entrar" type ="submit">Cadastrar-se</button>
+                            <button class="btn-entrar" type="submit">Cadastrar-se</button>
                             <p style={{ color: 'green' }}>{this.state.cadastroMensagem}</p>
                         </form>
                         <div className="cadastrar2">
-                            <p>Possui uma conta?</p> 
+                            <p>Possui uma conta?</p>
                             <Link to="/login" className="cadastro">Faça login</Link>
                         </div>
                     </div>
