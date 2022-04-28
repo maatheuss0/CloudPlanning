@@ -15,12 +15,8 @@ export default class Cadastro extends Component {
             NomeFantasia: '',
             email: '',
             senha: '',
-            empresa: '',
             telefone: '',
             CNPJ: '',
-            CPF: '',
-            dataNasc: '',
-            cadastroMensagem: '',
         };
     };
 
@@ -29,16 +25,21 @@ export default class Cadastro extends Component {
 
         this.setState({ erroMensagem: "", isLoading: true })
 
-        axios.post('http://localhost:5000/api/Empresas', {
+        axios.post('https://localhost:5001/api/Empresas', {
             NomeFantasia: this.state.NomeFantasia,
             telefone: this.state.telefone,
-            CNPJ: this.state.CNPJ
- 
+            CNPJ: this.state.CNPJ,
+
+            idUsuarioNavigation: {
+                email:  this.state.email,
+                senha:  this.state.senha,
+                IdTipoUsuario: 3
+            }
         })
 
             .then(resposta => {
                 if (resposta.status === 200) {
-                    localStorage.setItem('empresa-cadastro', resposta.data.token);
+                    localStorage.setItem('usuario-cadastro', resposta.data.token);
                     this.setState({ isLoading: false });
                     this.props.history.push('/diagramas');
                 }
@@ -57,14 +58,11 @@ export default class Cadastro extends Component {
     limparCampos = () => {
         this.setState({
             NomeFantasia: '',
-            email: '',
-            senha: '',
+            CNPJ: '',
             empresa: '',
             telefone: '',
-            CNPJ: '',
-            CPF: '',
-            dataNasc: '',
-            idUsuario: 0
+            email: '',
+            senha: '',
         })
     };
 
@@ -76,7 +74,7 @@ export default class Cadastro extends Component {
             menu.style.display = "flex"
         }
     }
-    
+
 
     render() {
         return (
@@ -110,7 +108,7 @@ export default class Cadastro extends Component {
                                 value={this.state.empresa}
                             /> */}
 
-                            <input className="input-login" 
+                            <input className="input-login"
                                 type="name"
                                 placeholder="Telefone"
                                 name='telefone'
@@ -118,7 +116,7 @@ export default class Cadastro extends Component {
                                 value={this.state.telefone}
                             />
 
- 
+
                             <input className="input-login"
                                 type="name"
                                 placeholder="CNPJ"

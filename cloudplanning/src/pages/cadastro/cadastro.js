@@ -144,10 +144,15 @@ export default class Cadastro extends Component {
 
                             <button class="btn-entrar" type="submit">Cadastrar-se</button>
                             <p style={{ color: 'green' }}>{this.state.cadastroMensagem}</p>
+                            
                         </form>
                         <div className="cadastrar2">
                             <p>Possui uma conta?</p>
                             <Link to="/login" className="cadastro">Faça login</Link>
+                        </div>
+                        <div className="cadastrar3">
+                            <p>Você também pode se cadastrar como uma empresa</p>
+                            <Link to="/cadastro_adm" className="cadastro">Cadastrar-se</Link>
                         </div>
                     </div>
                 </main>
