@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300&display=swap');
 /* @import 'node_modules/dragula/dragula'; */
@@ -26,11 +33,14 @@
     box-shadow: 0px 3.35311px 7.5445px rgba(0, 0, 0, 0.13);
     height: 125px;
     width: 100%;
+    z-index: 99;
 }
 
-.logo_azul {
-    width: 105px;
-    height: 120px;
+
+.imgLogo {
+    width: 75px;
+    height: 106px;
+    margin-top: 10px;
 }
 
 
@@ -41,28 +51,29 @@
     align-items: center;
 }
 
-.redirencionarr {
+.redirencionarrr {
     margin-left: 400px;
     display: flex;
     align-items: center;
 }
 
 
-logo_diagramass {
+.logo_diagramasss {
     font-family: 'Red Hat Mono', monospace;    
     color: white;
     text-decoration:double;
     margin-right: 340px;
-    font-size: 25px;
+    font-size: 22px;
     font-weight:unset;
     width: 196px;
-    color: #3F9FE4;
+    color: #f37e1f;
     margin-top: 10px;
+    margin-left: 24px;
 }
 
 /* Diagramas */
 
-.quadro {
+.quadroo {
     background: #FFFEFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -73,33 +84,37 @@ logo_diagramass {
     overflow-y: scroll;  
 }
 
-.quadro::-webkit-scrollbar {
+.quadroo::-webkit-scrollbar {
     width: 10px;
     border: none;
 }
 
-.quadro::-webkit-scrollbar-thumb{
-    background-color: #3981b4;
+.quadroo::-webkit-scrollbar-thumb{
+    background-color: #ec7211;
 }
 
 
-.but_desing {
-    background: #3F9FE4;
+.but_desingg {
+    background: #ffffff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    color: #FFFFFF;
+    color: rgba(88, 70, 70, 0.61);
     text-decoration: none;
     cursor: pointer;
     border: none;
     width: 200px;
     height: 60px;
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
-.but_budge {
-    background: #FFFEFF;
+.but_budgee {
+    background: #f37e1f;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    color: rgba(88, 70, 70, 0.61);
+    color: #FFFFFF;
     text-decoration: none;
     cursor: pointer;
     border: none;
@@ -112,8 +127,8 @@ logo_diagramass {
     justify-content: center;
 }
 
-.but_budge:hover {
-    background-color: #ec7211;
+.but_desingg:hover {
+    background-color: #3F9FE4;
     color: #FFFFFF;
 }
 
@@ -151,8 +166,8 @@ logo_diagramass {
     outline: unset;
 }
 
-.componente_principal {
-    background: #3F9FE4;
+.componente_principall {
+    background: #f37e1f;
     color: #FFFFFF;
     text-decoration: none;
     cursor: pointer;
@@ -191,29 +206,54 @@ logo_diagramass {
 
 .all_itens {
     display: flex;
-    
 }
 
-.diagramaa img {
-    margin-left: 300px;
-    width: 680px;
-    height: 900px;  
-    margin-top: -40px;
-    transform: rotate(90deg);
+.iframe {
+    height: 800px;
+    width: 1400px;
+    margin-left: 30px;
+    border: none;
+    margin-top: 8px;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 22%, rgba(255,255,255,1) 100%);
 }
 
-.resize-drag {
-    width: 120px;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 1rem;
-    background-color: #29e;
-    color: white;
-    font-size: 20px;
-    font-family: sans-serif;
-  
-    touch-action: none;
-  
-    /* This makes things *much* easier */
-    box-sizing: border-box;
-  }
+
+.retangulo {
+    height: 55px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    margin-top: 8px;
+    margin-left: 30px;
+}
+
+.teste {
+    height: 750px;
+    width: 1400px;
+    position: relative;
+    z-index: 1;
+}
+
+.retangulo2 {
+    height: 42px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    margin-top: 768px;
+    margin-left: 30px;
+}
+
+.retangulo3 {
+    width: 42px;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    z-index: 99;
+    right: 0;
+    /* margin-top: 768px; */    
+}

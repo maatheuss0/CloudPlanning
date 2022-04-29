@@ -16,7 +16,7 @@ function App() {
             <header className="header_diagrama">
                 <div className="containerr container_headerr">
                     <div className="redirencionarr">
-                        <img src={logo1} alt="logo_CloudPlanning" />
+                        <img className="logo_azul" src={logo1} alt="logo_CloudPlanning" />
                         <p className="logo_diagramass">CloudPlanning</p>
                     </div>
                 </div>
