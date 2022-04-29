@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning - Copia\\testandooooooooooooo\\testandooooooooooooo.csproj",
+      "projectUniqueName": "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning\\API\\Teste-Funcionalidades\\testandooooooooooooo\\testandooooooooooooo.csproj",
       "projectName": "testandooooooooooooo",
-      "projectPath": "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning - Copia\\testandooooooooooooo\\testandooooooooooooo.csproj",
+      "projectPath": "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning\\API\\Teste-Funcionalidades\\testandooooooooooooo\\testandooooooooooooo.csproj",
       "packagesPath": "C:\\Users\\47503739827.INFOSCS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning - Copia\\testandooooooooooooo\\obj\\",
+      "outputPath": "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning\\API\\Teste-Funcionalidades\\testandooooooooooooo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\47503739827.INFOSCS\\AppData\\Roaming\\NuGet\\NuGet.Config",

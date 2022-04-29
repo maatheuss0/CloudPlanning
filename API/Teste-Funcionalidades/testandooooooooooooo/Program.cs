@@ -45,7 +45,7 @@ namespace testandooooooooooooo
                     .Replace("[NomeSubnetPrivada]", "SUBNETPRIVADA");
 
 
-
+                // File.WriteAllLines
                 File.WriteAllText(destinoDir + fName, texto);
             }
         }

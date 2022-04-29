@@ -4,7 +4,6 @@ GO
 USE CloudPlanning;
 GO
 
-
 CREATE TABLE usuario(
 	idUsuario INT PRIMARY KEY IDENTITY,
 	email VARCHAR(50) NOT NULL UNIQUE,
