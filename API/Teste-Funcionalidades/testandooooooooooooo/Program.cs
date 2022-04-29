@@ -23,7 +23,7 @@ namespace testandooooooooooooo
 
 
                 // Will not overwrite if the destination file already exists.
-                File.Copy(Path.Combine(sourceDir, fName), Path.Combine(destinoDir, fName));
+                File.Copy(Path.Combine(sourceDir, fName), Path.Combine(destinoDir, fName)); // 41 items
                 var texto = File.ReadAllText(destinoDir + fName)
                     .Replace("[enable_dns_hostnames]", "true")
                     .Replace("[nomeVPC]", "TestandoVPC")
@@ -42,7 +42,16 @@ namespace testandooooooooooooo
                     .Replace("[NomeSubnetPublica]", "SUBNETPUBLICA")
                     .Replace("[cidr_block_aws_subnet_private]", "0.0.0.0/0")
                     .Replace("[availability_zone_private]", "b")
-                    .Replace("[NomeSubnetPrivada]", "SUBNETPRIVADA");
+                    .Replace("[NomeSubnetPrivada]", "SUBNETPRIVADA")
+                    .Replace("[cidr_block_route]", "0.0.0.0/0")
+                    .Replace("[NomeRota]", "TesteRota")
+                    .Replace("[access_key]", "access_key")
+                    .Replace("[secret_key]", "secret_key")
+                    .Replace("[region]", "region") 
+                    .Replace("[associate_public_ip_address]", "true")
+                    .Replace("[instance_type_ec2]", "instance_type_ec2")
+                    .Replace("[instance_type_ec2]", "instance_type_ec2")
+                    .Replace("[key_name]", "key_name");
 
 
                 // File.WriteAllLines
