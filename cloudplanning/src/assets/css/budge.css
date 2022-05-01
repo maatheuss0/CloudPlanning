@@ -40,7 +40,7 @@
 .imgLogo {
     width: 75px;
     height: 106px;
-    margin-top: 10px;
+    margin-top: 13px;
 }
 
 
@@ -52,7 +52,7 @@
 }
 
 .redirencionarrr {
-    margin-left: 400px;
+    margin-left: 410px;
     display: flex;
     align-items: center;
 }
@@ -63,12 +63,12 @@
     color: white;
     text-decoration:double;
     margin-right: 340px;
-    font-size: 22px;
+    font-size: 25px;
     font-weight:unset;
     width: 196px;
+    margin-top: 16px;
+    margin-left: 20px;
     color: #f37e1f;
-    margin-top: 10px;
-    margin-left: 24px;
 }
 
 /* Diagramas */
@@ -257,3 +257,27 @@
     right: 0;
     /* margin-top: 768px; */    
 }
+
+.formatação {
+    font-family: 'Open Sans', sans-serif;
+    color: #000000;
+    font-weight: 100;
+    font-size: 14px;
+    text-align: center;
+    text-align: justify;
+    padding: 0px 15px;
+}
+
+.formatação_aws {
+    font-family: 'Open Sans', sans-serif;
+    color: #000000;
+    font-weight: 100;
+    font-size: 14px;
+    text-align: center;
+    text-align: justify;
+    padding: 0px 15px;
+    margin-bottom: 40px;
+}
+
+
+

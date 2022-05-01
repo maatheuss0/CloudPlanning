@@ -232,7 +232,9 @@ header p {
 }
 
 .fundo2 img {
-  margin-left: -14px;
+  margin-left: 30px;
+  width: 596px;
+  height: 425px;
 }
 
 .quem_somos{
@@ -242,12 +244,26 @@ header p {
 }
 
 .quem_somos span {
-  font-size: 17 px;
   font-family: 'Open Sans', sans-serif;
   text-align: justify;
   font-weight: 100;
   color: white;
-  margin-top: 40px;
+  margin-top: 30px;
+}
+
+.fundo2 hr {
+  border-top: 1px solid rgb(0, 0, 0);
+  margin-top: 20px;
+  width: 100%;
+}
+
+.fundo2 h1 {
+  font-size: 40px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: justify;
+  font-weight: 100;
+  color: white;
+  margin-top: 0px;
 }
 
 
@@ -261,7 +277,7 @@ header p {
   text-decoration: none;
   cursor: pointer;
   border-radius: 10px;
-  margin-left: 235px;
+  margin-left: 365px;
   margin-top: 20px;
   font-weight: 100;
   padding: 10px 88px;

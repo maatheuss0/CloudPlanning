@@ -16,14 +16,12 @@ import fundo from '../../assets/img/image_fundo.png'
 function App() {
   return (
     <div>
-
-
       <header>
         <div className
-        ="container container_header">
+          ="container container_header">
           <img src={logo} alt="logo_CloudPlanning" />
           <p>CloudPlanning</p>
-          <nav className  ="cabeçalho">
+          <nav className="cabeçalho">
             <a className="alinhamento" href="#início">INÍCIO</a>
             {/* <a className="alinhamento" href="#sobre nós">SOLUÇÕES</a> */}
             <a className="alinhamento" href="#tips">SOLUÇÕES</a>
@@ -94,6 +92,8 @@ function App() {
           <div id="tips" className="fundo2 container">
             <img src={diagrama2} alt="" />
             <div className="quem_somos">
+              <h1>Diagramas de rede</h1>
+              <hr></hr>
               <span>Os diagramas de rede são essenciais para ilustrar as entradas e saídas da sua rede. Como
                 engenheiro de rede ou profissional de TI, você provavelmente precisará desenhar diagramas de
                 rede ao projetar, desenvolver e solucionar problemas de sua rede, ou para ajudar outras
@@ -110,7 +110,7 @@ function App() {
                 dispositivos, hubs, firewalls etc. Este diagrama de rede mostra uma rede de área local
                 (LAN)</span>
 
-                <Link to="/login" className="botao1">Começe agora</Link>
+              <Link to="/login" className="botao1">Começe agora</Link>
               {/* <button>Começe agora</button> */}
             </div>
           </div>

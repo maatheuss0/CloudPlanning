@@ -29,8 +29,8 @@
 }
 
 .logo_azul {
-    width: 105px;
-    height: 120px;
+    width: 108px;
+    height: 124px;
 }
 
 
@@ -42,13 +42,13 @@
 }
 
 .redirencionarr {
-    margin-left: 400px;
+    margin-left: 395px;
     display: flex;
     align-items: center;
 }
 
 
-logo_diagramass {
+.logo_diagramass {
     font-family: 'Red Hat Mono', monospace;    
     color: white;
     text-decoration:double;

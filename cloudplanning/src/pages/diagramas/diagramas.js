@@ -25,7 +25,7 @@ function App() {
                 <div className="all_itens">
                     <section className="quadro">
                         <div className="but">
-                            <button className="but_desing">Desing</button>
+                            <button className="but_desing">Design</button>
                             {/* <button className="but_budge">Budge</button> */}
                             <Link to="/budge" className="but_budge">Budge</Link>
                         </div>
@@ -64,7 +64,7 @@ function App() {
 
                     <section>
                         <div className="diagramaa">
-                            <img src={diagrama_fundo} alt="" />
+                            {/* <img src={diagrama_fundo} alt="" /> */}
                         </div>
                     </section>
                 </div>
