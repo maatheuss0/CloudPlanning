@@ -15,10 +15,9 @@ import fundo from '../../assets/img/image_fundo.png'
 
 function App() {
   return (
-    <div>
+    <div className='itens'>
       <header>
-        <div className
-          ="container container_header">
+        <div className="container container_header">
           <img src={logo} alt="logo_CloudPlanning" />
           <p>CloudPlanning</p>
           <nav className="cabeçalho">

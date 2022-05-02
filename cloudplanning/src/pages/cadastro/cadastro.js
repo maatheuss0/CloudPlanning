@@ -86,21 +86,21 @@ export default class Cadastro extends Component {
         return (
             <div>
 
-                <main class="main-login">
-                    <div class="container-fundo">
+                <main className="main-login">
+                    <div className="container-fundo">
 
                     </div>
 
-                    <div class="container-input">
+                    <div className="container-input">
                         <a href="http://localhost:3000/">
-                            <img class="logo" src={logo} alt="logo" />
+                            <img className="logo" src={logo} alt="logo" />
                         </a>
-                        <p class="titulo-input">Crie uma conta gratuita</p>
-                        <hr />
+                        <p className="titulo-input">Crie uma conta gratuita</p>
+                        <hr className='hr_cadastro' />
 
                         {/* <button onClick={() => this.botaoDoMenu()}>a</button> */}
 
-                        <form id="aaa" class="form-login" action="submit" onSubmit={this.cadastrarUsuario}>
+                        <form id="aaa" className="form-cadastro" action="submit" onSubmit={this.cadastrarUsuario}>
 
                             <input className="input-login" type="name" placeholder="Nome"
                                 name='nomeUsuario'
@@ -142,7 +142,7 @@ export default class Cadastro extends Component {
                             />
 
 
-                            <button class="btn-entrar" type="submit">Cadastrar-se</button>
+                            <button className="btn-entrar" type="submit">Cadastrar-se</button>
                             <p style={{ color: 'green' }}>{this.state.cadastroMensagem}</p>
                             
                         </form>

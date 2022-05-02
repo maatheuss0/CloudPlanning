@@ -47,13 +47,13 @@
     max-width: 490px;
 }
 
-.container-input hr {
+.hr_cadastro {
     border-top: 1px solid rgb(0, 0, 0);
     margin-top: -45px;
     width: 600px;
 }
 
-.form-login{
+.form-cadastro{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -140,4 +140,62 @@
     color: #197BC2;
     text-decoration: none;
     font-weight: 100;
+}
+
+@media (max-width: 524px) {
+
+    .container-fundo {
+        display: none;
+    }
+
+    .logo {
+        margin-left: 310px;
+        width: 411px;
+        height: 145px;
+    }
+
+    .titulo-input {
+        font-size: 30px;
+        margin-left: 350px;
+        margin-top: 0px;
+    }
+
+    .hr_cadastro {
+        display: none;
+    }
+
+    .form-cadastro {
+        margin-left: 345px;
+        background-color: #ffffff;
+        width: 456px;
+        box-shadow:0px 0px 10px -3px #000000;
+        padding: 25px 0px;
+        margin-top: -30px;
+    }
+
+    .form-login input {
+      width: 400px;
+      font-size: 15px;
+    }
+
+    .esqueceu-senha {
+        margin-left: 453px;
+    }
+
+    .cadastrar2 {
+        margin-left: 364px;
+        width: 350px;
+        font-size: 15px;
+    }
+
+    .cadastrar3 {
+        margin-left: 405px;
+        width: 613px;
+        font-size: 15px;
+        margin-top: -12px;
+        margin-bottom: 10px;
+    }
+
+
+
 }

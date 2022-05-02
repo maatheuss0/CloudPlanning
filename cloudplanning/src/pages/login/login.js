@@ -52,18 +52,18 @@ export default class Login extends Component {
         return (
             <div>
 
-                <main class="main-login">
-                    <div class="container-fundo">
+                <main className="main-login">
+                    <div className="container-fundo">
 
                     </div>
 
-                    <div class="container-input">
+                    <div className="container-input">
                         <a href="http://localhost:3000/">
-                            <img class="logo" src={logo} alt="logo" />
+                            <img className="logo" src={logo} alt="logo" />
                         </a>
-                        <p class="titulo-input">Realize login no sistema</p>
-                        <hr />
-                        <form onSubmit={this.efetuaLogin} class="form-login">
+                            <p className="titulo-inputt">Realize login no sistema</p>
+                            <hr className='hr_login'/>
+                        <form onSubmit={this.efetuaLogin} className="form-login">
                             <input
                                 className="input-login"
                                 // e-mail
@@ -101,7 +101,7 @@ export default class Login extends Component {
                             <p className="erro" style={{ color: 'red' }}>{this.state.erroMensagem}</p>
 
                         </form>
-                        
+
                         <div className="cadastrar">
                             <p>Não possui uma conta?</p> <Link to="/cadastro" className="login">Cadastre-se</Link>
                         </div>

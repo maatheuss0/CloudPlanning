@@ -300,19 +300,36 @@ footer span {
 @media (max-width: 524px) {
   
 
-  .login {
+  .banner {
+    width: 100%;
+  }
+
+  /* .cabeçalho a {
+    display: none;
+  } */
+
+  .login1 {
       font-size: 16px;
-      display: none;
+      /* display: none; */
+      margin-left: -248px;
+  }
+
+  .butao {
+    margin-right: 96px;
+    width: 94px;
+    padding: 9px 18px;
+    height: 34px;
+    font-size: 13px;
   }
 
   .alinhamento {
       display: none;
   }
 
-  .container_header p {
+  /* .container_header p {
       margin-right: 181px;
       font-size: 20px;
-  }
+  } */
 
   .cabeçalho button {
       margin-right: 68px;
@@ -328,7 +345,7 @@ footer span {
   .container_header img {
       width: 54px;
       height: 59px;
-      margin-left: 44px;
+      margin-left: 83px;
   }
 
   .conteudo_banner {
@@ -336,17 +353,22 @@ footer span {
       height: 1236px
   }
 
+  .fundo {
+    height: 1281px;
+  }
+
   .conteudo_banner {
       display: flex;
       flex-direction: column;
       justify-content: center;
       margin-left: 43px;
-      margin-top: -15px;
+      margin-top: -40px;
   }
 
   .caixa {
       margin-top: 34px;
-
+      width: 445px;
+      height: 626px;
   }
 
   .diagramas {
@@ -367,7 +389,10 @@ footer span {
   }
 
   .diagramas img {
-      margin-top: 200px; 
+      margin-top: 100px;
+      margin-bottom: -93px; 
+      height: 272px;
+      width: 438px;
   }
 
   .infra2 {
@@ -377,18 +402,31 @@ footer span {
   .fundo2 {
       display: flex;
       flex-direction: column;
-      height: 957px;
+      height: 685px;
       width: 483px;
   }
 
   .fundo2 img {
-      height: 330px;
-      width: 422px;
-      margin-left: 10px;
+      display: none;
+  }
+
+  .botao1 {
+    margin-left: 57px;
+    margin-top: 42px;
   }
 
   .quem_somos button {
       margin-left: 47px;
+  }
+
+  .quem_somos h1 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  footer {
+    width: 100%;
   }
 
 }

@@ -54,6 +54,7 @@
 .redirencionarrr {
     margin-left: 410px;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -209,11 +210,10 @@
 }
 
 .iframe {
-    height: 800px;
+    height: 735px;
     width: 1400px;
     margin-left: 30px;
     border: none;
-    margin-top: 8px;
     overflow: hidden;
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 22%, rgba(255,255,255,1) 100%);
 }
@@ -226,7 +226,7 @@
     position: absolute;
     z-index: 99;
     top: 0;
-    margin-top: 8px;
+    margin-top: 62px;
     margin-left: 30px;
 }
 
@@ -244,7 +244,7 @@
     position: absolute;
     z-index: 99;
     top: 0;
-    margin-top: 768px;
+    margin-top: 757px;
     margin-left: 30px;
 }
 
@@ -277,6 +277,26 @@
     text-align: justify;
     padding: 0px 15px;
     margin-bottom: 40px;
+}
+
+.tittle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.tittle h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight:lighter;
+    font-size: 30px;
+}
+
+.tittle hr {
+    border-top: 1px solid rgb(0, 0, 0);
+    margin-top: 20px;
+    width: 610px;
 }
 
 

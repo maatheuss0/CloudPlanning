@@ -85,6 +85,10 @@ function App() {
 
                     <section>
                         <div className="teste">
+                            <div className='tittle'>
+                                <h1>Calculadora AWS</h1>
+                                <hr></hr>
+                            </div>
                             <iframe scrolling="no" className="iframe" src="https://calculator.aws/#/estimate" title="description"></iframe>
                             <div className='retangulo'>
                             </div>
