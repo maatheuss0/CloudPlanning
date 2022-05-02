@@ -1,13 +1,13 @@
 USE CloudPlanning;
 GO
 
-SELECT * FROM usuario
+SELECT * FROM Usuario
 
-SELECT * FROM usuarioComum
+SELECT * FROM UsuarioComum
 
-SELECT * FROM empresa
+SELECT * FROM Empresa
 
-SELECT * FROM diagrama
+SELECT * FROM Diagrama
 
 SELECT * FROM Componentes
 

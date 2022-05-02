@@ -1,9 +1,9 @@
-USE OFERTA;
+USE CloudPlanning;
 GO
 
 
-INSERT INTO usuario (email, senha) 
-VALUES 
+INSERT INTO TipoUsuario(permissao) 
+VALUES ('Usuario Comum'), ('Empresa')
 GO
 
 

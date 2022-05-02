@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <Folder Include="Contexts\" />
+    <Folder Include="Domains\" />
   </ItemGroup>
 
 	<PropertyGroup>
