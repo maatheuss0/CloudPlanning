@@ -96,7 +96,7 @@ export default class Cadastro extends Component {
                         <a href="http://localhost:3000/">
                             <img className="logo" src={logo} alt="logo" />
                         </a>
-                        <p className="titulo-input">Crie uma conta gratuita</p>
+                        <p className="titulo-input_cad">Crie uma conta gratuita</p>
                         <hr className='hr_cadastro' />
 
                         {/* <button onClick={() => this.botaoDoMenu()}>a</button> */}

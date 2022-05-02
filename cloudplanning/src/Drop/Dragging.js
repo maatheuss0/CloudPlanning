@@ -48,3 +48,7 @@ function dragMoveListener (event) {
 
 // this function is used later in the resizing and gesture demos
 window.dragMoveListener = dragMoveListener
+
+function myFunction(x) {
+  x.classList.toggle("change");
+}

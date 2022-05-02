@@ -255,6 +255,18 @@
     outline: 0;
 }
 
+
+.botao_perfil {
+    width: 100px;
+    height: 100px;
+    margin-top: -65px;
+}
+
+.perfil_redirencionar {
+    margin-left: 1200px;
+    position: absolute;
+}
+
   #drag-2 {
     height: 293px;
     width: 290px;

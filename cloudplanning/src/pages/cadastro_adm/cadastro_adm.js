@@ -89,12 +89,12 @@ export default class Cadastro extends Component {
                         <a href="http://localhost:3000/">
                             <img className="logo" src={logo} alt="logo" />
                         </a>
-                        <p className="titulo-input">Crie uma conta gratuita</p>
+                        <p className="titulo-input_adm">Crie uma conta gratuita</p>
                         <hr className='hr_adm'></hr>
 
                         {/* <button onClick={() => this.botaoDoMenu()}>a</button> */}
 
-                        <form id="aaa" className="form-login" action="submit" onSubmit={this.cadastrarEmpresa}>
+                        <form id="aaa" className="form-cadastro_adm" action="submit" onSubmit={this.cadastrarEmpresa}>
 
                             <input className="input-login" type="name" placeholder="Nome Fantasia"
                                 name='NomeFantasia'

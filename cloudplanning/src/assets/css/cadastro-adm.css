@@ -53,7 +53,7 @@
     width: 600px;
 }
 
-.form-login {
+.form-cadastro_adm {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,7 +62,7 @@
     margin-top: 50px;
 }
 
-.titulo-input {
+.titulo-input_adm {
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -135,8 +135,58 @@
 
 @media (max-width: 524px) {
 
+    .container-fundo {
+        display: none;
+    }
+
+    .logo {
+        margin-left: 310px;
+        width: 411px;
+        height: 145px;
+    }
+
+    .titulo-input_adm {
+        font-size: 30px;
+        margin-left: 350px;
+        margin-top: 0px;
+        width: 314px;
+    }
+
     .hr_adm {
         display: none;
     }
+
+    .form-cadastro_adm {
+        margin-left: 345px;
+        background-color: #ffffff;
+        width: 456px;
+        box-shadow:0px 0px 10px -3px #000000;
+        padding: 25px 0px;
+        margin-top: -30px;
+    }
+
+    .form-login input {
+      width: 400px;
+      font-size: 15px;
+    }
+
+    .esqueceu-senha {
+        margin-left: 453px;
+    }
+
+    .cadastrar2 {
+        margin-left: 364px;
+        width: 350px;
+        font-size: 15px;
+    }
+
+    .cadastrar3 {
+        margin-left: 405px;
+        width: 613px;
+        font-size: 15px;
+        margin-top: -12px;
+        margin-bottom: 10px;
+    }
+
 
 }

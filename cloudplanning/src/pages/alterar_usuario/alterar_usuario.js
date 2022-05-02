@@ -1,4 +1,4 @@
-import '../../assets/css/alterar_perfil.css'
+import '../../assets/css/alterar_usuario.css'
 import { Component } from 'react';
 import { Link } from 'react-router-dom'
 import React from 'react'
@@ -11,10 +11,10 @@ import diagrama_fundo from '../../assets/img/tela_diagrama.png'
 function App() {
     return (
         <div>
-            <header className="header_diagrama">
+            <header className="header_diagramaa">
                 <div className="containerr container_headerr">
                     <div className="redirencionarr">
-                        <img src={logo1} alt="logo_CloudPlanning" />
+                        <img className="logo_azul" src={logo1} alt="logo_CloudPlanning" />
                         <p className="logo_diagramass">CloudPlanning</p>
                     </div>
                 </div>

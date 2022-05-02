@@ -62,7 +62,7 @@
     margin-top: 50px;
 }
 
-.titulo-input{
+.titulo-input_cad{
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -154,7 +154,7 @@
         height: 145px;
     }
 
-    .titulo-input {
+    .titulo-input_cad {
         font-size: 30px;
         margin-left: 350px;
         margin-top: 0px;

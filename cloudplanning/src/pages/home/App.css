@@ -43,7 +43,7 @@ header {
   width: 590px;
 }
 
-header img {
+.logo_home {
   width: 82px;
   height: 91px;
 }
@@ -178,11 +178,14 @@ header p {
 .diagramas h2 {
   font-weight:normal;
   font-size: 45px;
+  color: black;
+
 }
 
 .diagramas h3 {
   margin-top: 12px;
   font-size: 30px;
+  color: black;
   font-weight:normal;
 }
 
@@ -269,7 +272,7 @@ header p {
 
 .botao1 {
   border: none;
-  width: 300px;
+  width: 310px;
   height: 50px;
   background-color: #3F9FE4;
   color: #FFFFFF;
@@ -279,8 +282,8 @@ header p {
   border-radius: 10px;
   margin-left: 365px;
   margin-top: 20px;
-  font-weight: 100;
-  padding: 10px 88px;
+  font-weight: lighter;
+  padding: 14px 88px;
 }
 
 footer{
@@ -378,10 +381,12 @@ footer span {
 
   .diagramas h2 {
       font-size: 31px;
+      color: black;
   }
 
   .diagramas h3 {
       font-size: 25px;
+      color: black;
   }
 
   .diagramas hr {

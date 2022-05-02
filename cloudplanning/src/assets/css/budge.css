@@ -291,11 +291,12 @@
     font-family: 'Open Sans', sans-serif;
     font-weight:lighter;
     font-size: 30px;
+    color: black;
 }
 
 .tittle hr {
     border-top: 1px solid rgb(0, 0, 0);
-    margin-top: 20px;
+    margin-top: 19px;
     width: 610px;
 }
 

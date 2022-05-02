@@ -18,7 +18,7 @@ function App() {
     <div className='itens'>
       <header>
         <div className="container container_header">
-          <img src={logo} alt="logo_CloudPlanning" />
+          <img className="logo_home" src={logo} alt="logo_CloudPlanning" />
           <p>CloudPlanning</p>
           <nav className="cabeçalho">
             <a className="alinhamento" href="#início">INÍCIO</a>
