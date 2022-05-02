@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import React from 'react'
 
 
-
 import logo from '../../assets/img/logo.png'
 import axios from 'axios';
 
@@ -21,8 +20,10 @@ export default class Cadastro extends Component {
             CPF: '',
             dataNasc: '',
             cadastroMensagem: '',
+            
         };
     };
+
 
     cadastrarUsuario = (event) => {
         event.preventDefault();
@@ -108,11 +109,6 @@ export default class Cadastro extends Component {
                                 value={this.state.nomeUsuario}
                             />
 
-                            {/* <input className="input-login" type="name" placeholder="Empresa"
-                                name='empresa'
-                                onChange={this.atualizaStateCampo}
-                                value={this.state.empresa}
-                            /> */}
 
                             <input className="input-login" type="date" placeholder="Data de nascimento"
                                 name='dataNasc'
@@ -122,11 +118,11 @@ export default class Cadastro extends Component {
 
  
                             <input className="input-login"
-                                type="name"
                                 placeholder="CPF"
-                                name='CPF' maxLength="14"
-                                onChange={this.atualizaStateCampo}
+                                name='CPF'
+                                maxLength="14"
                                 value={this.state.CPF}
+                                onChange={this.atualizaStateCampo}
                             />
 
                             <input className="input-login" type="Email" placeholder="Email"

@@ -2,11 +2,13 @@ import '../../assets/css/diagramas.css'
 import { Component } from 'react';
 import { Link } from 'react-router-dom'
 import React from 'react'
-
+import '../../Drop/Dragging.js'
 
 
 import logo1 from '../../assets/img/CloudPlanning-_1_-1 1.png'
 import diagrama_fundo from '../../assets/img/tela_diagrama.png'
+import ec2 from '../../assets/img/ec2.png'
+
 
 
 
@@ -63,8 +65,22 @@ function App() {
                     </section>
 
                     <section>
-                        <div className="diagramaa">
-                            {/* <img src={diagrama_fundo} alt="" /> */}
+
+
+                        <div className='tittle_diagrama'>
+                            <form>
+                                <input className='titulo' placeholder='Meu primerio diagrama'></input>
+                            </form>
+                            <hr></hr>
+                        </div>
+                        {/* <div className="diagramaa">
+                            <img className='diagrama_fundu' src={diagrama_fundo} alt="" />
+                        </div> */}
+                        <div id="drag-2" className="draggable">
+
+                        </div>
+                        <div id="drag-2" className="draggable">
+
                         </div>
                     </section>
                 </div>

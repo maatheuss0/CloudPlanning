@@ -195,11 +195,11 @@
     
 }
 
-.diagramaa img {
+.diagrama_fundu {
     margin-left: 300px;
     width: 680px;
     height: 900px;  
-    margin-top: -40px;
+    margin-top: -90px;
     transform: rotate(90deg);
 }
 
@@ -218,3 +218,64 @@
     /* This makes things *much* easier */
     box-sizing: border-box;
   }
+
+  .tittle_diagrama {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 395px;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.tittle_diagrama h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight:lighter;
+    font-size: 30px;
+}
+
+.tittle_diagrama hr {
+    border-top: 1px solid rgb(0, 0, 0);
+    margin-top: -5px;
+    width: 610px;
+}
+
+.titulo {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-bottom: 1.07527px solid #000000;
+    margin: 12px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.83);
+    border: 0 none;
+    outline: 0;
+}
+
+  #drag-2 {
+    height: 293px;
+    width: 290px;
+    min-height: 6.5em;
+    /* padding: 4%; */
+    touch-action: none;
+    user-select: none;
+    transform: translate(0px, 0px);
+    background-image: url(../img/teste.png);
+    background-repeat: no-repeat;
+  }
+
+  #drag-3 {
+    height: 293px;
+    width: 290px;
+    min-height: 6.5em;
+    /* padding: 4%; */
+    touch-action: none;
+    user-select: none;
+    transform: translate(0px, 0px);
+    background-image: url(../img/igw.webp);
+    background-repeat: no-repeat;
+  }
+

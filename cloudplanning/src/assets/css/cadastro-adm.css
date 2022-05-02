@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,7 +16,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300&display=swap');
 
 
-.main-login{
+.main-login {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -24,7 +24,7 @@
     align-items: center;
 }
 
-.container-fundo{
+.container-fundo {
     width: 50%;
     height: 100vh;
     background-image: url(../img/Login-image.png);
@@ -33,7 +33,7 @@
     background-position: center;
 }
 
-.container-input{
+.container-input {
     width: 50%;
     height: 80vh;
     display: flex;
@@ -43,17 +43,17 @@
     margin-top: 20px;
 }
 
-.logo{
+.logo {
     max-width: 490px;
 }
 
-.container-input hr {
+.hr_adm {
     border-top: 1px solid rgb(0, 0, 0);
     margin-top: -45px;
     width: 600px;
 }
 
-.form-login{
+.form-login {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,7 +62,7 @@
     margin-top: 50px;
 }
 
-.titulo-input{
+.titulo-input {
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -75,7 +75,7 @@
     margin-top: 20px;
 }
 
-.input-login{
+.input-login {
     width: 65%;
     padding: 8px;
     border: none;
@@ -92,7 +92,7 @@
     outline: unset;
 }
 
-.esqueceu-senha{
+.esqueceu-senha {
     width: 65%;
     font-family: 'Open Sans';
     font-style: normal;
@@ -103,7 +103,7 @@
     color: #4E4E4E;
 }
 
-.btn-entrar{
+.btn-entrar {
     background: #197BC2;
     border-radius: 17px;
     font-family: 'Open Sans', sans-serif;

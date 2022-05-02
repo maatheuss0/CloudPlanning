@@ -1,4 +1,4 @@
-import '../../assets/css/cadastro.css'
+import '../../assets/css/cadastro-adm.css'
 import { Component } from 'react';
 import { Link } from 'react-router-dom'
 import React from 'react'
@@ -90,7 +90,7 @@ export default class Cadastro extends Component {
                             <img className="logo" src={logo} alt="logo" />
                         </a>
                         <p className="titulo-input">Crie uma conta gratuita</p>
-                        <hr className='hr_adm'/>
+                        <hr className='hr_adm'></hr>
 
                         {/* <button onClick={() => this.botaoDoMenu()}>a</button> */}
 
@@ -109,7 +109,7 @@ export default class Cadastro extends Component {
                             /> */}
 
                             <input className="input-login"
-                                type="name"
+                                type="number"
                                 placeholder="Telefone"
                                 name='telefone'
                                 onChange={this.atualizaStateCampo}
