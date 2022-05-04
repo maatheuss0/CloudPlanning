@@ -15,9 +15,7 @@ import cadastro from './pages/cadastro/cadastro';
 import diagramas from './pages/diagramas/diagramas';
 import NotFound from './pages/notFound/NotFound';
 import Budge from './pages/budge/budge'
-import Cadastro_adm from './pages/cadastro_adm/cadastro_adm'
 import alterar_usuario from './pages/alterar_usuario/alterar_usuario'
-import alterar_empresa from './pages/alterar_empresa/alterar_empresa'
 // import esqueciSenha from './pages/esqueciSenha/esqueciSenha';
 
 import reportWebVitals from './reportWebVitals';
@@ -32,9 +30,7 @@ const routing = (
         <Route path="/cadastro" component={cadastro} /> {/* Cadastro */}
         <Route path="/diagramas" component={diagramas} /> {/* Diagramas */}
         <Route path="/budge" component={Budge} /> {/* Diagramas */}
-        <Route path="/cadastro_adm" component={Cadastro_adm} /> {/* Diagramas */}
         <Route path="/alterar_usuario" component={alterar_usuario} /> {/* Diagramas */}
-        <Route path="/alterar_empresa" component={alterar_empresa} /> {/* Diagramas */}
         {/* <Route path="/esqueciSenha" component={esqueciSenha} /> esqueciSenha */}
 
         <Route path="/notFound" component={NotFound} /> {/* Not Found */}

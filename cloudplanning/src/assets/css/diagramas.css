@@ -225,9 +225,9 @@
     align-items: center;
     margin-left: 395px;
     flex-direction: column;
-    margin-top: 40px;
+    margin-top: 20px;
 }
-
+    
 .tittle_diagrama h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight:lighter;
@@ -265,6 +265,11 @@
 .perfil_redirencionar {
     margin-left: 1200px;
     position: absolute;
+}
+
+.perfil_redirencionar p {
+    font-family: 'Open Sans', sans-serif;
+    margin-left: -90px;
 }
 
   #drag-2 {

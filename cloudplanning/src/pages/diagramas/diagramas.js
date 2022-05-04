@@ -5,6 +5,7 @@ import React from 'react'
 import '../../Drop/Dragging.js'
 
 
+import woman from '../../assets/img/woman.png'
 import logo1 from '../../assets/img/CloudPlanning-_1_-1 1.png'
 import diagrama_fundo from '../../assets/img/tela_diagrama.png'
 import ec2 from '../../assets/img/ec2.png'
@@ -13,6 +14,7 @@ import ec2 from '../../assets/img/ec2.png'
 
 
 function App() {
+    document.title = 'Diagramas | CloudPlanning'
     return (
         <div>
             <header className="header_diagrama">
@@ -89,8 +91,9 @@ function App() {
 
                         <div className="perfil_redirencionar">
                             <form>
+                                <p>Username</p>
                                 <a href="http://localhost:3000/alterar_usuario">
-                                    <img className="botao_perfil" src={logo1}></img>
+                                    <img className="botao_perfil" src={woman}></img>
                                 </a>
                             </form>
                         </div>

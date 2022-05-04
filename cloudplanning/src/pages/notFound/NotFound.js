@@ -5,6 +5,7 @@ import not from '../../assets/img/notFound.png'
 
 
 function App() {
+  document.title = 'Página não encontrada'
   return (
     <div className="App">
       <header className="App-header">

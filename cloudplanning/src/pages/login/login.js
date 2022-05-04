@@ -49,6 +49,7 @@ export default class Login extends Component {
 
 
     render() {
+        document.title = 'Login | CloudPlanning'
         return (
             <div>
 

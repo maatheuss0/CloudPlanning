@@ -14,6 +14,7 @@ import fundo from '../../assets/img/image_fundo.png'
 
 
 function App() {
+  document.title = 'Início | CloudPlanning'
   return (
     <div className='itens'>
       <header>

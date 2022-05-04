@@ -13,6 +13,7 @@ import logo_laranja from '../../assets/img/logo_laranja.png'
 
 
 function App() {
+    document.title = 'Budge | CloudPlanning'
     return (
         <div>
             <header className="header_diagrama">
