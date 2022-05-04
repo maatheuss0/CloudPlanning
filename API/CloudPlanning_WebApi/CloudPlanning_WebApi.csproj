@@ -25,7 +25,7 @@
 
   <ItemGroup>
     <Folder Include="Contexts\" />
-    <Folder Include="Domains\" />
+    <Folder Include="StaticFiles\Images\" />
   </ItemGroup>
 
 	<PropertyGroup>

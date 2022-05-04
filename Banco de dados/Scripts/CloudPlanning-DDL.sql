@@ -4,48 +4,13 @@ GO
 USE CloudPlanning;
 GO
 
-CREATE TABLE TipoUsuario(
-	idTipoUsuario INT PRIMARY KEY IDENTITY,
-	permissao VARCHAR(50)
-)
-
 CREATE TABLE Usuario(
 	idUsuario INT PRIMARY KEY IDENTITY,
-	idTipoUsuario INT FOREIGN KEY REFERENCES TipoUsuario(idTipoUsuario),
 	email VARCHAR(50) NOT NULL UNIQUE,
 	senha VARCHAR(70) NOT NULL,
 	nome VARCHAR (70),
-	CPF VARCHAR (12) NOT NULL UNIQUE,
+	imagem VARCHAR(70), 
 	DataNascimento DATE NOT NULL,
-)
-GO
-
-CREATE TABLE VPC(
-	idVPC INT PRIMARY KEY IDENTITY,
-	idRoute INT FOREIGN KEY REFERENCES Rota(idRoute),
-	idSubnet INT FOREIGN KEY REFERENCES Subnet(idSubnet),
-	idGrupoSeguranca INT FOREIGN KEY REFERENCES Grupo_Seguranca(idGrupoSeguranca),
-	nome VARCHAR(50), 
-	imagemComponente VARCHAR(70), 
-	descricao VARCHAR(100),
-	natGateway varchar(20) NOT NULL,
-)
-GO
-
-
-CREATE TABLE EC2(
-	idEC2 INT PRIMARY KEY IDENTITY,
-	idVPC INT FOREIGN KEY REFERENCES VPC(idVPC),
-	nome VARCHAR(50), 
-	imagemComponente VARCHAR(70), 
-	descricao VARCHAR(100),
-	sistemaOperacional VARCHAR(20) NOT NULL,
-	armazenamento INT NOT NULL,
-	quantidadeProcessadores INT NOT NULL,
-	RAM INT NOT NULL,
-	subRede VARCHAR(20) NOT NULL,
-	autoAssign BIT DEFAULT(0),
-	nomeChave VARCHAR(50)
 )
 GO
 
@@ -81,6 +46,35 @@ CREATE TABLE Grupo_Seguranca(
 	protocol_egress VARCHAR(40),
 	cidr_blocks_egress VARCHAR(40),
 )
+
+CREATE TABLE VPC(
+	idVPC INT PRIMARY KEY IDENTITY,
+	idRoute INT FOREIGN KEY REFERENCES Rota(idRoute),
+	idSubnet INT FOREIGN KEY REFERENCES Subnet(idSubnet),
+	idGrupoSeguranca INT FOREIGN KEY REFERENCES Grupo_Seguranca(idGrupoSeguranca),
+	nome VARCHAR(50), 
+	imagemComponente VARCHAR(70), 
+	descricao VARCHAR(100),
+	natGateway varchar(20) NOT NULL,
+)
+GO
+
+
+CREATE TABLE EC2(
+	idEC2 INT PRIMARY KEY IDENTITY,
+	idVPC INT FOREIGN KEY REFERENCES VPC(idVPC),
+	nome VARCHAR(50), 
+	imagemComponente VARCHAR(70), 
+	descricao VARCHAR(100),
+	sistemaOperacional VARCHAR(20) NOT NULL,
+	armazenamento INT NOT NULL,
+	quantidadeProcessadores INT NOT NULL,
+	RAM INT NOT NULL,
+	subRede VARCHAR(20) NOT NULL,
+	autoAssign BIT DEFAULT(0),
+	nomeChave VARCHAR(50)
+)
+GO
 
 CREATE TABLE Diagrama(
 	idDiagrama INT PRIMARY KEY IDENTITY,

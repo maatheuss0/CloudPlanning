@@ -5,6 +5,8 @@ using CloudPlanning_WebApi.Utils;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 
 namespace CloudPlanning_WebApi.Controllers
 {
@@ -15,7 +17,6 @@ namespace CloudPlanning_WebApi.Controllers
     [ApiController]
     public class UsuariosController : ControllerBase
     {
-        Email e = new();
         private readonly IUsuarioRepository _usuarioRepository;
 
         public UsuariosController(IUsuarioRepository contexto)
@@ -29,19 +30,37 @@ namespace CloudPlanning_WebApi.Controllers
             return Ok(_usuarioRepository.Listar());
         }
 
+
         [HttpPost]
-        public IActionResult Post(UsuarioComum user)
+        public IActionResult Cadastrar([FromForm] Usuario usuarionovo, IFormFile arquivo)
         {
             try
             {
-                _usuarioRepository.Cadastrar(user);
-                e.SendEmail(user.IdUsuarioNavigation.Email);
+                //int idUsuario = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
+                string[] extensoesPermitidas = { "jpg", "png", "jpeg" };
+                string uploadResultado = Upload.UploadFile(arquivo, extensoesPermitidas);
 
-                return Created("Usuario Cadastrado", new { id = user.IdUsuario });
+                if (uploadResultado == "")
+                {
+                    return BadRequest("Arquivo não encontrado");
+                }
+
+                if (uploadResultado == "Extensão não permitida")
+                {
+                    return BadRequest("Extensão de arquivo não permitida");
+                }
+
+                usuarionovo.Imagem = uploadResultado;
+
+                //_usuarioRepository.Atualizar(idUsuario, usuarionovo);
+                _usuarioRepository.Cadastrar(usuarionovo);
+
+                return StatusCode(201);
             }
-            catch (Exception erro)
+            catch (Exception ex)
             {
-                return BadRequest(erro);
+
+                return BadRequest(ex);
             }
         }
     }

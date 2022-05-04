@@ -18,7 +18,7 @@ namespace CloudPlanning_WebApi.Utils
 
             string arqv = "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning\\API\\CloudPlanning_WebApi\\Template\\template.html";
             string texto = "";
-            using (StreamReader leitor = new StreamReader(arqv))
+            using (StreamReader leitor = new (arqv))
             {
                 string linha = "";
                 while (linha != null)

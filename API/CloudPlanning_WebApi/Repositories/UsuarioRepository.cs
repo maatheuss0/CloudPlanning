@@ -31,8 +31,28 @@ namespace CloudPlanning_WebApi.Repositories
                 usuarioBuscado.Senha = usuarioAtualizado.Senha;
             }
 
+            if (usuarioAtualizado.Nome != null)
+            {
+                usuarioBuscado.Nome = usuarioAtualizado.Nome;
+            }
+
+            if (usuarioAtualizado.Imagem != null)
+            {
+                usuarioBuscado.Imagem = usuarioAtualizado.Imagem;
+            }
+
             ctx.Usuarios.Update(usuarioBuscado);
 
+            ctx.SaveChanges();
+        }
+
+        public void Cadastrar(Usuario user)
+        {
+            user.Senha = Cripto.GerarHash(user.Senha);
+
+            ctx.Usuarios.Add(user);
+            Email e = new();
+            e.SendEmail(user.Email);
             ctx.SaveChanges();
         }
 

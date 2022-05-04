@@ -50,8 +50,7 @@ namespace CloudPlanning_WebApi.Controllers
                 var minhasClaims = new[]
                 {
                     new Claim(JwtRegisteredClaimNames.Email, usuarioBuscado.Email),
-                    new Claim(JwtRegisteredClaimNames.Jti, usuarioBuscado.IdTipoUsuario.ToString()),
-                    new Claim("TipoUsuario", usuarioBuscado.IdTipoUsuario.ToString())
+                    new Claim(JwtRegisteredClaimNames.Jti, usuarioBuscado.IdUsuario.ToString()),
                 };
 
                 var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("cloudplanning-chave-autenticacao"));
