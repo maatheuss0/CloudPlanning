@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\CloudPlanning\\API\\CloudPlanning_WebApi\\CloudPlanning_WebApi.csproj": {}
+    "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning\\API\\CloudPlanning_WebApi\\CloudPlanning_WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\CloudPlanning\\API\\CloudPlanning_WebApi\\CloudPlanning_WebApi.csproj": {
+    "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning\\API\\CloudPlanning_WebApi\\CloudPlanning_WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\CloudPlanning\\API\\CloudPlanning_WebApi\\CloudPlanning_WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning\\API\\CloudPlanning_WebApi\\CloudPlanning_WebApi.csproj",
         "projectName": "CloudPlanning_WebApi",
-        "projectPath": "C:\\Users\\User\\Desktop\\CloudPlanning\\API\\CloudPlanning_WebApi\\CloudPlanning_WebApi.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\CloudPlanning\\API\\CloudPlanning_WebApi\\obj\\",
+        "projectPath": "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning\\API\\CloudPlanning_WebApi\\CloudPlanning_WebApi.csproj",
+        "packagesPath": "C:\\Users\\47503739827.INFOSCS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning\\API\\CloudPlanning_WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\47503739827.INFOSCS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -113,7 +113,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

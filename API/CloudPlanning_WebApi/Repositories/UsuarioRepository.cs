@@ -41,19 +41,6 @@ namespace CloudPlanning_WebApi.Repositories
             return ctx.Usuarios.FirstOrDefault(p => p.IdUsuario == id);
         }
 
-        public void Cadastrar(UsuarioComum novoUsuario)
-        {
-
-            novoUsuario.IdUsuarioNavigation.Senha = Cripto.GerarHash(novoUsuario.IdUsuarioNavigation.Senha);
-
-            ctx.UsuarioComums.Add(novoUsuario);
-            Email e = new();
-            e.SendEmail(novoUsuario.IdUsuarioNavigation.Email);
-            ctx.SaveChanges();
-
-
-        }
-
         public void Deletar(int id)
         {
             Usuario UsuarioBuscado = BuscarPorId(id);

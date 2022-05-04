@@ -22,7 +22,7 @@ namespace CloudPlanning_WebApi.Contexts
         public virtual DbSet<Ec2> Ec2s { get; set; }
         public virtual DbSet<Empresa> Empresas { get; set; }
         public virtual DbSet<GrupoSeguranca> GrupoSegurancas { get; set; }
-        public virtual DbSet<Rotum> Rota { get; set; }
+        public virtual DbSet<Rota> Rota { get; set; }
         public virtual DbSet<Subnet> Subnets { get; set; }
         public virtual DbSet<TipoUsuario> TipoUsuarios { get; set; }
         public virtual DbSet<Usuario> Usuarios { get; set; }
@@ -232,7 +232,7 @@ namespace CloudPlanning_WebApi.Contexts
                     .HasColumnName("to_port_ingress");
             });
 
-            modelBuilder.Entity<Rotum>(entity =>
+            modelBuilder.Entity<Rota>(entity =>
             {
                 entity.HasKey(e => e.IdRoute)
                     .HasName("PK__Rota__F6B8C6BBC0698619");

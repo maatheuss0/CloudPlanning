@@ -9,17 +9,18 @@ namespace CloudPlanning_WebApi.Domains
     {
         public Usuario()
         {
-            Empresas = new HashSet<Empresa>();
-            UsuarioComums = new HashSet<UsuarioComum>();
+            Diagramas = new HashSet<Diagrama>();
         }
 
         public int IdUsuario { get; set; }
         public int? IdTipoUsuario { get; set; }
         public string Email { get; set; }
         public string Senha { get; set; }
+        public string Nome { get; set; }
+        public string Cpf { get; set; }
+        public DateTime DataNascimento { get; set; }
 
         public virtual TipoUsuario IdTipoUsuarioNavigation { get; set; }
-        public virtual ICollection<Empresa> Empresas { get; set; }
-        public virtual ICollection<UsuarioComum> UsuarioComums { get; set; }
+        public virtual ICollection<Diagrama> Diagramas { get; set; }
     }
 }

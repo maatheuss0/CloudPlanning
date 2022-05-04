@@ -94,6 +94,7 @@ namespace CloudPlanning_WebApi
             services.AddTransient<IUsuarioRepository, UsuarioRepository>();
             services.AddTransient<IComponenteRepository, ComponenteRepository>();
             services.AddTransient<IDiagramaRepository, DiagramaRepository>();
+            services.AddTransient<IUsuarioComumRepository, UsuarioComumRepository>();
             services.AddTransient<IEmpresaRepository, EmpresaRepository>();
 
 
