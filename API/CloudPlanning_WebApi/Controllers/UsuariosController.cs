@@ -36,7 +36,6 @@ namespace CloudPlanning_WebApi.Controllers
         {
             try
             {
-                //int idUsuario = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
                 string[] extensoesPermitidas = { "jpg", "png", "jpeg" };
                 string uploadResultado = Upload.UploadFile(arquivo, extensoesPermitidas);
 
@@ -52,8 +51,39 @@ namespace CloudPlanning_WebApi.Controllers
 
                 usuarionovo.Imagem = uploadResultado;
 
-                //_usuarioRepository.Atualizar(idUsuario, usuarionovo);
                 _usuarioRepository.Cadastrar(usuarionovo);
+
+                return StatusCode(201);
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex);
+            }
+        }
+
+        [HttpPut]
+        public IActionResult AtualizarUsuario([FromForm] Usuario usuarionovo, IFormFile arquivo)
+        {
+            try
+            {
+                int idUsuario = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
+                string[] extensoesPermitidas = { "jpg", "png", "jpeg" };
+                string uploadResultado = Upload.UploadFile(arquivo, extensoesPermitidas);
+
+                if (uploadResultado == "")
+                {
+                    return BadRequest("Arquivo não encontrado");
+                }
+
+                if (uploadResultado == "Extensão não permitida")
+                {
+                    return BadRequest("Extensão de arquivo não permitida");
+                }
+
+                usuarionovo.Imagem = uploadResultado;
+
+                _usuarioRepository.Atualizar(idUsuario, usuarionovo);
 
                 return StatusCode(201);
             }
