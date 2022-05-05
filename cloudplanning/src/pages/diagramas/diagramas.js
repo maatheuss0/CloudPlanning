@@ -23,18 +23,14 @@ function App() {
                         <img className="logo_azul" src={logo1} alt="logo_CloudPlanning" />
                         <p className="logo_diagramass">CloudPlanning</p>
                     </div>
-                    {/* <nav role="navigation">
-                        <div id="menuToggle">
-                            <input type="checkbox" />
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <ul id="menu">
-                                <a href="http://localhost:3000/alterar_perfil#"><li>Perfil</li></a>
-                                <a href="http://localhost:3000/Budge#"><li>Budge</li></a>
-                            </ul>
-                        </div>
-                    </nav> */}
+                    <div className="perfil_redirencionar">
+                        <form>
+                            <p>Username</p>
+                            <a href="http://localhost:3000/alterar_usuario">
+                                <img className="botao_perfil" src={woman}></img>
+                            </a>
+                        </form>
+                    </div>
                 </div>
 
             </header>
@@ -89,14 +85,7 @@ function App() {
                             <hr></hr>
                         </div>
 
-                        <div className="perfil_redirencionar">
-                            <form>
-                                <p>Username</p>
-                                <a href="http://localhost:3000/alterar_usuario">
-                                    <img className="botao_perfil" src={woman}></img>
-                                </a>
-                            </form>
-                        </div>
+
                         {/* <div className="diagramaa">
                             <img className='diagrama_fundu' src={diagrama_fundo} alt="" />
                         </div> */}

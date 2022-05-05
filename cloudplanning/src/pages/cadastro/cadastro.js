@@ -1,11 +1,12 @@
 import '../../assets/css/cadastro.css'
-import { Component } from 'react';
+import { Component, useState } from 'react';
 import { Link } from 'react-router-dom'
 import React from 'react'
 
 
 import logo from '../../assets/img/logo.png'
 import axios from 'axios';
+import Login from '../login/login';
 
 export default class Cadastro extends Component {
     constructor(props) {
@@ -14,13 +15,10 @@ export default class Cadastro extends Component {
             nomeUsuario: '',
             email: '',
             senha: '',
-            empresa: '',
-            telefone: '',
-            CNPJ: '',
-            CPF: '',
             dataNasc: '',
             cadastroMensagem: '',
-            
+            erroMensagem: '',
+            isLoading: false
         };
     };
 
@@ -34,22 +32,18 @@ export default class Cadastro extends Component {
             nomeUsuario: this.state.nomeUsuario,
             email: this.state.email,
             senha: this.state.senha,
-            empresa: this.state.empresa,
-            telefone: this.state.telefone,
-            CPF: this.state.CPF,
             dataNasc: this.state.dataNasc,
-            CNPJ: this.state.CNPJ
         })
 
             .then(resposta => {
-                if (resposta.status === 200) {
+                if (resposta.status === 201) {
                     localStorage.setItem('usuario-cadastro', resposta.data.token);
                     this.setState({ isLoading: false });
                     this.props.history.push('/diagramas');
                 }
             })
             .catch(() => {
-                this.setState({ erroMensagem: "Dados inseridos são inválidos!", isLoading: false });
+                this.setState({ erroMensagem: "Esse email já está sendo utilizado, por favor insira outro!", isLoading: false });
             })
     }
 
@@ -64,24 +58,14 @@ export default class Cadastro extends Component {
             nomeUsuario: '',
             email: '',
             senha: '',
-            empresa: '',
-            telefone: '',
-            CNPJ: '',
-            CPF: '',
             dataNasc: '',
-            idUsuario: 0
+            erroMensagem: '',
+            isLoading: false
         })
     };
 
-    botaoDoMenu() {
-        var menu = document.getElementById("aaa")
-        if (menu.style.display === "flex") {
-            menu.style.display = "none"
-        } else {
-            menu.style.display = "flex"
-        }
-    }
-    
+
+
 
     render() {
         document.title = 'Cadastro | CloudPlanning'
@@ -104,11 +88,12 @@ export default class Cadastro extends Component {
 
                         <form id="aaa" className="form-cadastro" action="submit" onSubmit={this.cadastrarUsuario}>
 
-                            <input className="input-login" type="name" placeholder="Nome"
+                            <input className="input-login" type="text" placeholder="Nome"
                                 name='nomeUsuario'
                                 onChange={this.atualizaStateCampo}
                                 value={this.state.nomeUsuario}
                             />
+
 
 
                             <input className="input-login" type="date" placeholder="Data de nascimento"
@@ -117,20 +102,14 @@ export default class Cadastro extends Component {
                                 value={this.state.dataNasc}
                             />
 
- 
-                            <input className="input-login"
-                                placeholder="CPF"
-                                name='CPF'
-                                maxLength="14"
-                                value={this.state.CPF}
-                                onChange={this.atualizaStateCampo}
-                            />
+
 
                             <input className="input-login" type="Email" placeholder="Email"
                                 name='email'
                                 onChange={this.atualizaStateCampo}
                                 value={this.state.email}
                             />
+
 
                             <input className="input-login" type="password" placeholder="Senha"
                                 name='senha'
@@ -139,9 +118,18 @@ export default class Cadastro extends Component {
                             />
 
 
-                            <button className="btn-entrar" type="submit">Cadastrar-se</button>
-                            <p style={{ color: 'green' }}>{this.state.cadastroMensagem}</p>
-                            
+
+                            {/* <button className="btn-entrar" type="submit">Cadastrar-se</button> */}
+                            {
+                                this.state.isLoading === true &&
+                                <button className="btn-entrar" type="submit" disabled>Loading...</button>
+                            }
+                            {
+                                this.state.isLoading === false &&
+                                <button className="btn-entrar" disabled={this.state.email === '' || this.state.senha === '' ? 'none' : ''} type="submit">Cadastrar-se</button>
+                            }
+                            <p style={{ color: 'red' }}>{this.state.erroMensagem}</p>
+
                         </form>
                         <div className="cadastrar2">
                             <p>Possui uma conta?</p>

@@ -20,7 +20,7 @@ function App() {
       <header>
         <div className="container container_header">
           <img className="logo_home" src={logo} alt="logo_CloudPlanning" />
-          <p>CloudPlanning</p>
+          <p className="nome_home">CloudPlanning</p>
           <nav className="cabeçalho">
             <a className="alinhamento" href="#início">INÍCIO</a>
             {/* <a className="alinhamento" href="#sobre nós">SOLUÇÕES</a> */}

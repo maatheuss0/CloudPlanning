@@ -81,9 +81,8 @@ nav a{
 }
 
 
-header p {
+.nome_home {
   font-family: 'Red Hat Mono', monospace;    
-  color: white;
   text-decoration:double;
   margin-right: 340px;
   font-size: 22px;

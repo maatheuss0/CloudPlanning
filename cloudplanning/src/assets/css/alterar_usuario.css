@@ -108,7 +108,7 @@
 
 .name_usuario input {
     width: 460px;
-    padding: 8px;
+    padding: 4px;
     border: none;
     border-bottom: 1.07527px solid #000000;
     margin: 12px 0;
@@ -118,13 +118,14 @@
     font-size: 18px;
     color: rgba(0, 0, 0, 0.83);
     margin-bottom: 40px;
-    margin-top: -5px;
+    margin-top: 5px;
+    outline: 0;
 }
 
 
 .email_usuario input {
     width: 460px;
-    padding: 8px;
+    padding: 4px;
     border: none;
     border-bottom: 1.07527px solid #000000;
     margin: 12px 0;
@@ -134,7 +135,8 @@
     font-size: 18px;
     color: rgba(0, 0, 0, 0.83);
     margin-bottom: 40px;
-    margin-top: -5px;
+    margin-top: 5px;
+    outline: 0;
 }
 
 .email_usuario p {
@@ -145,7 +147,7 @@
 
 .senha_usuario input {
     width: 460px;
-    padding: 8px;
+    padding: 4px;
     border: none;
     border-bottom: 1.07527px solid #000000;
     margin: 12px 0;
@@ -155,8 +157,8 @@
     font-size: 18px;
     color: rgba(0, 0, 0, 0.83); 
     margin-bottom: 80px;
-    margin-top: -5px;
-
+    margin-top: 5px;
+    outline: 0;
 }
 
 

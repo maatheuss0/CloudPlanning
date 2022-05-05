@@ -91,7 +91,7 @@ export default class Login extends Component {
                             {/* <a class="esqueceu-senha"> Esqueceu sua senha?</a> */}
                             <Link to="/esqueciSenha" className="esqueceu-senha">Esqueceu sua senha?</Link>
 
-                            {
+                            {   
                                 this.state.isLoading === true &&
                                 <button className="btn-entrar" type="submit" disabled>Loading...</button>
                             }

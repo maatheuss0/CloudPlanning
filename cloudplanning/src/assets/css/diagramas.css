@@ -257,19 +257,21 @@
 
 
 .botao_perfil {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     margin-top: -65px;
 }
 
 .perfil_redirencionar {
-    margin-left: 1200px;
+    margin-left: 1500px;
+    margin-top: 50px;
     position: absolute;
 }
 
 .perfil_redirencionar p {
-    font-family: 'Open Sans', sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
     margin-left: -90px;
+    
 }
 
   #drag-2 {
