@@ -18,18 +18,19 @@ namespace CloudPlanning_WebApi.Contexts
         {
         }
 
-        public virtual DbSet<Componente> Componentes { get; set; }
         public virtual DbSet<Diagrama> Diagramas { get; set; }
-        public virtual DbSet<Empresa> Empresas { get; set; }
+        public virtual DbSet<Ec2> Ec2s { get; set; }
+        public virtual DbSet<GrupoSeguranca> GrupoSegurancas { get; set; }
+        public virtual DbSet<Rotum> Rota { get; set; }
+        public virtual DbSet<Subnet> Subnets { get; set; }
         public virtual DbSet<Usuario> Usuarios { get; set; }
-        public virtual DbSet<UsuarioComum> UsuarioComums { get; set; }
+        public virtual DbSet<Vpc> Vpcs { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                // optionsBuilder.UseSqlServer("Data Source=NOTE0113G2\\SQLEXPRESS; initial catalog=CloudPlanning; user Id=sa; pwd=Senai@132;");
-                optionsBuilder.UseSqlServer("name=Default");
+                optionsBuilder.UseSqlServer("Data Source=NOTE0113G2\\SQLEXPRESS; initial catalog=CloudPlanning; user Id=sa; pwd=Senai@132;");
             }
         }
 
@@ -37,22 +38,60 @@ namespace CloudPlanning_WebApi.Contexts
         {
             modelBuilder.HasAnnotation("Relational:Collation", "Latin1_General_CI_AS");
 
-            modelBuilder.Entity<Componente>(entity =>
+            modelBuilder.Entity<Diagrama>(entity =>
             {
-                entity.HasKey(e => e.IdComponentes)
-                    .HasName("PK__Componen__FE4AB944F80E146D");
+                entity.HasKey(e => e.IdDiagrama)
+                    .HasName("PK__Diagrama__7232863824592B5F");
 
-                entity.Property(e => e.IdComponentes).HasColumnName("idComponentes");
+                entity.ToTable("Diagrama");
 
-                entity.Property(e => e.Codigo)
-                    .HasMaxLength(300)
+                entity.HasIndex(e => e.Nome, "UQ__Diagrama__6F71C0DC6DB4601E")
+                    .IsUnique();
+
+                entity.Property(e => e.IdDiagrama).HasColumnName("idDiagrama");
+
+                entity.Property(e => e.IdEc2).HasColumnName("idEC2");
+
+                entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
+
+                entity.Property(e => e.Nome)
+                    .IsRequired()
+                    .HasMaxLength(70)
                     .IsUnicode(false)
-                    .HasColumnName("codigo");
+                    .HasColumnName("nome");
+
+                entity.HasOne(d => d.IdEc2Navigation)
+                    .WithMany(p => p.Diagramas)
+                    .HasForeignKey(d => d.IdEc2)
+                    .HasConstraintName("FK__Diagrama__idEC2__37A5467C");
+
+                entity.HasOne(d => d.IdUsuarioNavigation)
+                    .WithMany(p => p.Diagramas)
+                    .HasForeignKey(d => d.IdUsuario)
+                    .HasConstraintName("FK__Diagrama__idUsua__36B12243");
+            });
+
+            modelBuilder.Entity<Ec2>(entity =>
+            {
+                entity.HasKey(e => e.IdEc2)
+                    .HasName("PK__EC2__3F0898BDBB748AEC");
+
+                entity.ToTable("EC2");
+
+                entity.Property(e => e.IdEc2).HasColumnName("idEC2");
+
+                entity.Property(e => e.Armazenamento).HasColumnName("armazenamento");
+
+                entity.Property(e => e.AutoAssign)
+                    .HasColumnName("autoAssign")
+                    .HasDefaultValueSql("((0))");
 
                 entity.Property(e => e.Descricao)
                     .HasMaxLength(100)
                     .IsUnicode(false)
                     .HasColumnName("descricao");
+
+                entity.Property(e => e.IdVpc).HasColumnName("idVPC");
 
                 entity.Property(e => e.ImagemComponente)
                     .HasMaxLength(70)
@@ -63,92 +102,189 @@ namespace CloudPlanning_WebApi.Contexts
                     .HasMaxLength(50)
                     .IsUnicode(false)
                     .HasColumnName("nome");
+
+                entity.Property(e => e.NomeChave)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("nomeChave");
+
+                entity.Property(e => e.QuantidadeProcessadores).HasColumnName("quantidadeProcessadores");
+
+                entity.Property(e => e.Ram).HasColumnName("RAM");
+
+                entity.Property(e => e.SistemaOperacional)
+                    .IsRequired()
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("sistemaOperacional");
+
+                entity.Property(e => e.SubRede)
+                    .IsRequired()
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("subRede");
+
+                entity.HasOne(d => d.IdVpcNavigation)
+                    .WithMany(p => p.Ec2s)
+                    .HasForeignKey(d => d.IdVpc)
+                    .HasConstraintName("FK__EC2__idVPC__31EC6D26");
             });
 
-            modelBuilder.Entity<Diagrama>(entity =>
+            modelBuilder.Entity<GrupoSeguranca>(entity =>
             {
-                entity.HasKey(e => e.IdDiagrama)
-                    .HasName("PK__diagrama__72328638B775C27B");
+                entity.HasKey(e => e.IdGrupoSeguranca)
+                    .HasName("PK__Grupo_Se__9ABDED6D1C35FF18");
 
-                entity.ToTable("diagrama");
+                entity.ToTable("Grupo_Seguranca");
 
-                entity.Property(e => e.IdDiagrama).HasColumnName("idDiagrama");
+                entity.Property(e => e.IdGrupoSeguranca).HasColumnName("idGrupoSeguranca");
 
-                entity.Property(e => e.IdComponentes).HasColumnName("idComponentes");
+                entity.Property(e => e.CidrBlocksEgress)
+                    .HasMaxLength(40)
+                    .IsUnicode(false)
+                    .HasColumnName("cidr_blocks_egress");
 
-                entity.Property(e => e.IdEmpresa).HasColumnName("idEmpresa");
+                entity.Property(e => e.CidrBlocksIngress)
+                    .HasMaxLength(40)
+                    .IsUnicode(false)
+                    .HasColumnName("cidr_blocks_ingress");
+
+                entity.Property(e => e.FromPortEgress)
+                    .HasMaxLength(40)
+                    .IsUnicode(false)
+                    .HasColumnName("from_port_egress");
+
+                entity.Property(e => e.FromPortIngress)
+                    .HasMaxLength(40)
+                    .IsUnicode(false)
+                    .HasColumnName("from_port_ingress");
+
+                entity.Property(e => e.NomeGrupoSeguranca)
+                    .HasMaxLength(40)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.ProtocolEgress)
+                    .HasMaxLength(40)
+                    .IsUnicode(false)
+                    .HasColumnName("protocol_egress");
+
+                entity.Property(e => e.ProtocolIngress)
+                    .HasMaxLength(40)
+                    .IsUnicode(false)
+                    .HasColumnName("protocol_ingress");
+
+                entity.Property(e => e.ToPortEgress)
+                    .HasMaxLength(40)
+                    .IsUnicode(false)
+                    .HasColumnName("to_port_egress");
+
+                entity.Property(e => e.ToPortIngress)
+                    .HasMaxLength(40)
+                    .IsUnicode(false)
+                    .HasColumnName("to_port_ingress");
+            });
+
+            modelBuilder.Entity<Rotum>(entity =>
+            {
+                entity.HasKey(e => e.IdRoute)
+                    .HasName("PK__Rota__F6B8C6BB646AAF71");
+
+                entity.Property(e => e.IdRoute).HasColumnName("idRoute");
+
+                entity.Property(e => e.BlockIp)
+                    .HasMaxLength(15)
+                    .IsUnicode(false)
+                    .HasColumnName("blockIp");
+
+                entity.Property(e => e.IpDestino)
+                    .IsRequired()
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("ipDestino");
+
+                entity.Property(e => e.IpOrigem)
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("ipOrigem");
+
+                entity.Property(e => e.NomeRoute)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("nomeRoute");
+            });
+
+            modelBuilder.Entity<Subnet>(entity =>
+            {
+                entity.HasKey(e => e.IdSubnet)
+                    .HasName("PK__Subnet__77ABF7FCF997F10F");
+
+                entity.ToTable("Subnet");
+
+                entity.Property(e => e.IdSubnet).HasColumnName("idSubnet");
+
+                entity.Property(e => e.Acesso)
+                    .IsRequired()
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("acesso");
+
+                entity.Property(e => e.Area)
+                    .HasMaxLength(3)
+                    .IsUnicode(false)
+                    .HasColumnName("area");
+
+                entity.Property(e => e.IpSubnet)
+                    .HasMaxLength(15)
+                    .IsUnicode(false)
+                    .HasColumnName("ipSubnet");
+
+                entity.Property(e => e.Mascara)
+                    .IsRequired()
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("mascara");
 
                 entity.Property(e => e.Nome)
-                    .HasMaxLength(70)
+                    .HasMaxLength(50)
                     .IsUnicode(false)
                     .HasColumnName("nome");
 
-                entity.HasOne(d => d.IdComponentesNavigation)
-                    .WithMany(p => p.Diagramas)
-                    .HasForeignKey(d => d.IdComponentes)
-                    .HasConstraintName("FK__diagrama__idComp__3C69FB99");
-
-                entity.HasOne(d => d.IdEmpresaNavigation)
-                    .WithMany(p => p.Diagramas)
-                    .HasForeignKey(d => d.IdEmpresa)
-                    .HasConstraintName("FK__diagrama__idEmpr__3B75D760");
-            });
-
-            modelBuilder.Entity<Empresa>(entity =>
-            {
-                entity.HasKey(e => e.IdEmpresa)
-                    .HasName("PK__empresa__75D2CED420A19249");
-
-                entity.ToTable("empresa");
-
-                entity.HasIndex(e => e.Telefone, "UQ__empresa__2A16D97F7477E804")
-                    .IsUnique();
-
-                entity.HasIndex(e => e.Cnpj, "UQ__empresa__AA57D6B40DB413B9")
-                    .IsUnique();
-
-                entity.Property(e => e.IdEmpresa).HasColumnName("idEmpresa");
-
-                entity.Property(e => e.Cnpj)
-                    .HasMaxLength(14)
+                entity.Property(e => e.SubRede)
+                    .IsRequired()
+                    .HasMaxLength(20)
                     .IsUnicode(false)
-                    .HasColumnName("CNPJ");
-
-                entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
-
-                entity.Property(e => e.NomeFantasia)
-                    .HasMaxLength(70)
-                    .IsUnicode(false)
-                    .HasColumnName("nomeFantasia");
-
-                entity.Property(e => e.Telefone)
-                    .HasMaxLength(14)
-                    .IsUnicode(false)
-                    .HasColumnName("telefone");
-
-                entity.HasOne(d => d.IdUsuarioNavigation)
-                    .WithMany(p => p.Empresas)
-                    .HasForeignKey(d => d.IdUsuario)
-                    .HasConstraintName("FK__empresa__idUsuar__2E1BDC42");
+                    .HasColumnName("subRede");
             });
 
             modelBuilder.Entity<Usuario>(entity =>
             {
                 entity.HasKey(e => e.IdUsuario)
-                    .HasName("PK__usuario__645723A6FC10CA8D");
+                    .HasName("PK__Usuario__645723A6B3E0FB35");
 
-                entity.ToTable("usuario");
+                entity.ToTable("Usuario");
 
-                entity.HasIndex(e => e.Email, "UQ__usuario__AB6E61644F6FBB73")
+                entity.HasIndex(e => e.Email, "UQ__Usuario__AB6E6164E2B1D03F")
                     .IsUnique();
 
                 entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
+
+                entity.Property(e => e.DataNascimento).HasColumnType("date");
 
                 entity.Property(e => e.Email)
                     .IsRequired()
                     .HasMaxLength(50)
                     .IsUnicode(false)
                     .HasColumnName("email");
+
+                entity.Property(e => e.Imagem)
+                    .HasMaxLength(70)
+                    .IsUnicode(false)
+                    .HasColumnName("imagem");
+
+                entity.Property(e => e.Nome)
+                    .HasMaxLength(70)
+                    .IsUnicode(false)
+                    .HasColumnName("nome");
 
                 entity.Property(e => e.Senha)
                     .IsRequired()
@@ -157,44 +293,56 @@ namespace CloudPlanning_WebApi.Contexts
                     .HasColumnName("senha");
             });
 
-            modelBuilder.Entity<UsuarioComum>(entity =>
+            modelBuilder.Entity<Vpc>(entity =>
             {
-                entity.HasKey(e => e.IdUsuarioComum)
-                    .HasName("PK__usuarioC__5974077917D0D773");
+                entity.HasKey(e => e.IdVpc)
+                    .HasName("PK__VPC__3D8E43C26972BC3C");
 
-                entity.ToTable("usuarioComum");
+                entity.ToTable("VPC");
 
-                entity.HasIndex(e => e.Cpf, "UQ__usuarioC__C1F89731B8260B85")
-                    .IsUnique();
+                entity.Property(e => e.IdVpc).HasColumnName("idVPC");
 
-                entity.Property(e => e.IdUsuarioComum).HasColumnName("idUsuarioComum");
-
-                entity.Property(e => e.Cpf)
-                    .IsRequired()
-                    .HasMaxLength(12)
+                entity.Property(e => e.Descricao)
+                    .HasMaxLength(100)
                     .IsUnicode(false)
-                    .HasColumnName("CPF");
+                    .HasColumnName("descricao");
 
-                entity.Property(e => e.DataNascimento).HasColumnType("date");
+                entity.Property(e => e.IdGrupoSeguranca).HasColumnName("idGrupoSeguranca");
 
-                entity.Property(e => e.IdEmpresa).HasColumnName("idEmpresa");
+                entity.Property(e => e.IdRoute).HasColumnName("idRoute");
 
-                entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
+                entity.Property(e => e.IdSubnet).HasColumnName("idSubnet");
+
+                entity.Property(e => e.ImagemComponente)
+                    .HasMaxLength(70)
+                    .IsUnicode(false)
+                    .HasColumnName("imagemComponente");
+
+                entity.Property(e => e.NatGateway)
+                    .IsRequired()
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("natGateway");
 
                 entity.Property(e => e.Nome)
-                    .HasMaxLength(70)
+                    .HasMaxLength(50)
                     .IsUnicode(false)
                     .HasColumnName("nome");
 
-                entity.HasOne(d => d.IdEmpresaNavigation)
-                    .WithMany(p => p.UsuarioComums)
-                    .HasForeignKey(d => d.IdEmpresa)
-                    .HasConstraintName("FK__usuarioCo__idEmp__32E0915F");
+                entity.HasOne(d => d.IdGrupoSegurancaNavigation)
+                    .WithMany(p => p.Vpcs)
+                    .HasForeignKey(d => d.IdGrupoSeguranca)
+                    .HasConstraintName("FK__VPC__idGrupoSegu__2F10007B");
 
-                entity.HasOne(d => d.IdUsuarioNavigation)
-                    .WithMany(p => p.UsuarioComums)
-                    .HasForeignKey(d => d.IdUsuario)
-                    .HasConstraintName("FK__usuarioCo__idUsu__31EC6D26");
+                entity.HasOne(d => d.IdRouteNavigation)
+                    .WithMany(p => p.Vpcs)
+                    .HasForeignKey(d => d.IdRoute)
+                    .HasConstraintName("FK__VPC__idRoute__2D27B809");
+
+                entity.HasOne(d => d.IdSubnetNavigation)
+                    .WithMany(p => p.Vpcs)
+                    .HasForeignKey(d => d.IdSubnet)
+                    .HasConstraintName("FK__VPC__idSubnet__2E1BDC42");
             });
 
             OnModelCreatingPartial(modelBuilder);

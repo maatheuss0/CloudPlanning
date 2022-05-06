@@ -21,6 +21,8 @@ namespace CloudPlanning_WebApi.Repositories
         {
             Usuario usuarioBuscado = BuscarPorId(id);
 
+            Upload.RemoverArquivo(usuarioBuscado.Imagem);
+
             if (usuarioAtualizado.Email != null)
             {
                 usuarioBuscado.Email = usuarioAtualizado.Email;
@@ -31,26 +33,34 @@ namespace CloudPlanning_WebApi.Repositories
                 usuarioBuscado.Senha = usuarioAtualizado.Senha;
             }
 
+            if (usuarioAtualizado.Nome != null)
+            {
+                usuarioBuscado.Nome = usuarioAtualizado.Nome;
+            }
+
+            if (usuarioAtualizado.Imagem != null)
+            {
+                usuarioBuscado.Imagem = usuarioAtualizado.Imagem;
+            }
+
             ctx.Usuarios.Update(usuarioBuscado);
 
+            ctx.SaveChanges();
+        }
+
+        public void Cadastrar(Usuario user)
+        {
+            user.Senha = Cripto.GerarHash(user.Senha);
+
+            ctx.Usuarios.Add(user);
+            Email e = new();
+            e.SendEmail(user.Email);
             ctx.SaveChanges();
         }
 
         public Usuario BuscarPorId(int id)
         {
             return ctx.Usuarios.FirstOrDefault(p => p.IdUsuario == id);
-        }
-
-        public void Cadastrar(Usuario novoUsuario)
-        {
-
-            novoUsuario.Senha = Cripto.GerarHash(novoUsuario.Senha);
-
-            ctx.Usuarios.Add(novoUsuario);
-
-            ctx.SaveChanges();
-
-
         }
 
         public void Deletar(int id)

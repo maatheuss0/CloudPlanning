@@ -19,13 +19,6 @@ namespace CloudPlanning_WebApi.Interfaces
         /// <returns>Uma lista de usuários</returns>
         List<Usuario> Listar();
 
-
-        /// <summary>
-        /// Cadastra um novo usuário
-        /// </summary>
-        /// <param name="novoUsuario">Objeto novoUsuario que será cadastrado</param>
-        void Cadastrar(Usuario novoUsuario);
-
         /// <summary>
         /// Atualiza um usuário existente
         /// </summary>
@@ -45,5 +38,12 @@ namespace CloudPlanning_WebApi.Interfaces
         /// <param name="id">ID do usuário que será buscado</param>
         /// <returns>Um usuário buscado</returns>
         Usuario BuscarPorId(int id);
+
+        /// <summary>
+        /// Cadastra um usuario
+        /// </summary>
+        /// <param name="user">usuário que será cadastrado</param>
+        /// <returns>Um usuário cadastrado</returns>
+        public void Cadastrar(Usuario user);
     }
 }

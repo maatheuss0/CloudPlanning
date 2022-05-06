@@ -8,11 +8,11 @@ namespace CloudPlanning_WebApi.Domains
     public partial class Diagrama
     {
         public int IdDiagrama { get; set; }
-        public int? IdEmpresa { get; set; }
-        public int? IdComponentes { get; set; }
+        public int? IdUsuario { get; set; }
+        public int? IdEc2 { get; set; }
         public string Nome { get; set; }
 
-        public virtual Componente IdComponentesNavigation { get; set; }
-        public virtual Empresa IdEmpresaNavigation { get; set; }
+        public virtual Ec2 IdEc2Navigation { get; set; }
+        public virtual Usuario IdUsuarioNavigation { get; set; }
     }
 }

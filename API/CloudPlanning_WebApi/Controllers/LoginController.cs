@@ -37,7 +37,7 @@ namespace CloudPlanning_WebApi.Controllers
         {
             try
             {
-                int claimAutorizacao = 0;
+                
 
                 Usuario usuarioBuscado = _usuarioRepository.Login(login.Email, login.Senha);
 
@@ -46,21 +46,11 @@ namespace CloudPlanning_WebApi.Controllers
                     return Unauthorized(new { msg = "Email ou senha incorretos" });
                 }
 
-                if (usuarioBuscado.Empresas == null)
-                {
-                    claimAutorizacao = 1;
-                }
-                else if(usuarioBuscado.UsuarioComums == null)
-                {
-                    claimAutorizacao = 2;
-                        
-                }
 
                 var minhasClaims = new[]
                 {
                     new Claim(JwtRegisteredClaimNames.Email, usuarioBuscado.Email),
-                    new Claim(JwtRegisteredClaimNames.Jti, claimAutorizacao.ToString()),
-                    new Claim("TipoUsuario", claimAutorizacao.ToString())
+                    new Claim(JwtRegisteredClaimNames.Jti, usuarioBuscado.IdUsuario.ToString()),
                 };
 
                 var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("cloudplanning-chave-autenticacao"));
