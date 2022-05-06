@@ -25,7 +25,7 @@ namespace CloudPlanning_WebApi.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult Get()  
         {
             int idUsuario = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
             return Ok(_usuarioRepository.BuscarPorId(idUsuario));

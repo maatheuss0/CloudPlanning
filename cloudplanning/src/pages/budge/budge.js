@@ -8,6 +8,7 @@ import React from 'react'
 import logo1 from '../../assets/img/CloudPlanning-_1_-1 1.png'
 import diagrama_fundo from '../../assets/img/tela_diagrama.png'
 import logo_laranja from '../../assets/img/logo_laranja.png'
+import woman from '../../assets/img/woman.png'
 
 
 
@@ -21,6 +22,14 @@ function App() {
                     <div className="redirencionarrr">
                         <img className="imgLogo" src={logo_laranja} alt="logo_CloudPlanning" />
                         <p className="logo_diagramasss">CloudPlanning</p>
+                        <div className="perfil_redirencionarr">
+                            <form>
+                                <p>Username</p>
+                                <a href="http://localhost:3000/alterar_usuario">
+                                    <img className="botao_perfil" src={woman}></img>
+                                </a>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </header>

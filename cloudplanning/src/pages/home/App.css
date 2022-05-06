@@ -285,7 +285,7 @@ nav a{
   padding: 10px 88px;
 }
 
-footer{
+.header_home{
   background-color: #1F2429;
   height: 50px;
   width: 100%;
@@ -295,7 +295,7 @@ footer{
   justify-content: center;
 }
 
-footer span {
+.header_home span {
   color: white;
 }
 

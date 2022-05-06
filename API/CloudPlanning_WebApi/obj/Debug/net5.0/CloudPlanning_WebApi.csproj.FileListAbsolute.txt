@@ -530,3 +530,6 @@ C:\Users\User\Desktop\CloudPlanning\API\CloudPlanning_WebApi\obj\Debug\net5.0\re
 C:\Users\User\Desktop\CloudPlanning\API\CloudPlanning_WebApi\obj\Debug\net5.0\CloudPlanning_WebApi.xml
 C:\Users\User\Desktop\CloudPlanning\API\CloudPlanning_WebApi\obj\Debug\net5.0\CloudPlanning_WebApi.pdb
 C:\Users\User\Desktop\CloudPlanning\API\CloudPlanning_WebApi\obj\Debug\net5.0\CloudPlanning_WebApi.genruntimeconfig.cache
+C:\Users\47524754809.INFOSCS\Desktop\CloudPlanning\API\CloudPlanning_WebApi\bin\Debug\net5.0\MailKit.dll
+C:\Users\47524754809.INFOSCS\Desktop\CloudPlanning\API\CloudPlanning_WebApi\bin\Debug\net5.0\MimeKit.dll
+C:\Users\47524754809.INFOSCS\Desktop\CloudPlanning\API\CloudPlanning_WebApi\bin\Debug\net5.0\BouncyCastle.Crypto.dll

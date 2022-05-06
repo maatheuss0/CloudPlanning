@@ -41,8 +41,8 @@
     align-items: center;
 }
 
-.redirencionarr {
-    margin-left: 395px;
+.redirencionarr_diagrma {
+    margin-left: 415px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,7 +68,7 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     margin-top: 50px;
-    width: 400px;
+    width: 500px;
     height: 750px;
     overflow: hidden;
     overflow-y: scroll;  
@@ -223,7 +223,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 395px;
+    margin-left: -20px;
     flex-direction: column;
     margin-top: 20px;
 }
@@ -249,7 +249,7 @@
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 25px;
+    font-size: 28px;
     color: rgba(0, 0, 0, 0.83);
     border: 0 none;
     outline: 0;
@@ -274,11 +274,62 @@
     
 }
 
-  #drag-2 {
+#drag-2 {
+    height: 515px;
+    width: 514px;
+    min-height: 6.5em;
+    touch-action: none;
+    user-select: none;
+    transform: translate(0px, 0px);
+    background-image: url(../img/ACL.png);
+    background-repeat: no-repeat;
+  }
+
+  #drag-3 {
+    height: 492px;
+    width: 492px;
+    min-height: 6.5em;
+    touch-action: none;
+    user-select: none;
+    transform: translate(0px, 0px);
+    background-image: url(../img/disponibilidade.png);
+    background-repeat: no-repeat;
+  }
+  #drag-4 {
+    height: 520px;
+    width: 520px;
+    min-height: 6.5em;
+    touch-action: none;
+    user-select: none;
+    transform: translate(0px, 0px);
+    background-image: url(../img/internet-gateway.png);
+    background-repeat: no-repeat;
+  }
+  #drag-5 {
+    height: 395px;
+    width: 395px;
+    min-height: 6.5em;
+    touch-action: none;
+    user-select: none;
+    transform: translate(0px, 0px);
+    background-image: url(../img/nat-gateway.png);
+    background-repeat: no-repeat;
+  }
+  #drag-6 {
+    height: 479px;
+    width: 514px;
+    min-height: 6.5em;
+    touch-action: none;
+    user-select: none;
+    transform: translate(0px, 0px);
+    background-image: url(../img/vpc.png);
+    background-repeat: no-repeat;
+  }
+
+  #drag-8 {
     height: 293px;
     width: 290px;
     min-height: 6.5em;
-    /* padding: 4%; */
     touch-action: none;
     user-select: none;
     transform: translate(0px, 0px);
@@ -286,15 +337,6 @@
     background-repeat: no-repeat;
   }
 
-  #drag-3 {
-    height: 293px;
-    width: 290px;
-    min-height: 6.5em;
-    /* padding: 4%; */
-    touch-action: none;
-    user-select: none;
-    transform: translate(0px, 0px);
-    background-image: url(../img/igw.webp);
-    background-repeat: no-repeat;
-  }
-
+.intens_todo {
+    width: 100%;
+  } 

@@ -116,7 +116,7 @@ function App() {
           </div>
         </section>
       </main>
-      <footer className="">
+      <footer className="header_home">
         <span>© 2022 Copyright - Programador</span>
       </footer>
     </div>

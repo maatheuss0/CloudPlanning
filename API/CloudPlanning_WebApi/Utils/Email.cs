@@ -16,7 +16,7 @@ namespace CloudPlanning_WebApi.Utils
             email.To.Add(MailboxAddress.Parse(Destinatario));
             email.Subject = "Bem vindo";
 
-            string arqv = "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning\\API\\CloudPlanning_WebApi\\Template\\template.html";
+            string arqv = @"C:\Users\47524754809.INFOSCS\Desktop\CloudPlanning\API\CloudPlanning_WebApi\Template\template.html";
             string texto = "";
             using (StreamReader leitor = new (arqv))
             {

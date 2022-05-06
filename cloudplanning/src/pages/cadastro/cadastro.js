@@ -18,6 +18,8 @@ export default class Cadastro extends Component {
             dataNasc: '',
             cadastroMensagem: '',
             erroMensagem: '',
+            arquivo: '',
+            base64img: '',
             isLoading: false
         };
     };
@@ -43,7 +45,7 @@ export default class Cadastro extends Component {
                 }
             })
             .catch(() => {
-                this.setState({ erroMensagem: "Esse email já está sendo utilizado, por favor insira outro!", isLoading: false });
+                this.setState({ erroMensagem: "Algo deu errado, tente novamente!", isLoading: false });
             })
     }
 
