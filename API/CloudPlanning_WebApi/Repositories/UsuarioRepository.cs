@@ -21,6 +21,8 @@ namespace CloudPlanning_WebApi.Repositories
         {
             Usuario usuarioBuscado = BuscarPorId(id);
 
+            Upload.RemoverArquivo(usuarioBuscado.Imagem);
+
             if (usuarioAtualizado.Email != null)
             {
                 usuarioBuscado.Email = usuarioAtualizado.Email;
