@@ -8,7 +8,6 @@ resource "aws_launch_configuration" "web_launch_conf" {
   security_groups             = [aws_security_group.asg_web_sg.id]
   associate_public_ip_address = true
 
-  user_data = file("codedeploy_agent_install.sh")
 
   lifecycle {
     create_before_destroy = true

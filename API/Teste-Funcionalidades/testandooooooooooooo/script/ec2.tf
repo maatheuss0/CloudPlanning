@@ -12,7 +12,7 @@
 
 resource "aws_security_group" "asg_web_sg" {
   name        = "[NomeSeguranca]" 
-  description = "Allow HTTP inbound connections"
+  description = "[description_security_group]"
   vpc_id      = aws_vpc.devops_vpc.id
 
   ingress {
@@ -29,7 +29,7 @@ resource "aws_security_group" "asg_web_sg" {
     cidr_blocks = ["[cidr_blocks_ssh]"]
   }
 
-  egress {
+  ingress {
     from_port   = [from_port_egress_security_group]
     to_port     = [to_port_egress_security_group]
     protocol    = "[protocol_egress_security_group]"

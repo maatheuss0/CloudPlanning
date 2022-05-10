@@ -14,3 +14,19 @@ C:\Users\47503739827.INFOSCS\Desktop\CloudPlanning - Copia\testandooooooooooooo\
 C:\Users\47503739827.INFOSCS\Desktop\CloudPlanning - Copia\testandooooooooooooo\obj\Debug\net5.0\ref\testandooooooooooooo.dll
 C:\Users\47503739827.INFOSCS\Desktop\CloudPlanning - Copia\testandooooooooooooo\obj\Debug\net5.0\testandooooooooooooo.pdb
 C:\Users\47503739827.INFOSCS\Desktop\CloudPlanning - Copia\testandooooooooooooo\obj\Debug\net5.0\testandooooooooooooo.genruntimeconfig.cache
+C:\Users\47503739827.INFOSCS\Desktop\CloudPlanning\API\Teste-Funcionalidades\testandooooooooooooo\bin\Debug\net5.0\testandooooooooooooo.exe
+C:\Users\47503739827.INFOSCS\Desktop\CloudPlanning\API\Teste-Funcionalidades\testandooooooooooooo\bin\Debug\net5.0\testandooooooooooooo.deps.json
+C:\Users\47503739827.INFOSCS\Desktop\CloudPlanning\API\Teste-Funcionalidades\testandooooooooooooo\bin\Debug\net5.0\testandooooooooooooo.runtimeconfig.json
+C:\Users\47503739827.INFOSCS\Desktop\CloudPlanning\API\Teste-Funcionalidades\testandooooooooooooo\bin\Debug\net5.0\testandooooooooooooo.runtimeconfig.dev.json
+C:\Users\47503739827.INFOSCS\Desktop\CloudPlanning\API\Teste-Funcionalidades\testandooooooooooooo\bin\Debug\net5.0\testandooooooooooooo.dll
+C:\Users\47503739827.INFOSCS\Desktop\CloudPlanning\API\Teste-Funcionalidades\testandooooooooooooo\bin\Debug\net5.0\ref\testandooooooooooooo.dll
+C:\Users\47503739827.INFOSCS\Desktop\CloudPlanning\API\Teste-Funcionalidades\testandooooooooooooo\bin\Debug\net5.0\testandooooooooooooo.pdb
+C:\Users\47503739827.INFOSCS\Desktop\CloudPlanning\API\Teste-Funcionalidades\testandooooooooooooo\obj\Debug\net5.0\testandooooooooooooo.csproj.AssemblyReference.cache
+C:\Users\47503739827.INFOSCS\Desktop\CloudPlanning\API\Teste-Funcionalidades\testandooooooooooooo\obj\Debug\net5.0\testandooooooooooooo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\47503739827.INFOSCS\Desktop\CloudPlanning\API\Teste-Funcionalidades\testandooooooooooooo\obj\Debug\net5.0\testandooooooooooooo.AssemblyInfoInputs.cache
+C:\Users\47503739827.INFOSCS\Desktop\CloudPlanning\API\Teste-Funcionalidades\testandooooooooooooo\obj\Debug\net5.0\testandooooooooooooo.AssemblyInfo.cs
+C:\Users\47503739827.INFOSCS\Desktop\CloudPlanning\API\Teste-Funcionalidades\testandooooooooooooo\obj\Debug\net5.0\testandooooooooooooo.csproj.CoreCompileInputs.cache
+C:\Users\47503739827.INFOSCS\Desktop\CloudPlanning\API\Teste-Funcionalidades\testandooooooooooooo\obj\Debug\net5.0\testandooooooooooooo.dll
+C:\Users\47503739827.INFOSCS\Desktop\CloudPlanning\API\Teste-Funcionalidades\testandooooooooooooo\obj\Debug\net5.0\ref\testandooooooooooooo.dll
+C:\Users\47503739827.INFOSCS\Desktop\CloudPlanning\API\Teste-Funcionalidades\testandooooooooooooo\obj\Debug\net5.0\testandooooooooooooo.pdb
+C:\Users\47503739827.INFOSCS\Desktop\CloudPlanning\API\Teste-Funcionalidades\testandooooooooooooo\obj\Debug\net5.0\testandooooooooooooo.genruntimeconfig.cache
