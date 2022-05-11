@@ -16,23 +16,45 @@ export default class Listar_Usuarios extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            listaUsuarios: []
+            listaUsuarios: [],
+            nomeUsuario: '',
+            email: '',
+            senha: '',
         }
     }
 
-    listarUsuarios = () => {
-        axios('http://localhost:5000/api/Usuarios').then(resposta => {
-            if (resposta.status === 200) {
-                this.setState({
-                    lista: resposta.data
-                })
-            }
-        }).catch(erro => console.log(erro))
-    };
+    // listarUsuarios = () => {
+    //     axios('http://localhost:5000/api/Usuarios').then(resposta => {
+    //         if (resposta.status === 200) {
+    //             this.setState({
+    //                 lista: resposta.data
+    //             })
+    //         }
+    //     }).catch(erro => console.log(erro))
+    // };
 
-    componentDidMount() {
-        this.listarUsuarios()
+    // componentDidMount() {
+    //     this.listarUsuarios()
+    // }
+
+    buscarConsultas = () => {
+        axios('https://localhost:5001/api/Usuarios', {
+            headers: {
+                Authorization: 'Bearer ' + localStorage.getItem('usuario-login'),
+            },
+        })
+            .then((resposta) => {
+                if (resposta.status === 200) {
+                    this.setState({ listaUsuarios: resposta.data });
+                    console.log(this.state.listaUsuarios);
+                }
+            })
+            .catch((erro) => console.log(erro));
+    // }
+    // componentDidMount() {
+    //     this.buscarDados();
     }
+
 
 
     render() {
@@ -45,7 +67,7 @@ export default class Listar_Usuarios extends Component {
                             <div class="redirencionarr">
                                 <img className="logo_azul" src={logo1} alt="logo" />
                                 <p className="logo_diagramass">CloudPlanning</p>
-                                <span>{}</span>
+                                {/* <span>{}</span> */}
                             </div>
                         </div>
                     </div>
@@ -56,31 +78,39 @@ export default class Listar_Usuarios extends Component {
                         <p>Perfil</p>
                         <hr></hr>
                     </div>
-                    <div className="quadro_perfil_geral">
-                        <div>
-                            <img className="imagem_usuario" src={woman}></img>
-                        </div>
-                        <div className="info_geral">
-                            <div className="name_usuario">
-                                <p>Nome de usuario</p>
-                                <input></input>
-                            </div>
-                            <div className="email_usuario">
-                                <p>Email</p>
-                                <input></input>
-                            </div>
-                            <div className="senha_usuario">
-                                <p>Senha</p>
-                                <input></input>
-                            </div>
-                            <Link to="/" className="botao1_usuario">Alterar informações</Link>
-                        </div>
-                    </div>
-                </main>
+
+                    {this.state.listaUsuarios.map((Usuarios) => {
+                            
+                                    <div className="quadro_perfil_geral">
+                                        <div>
+                                            <img className="imagem_usuario" src={woman}></img>
+                                        </div>
+                                        <div className="info_geral">
+                                            <div className="name_usuario">
+                                                <p>{Usuarios.nomeUsuario}</p>
+                                                <input></input>
+                                            </div>
+                                            <div className="email_usuario">
+                                                <p>{Usuarios.email}</p>
+                                                <input></input>
+                                            </div>
+                                            <div className="senha_usuario">
+                                                <p>{Usuarios.senha}</p>
+                                                <input></input>
+                                            </div>
+
+                                            <Link to="/" className="botao1_usuario">Alterar informações</Link>
+                                        </div>
+                                    </div>
+                                                                
+                        })
+                    }
+                </main >
                 <footer className="">
                     <span>© 2022 Copyright - Programador</span>
                 </footer>
-            </div>
+
+            </div >
         )
     }
 }

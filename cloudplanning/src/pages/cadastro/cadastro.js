@@ -19,7 +19,6 @@ export default class Cadastro extends Component {
             cadastroMensagem: '',
             erroMensagem: '',
             arquivo: '',
-            base64img: '',
             isLoading: false
         };
     };
@@ -30,11 +29,12 @@ export default class Cadastro extends Component {
 
         this.setState({ erroMensagem: "", isLoading: true })
 
-        axios.post('http://localhost:5000/api/Usuarios', {
+        axios.post('https://localhost:5001/api/Usuarios', {
             nomeUsuario: this.state.nomeUsuario,
             email: this.state.email,
             senha: this.state.senha,
             dataNasc: this.state.dataNasc,
+            arquivo: this.state.arquivo
         })
 
             .then(resposta => {
@@ -61,6 +61,7 @@ export default class Cadastro extends Component {
             email: '',
             senha: '',
             dataNasc: '',
+            arquivo: '',
             erroMensagem: '',
             isLoading: false
         })
@@ -89,6 +90,12 @@ export default class Cadastro extends Component {
                         {/* <button onClick={() => this.botaoDoMenu()}>a</button> */}
 
                         <form id="aaa" className="form-cadastro" action="submit" onSubmit={this.cadastrarUsuario}>
+
+                            <input className="input-login" type="file" placeholder="Nome"
+                                name='arquivo'
+                                onChange={this.atualizaStateCampo}
+                                value={this.state.arquivo}
+                            />
 
                             <input className="input-login" type="text" placeholder="Nome"
                                 name='nomeUsuario'
