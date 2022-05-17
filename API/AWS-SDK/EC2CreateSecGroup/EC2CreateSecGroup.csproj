@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Amazon.Ec2" Version="0.21.1" />
+    <PackageReference Include="AWSSDK" Version="2.3.55.2" />
+  </ItemGroup>
+
+</Project>

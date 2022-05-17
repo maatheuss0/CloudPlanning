@@ -1,0 +1,72 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning\\API\\AWS-SDK\\EC2CreateSecGroup\\EC2CreateSecGroup.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning\\API\\AWS-SDK\\EC2CreateSecGroup\\EC2CreateSecGroup.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning\\API\\AWS-SDK\\EC2CreateSecGroup\\EC2CreateSecGroup.csproj",
+        "projectName": "EC2CreateSecGroup",
+        "projectPath": "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning\\API\\AWS-SDK\\EC2CreateSecGroup\\EC2CreateSecGroup.csproj",
+        "packagesPath": "C:\\Users\\47503739827.INFOSCS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning\\API\\AWS-SDK\\EC2CreateSecGroup\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\47503739827.INFOSCS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AWSSDK": {
+              "target": "Package",
+              "version": "[2.3.55.2, )"
+            },
+            "Amazon.Ec2": {
+              "target": "Package",
+              "version": "[0.21.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

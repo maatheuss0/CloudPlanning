@@ -1,0 +1,170 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "Amazon.Core/0.21.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Amazon.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Amazon.Core.dll": {}
+        }
+      },
+      "Amazon.Ec2/0.21.1": {
+        "type": "package",
+        "dependencies": {
+          "Amazon.Core": "0.21.0"
+        },
+        "compile": {
+          "lib/net5.0/Amazon.Ec2.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Amazon.Ec2.dll": {}
+        }
+      },
+      "AWSSDK/2.3.55.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/AWSSDK.dll": {}
+        },
+        "runtime": {
+          "lib/net45/AWSSDK.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Amazon.Core/0.21.0": {
+      "sha512": "yDJ1BTTIdwmG/CeySsB1SqDrc2Dl5EPbwZbSyOe9m5uvYEowb6L5ODGakGTotpVensCbo29JL9Npca9+51T3FA==",
+      "type": "package",
+      "path": "amazon.core/0.21.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "amazon.core.0.21.0.nupkg.sha512",
+        "amazon.core.nuspec",
+        "lib/net5.0/Amazon.Core.dll"
+      ]
+    },
+    "Amazon.Ec2/0.21.1": {
+      "sha512": "0aiNwBzrvcGYzrrhfGchskPBviV9fnRNMPJfeN27PKnWWnzYMb5/CdZgG9pIgs5x48jT6+yr2xG7N76BjYkJ0w==",
+      "type": "package",
+      "path": "amazon.ec2/0.21.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "amazon.ec2.0.21.1.nupkg.sha512",
+        "amazon.ec2.nuspec",
+        "lib/net5.0/Amazon.Ec2.dll"
+      ]
+    },
+    "AWSSDK/2.3.55.2": {
+      "sha512": "zy/6psTOx9c8LaZqL1tUtiGKMpd35b16TNRctz/N6Qc6hqFeOjyZ5WVhn89szJkkZtotcMFyfq58Y2RfyRxxUg==",
+      "type": "package",
+      "path": "awssdk/2.3.55.2",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "awssdk.2.3.55.2.nupkg.sha512",
+        "awssdk.nuspec",
+        "lib/net35/AWSSDK.dll",
+        "lib/net35/AWSSDK.pdb",
+        "lib/net45/AWSSDK.dll",
+        "lib/net45/AWSSDK.pdb",
+        "lib/portable-wpa+netcore45/AWSSDK.dll",
+        "lib/windows8/AWSSDK.dll",
+        "lib/windowsphone8/AWSSDK.dll",
+        "tools/account-management.ps1",
+        "tools/net35/install.ps1",
+        "tools/net45/install.ps1"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "AWSSDK >= 2.3.55.2",
+      "Amazon.Ec2 >= 0.21.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\47503739827.INFOSCS\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning\\API\\AWS-SDK\\EC2CreateSecGroup\\EC2CreateSecGroup.csproj",
+      "projectName": "EC2CreateSecGroup",
+      "projectPath": "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning\\API\\AWS-SDK\\EC2CreateSecGroup\\EC2CreateSecGroup.csproj",
+      "packagesPath": "C:\\Users\\47503739827.INFOSCS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning\\API\\AWS-SDK\\EC2CreateSecGroup\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\47503739827.INFOSCS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "dependencies": {
+          "AWSSDK": {
+            "target": "Package",
+            "version": "[2.3.55.2, )"
+          },
+          "Amazon.Ec2": {
+            "target": "Package",
+            "version": "[0.21.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'AWSSDK 2.3.55.2' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto 'net5.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "AWSSDK",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
+}

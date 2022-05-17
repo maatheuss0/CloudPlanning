@@ -1,0 +1,75 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "EC2CreateSecGroup/1.0.0": {
+        "dependencies": {
+          "AWSSDK": "2.3.55.2",
+          "Amazon.Ec2": "0.21.1"
+        },
+        "runtime": {
+          "EC2CreateSecGroup.dll": {}
+        }
+      },
+      "Amazon.Core/0.21.0": {
+        "runtime": {
+          "lib/net5.0/Amazon.Core.dll": {
+            "assemblyVersion": "0.21.0.0",
+            "fileVersion": "0.21.0.0"
+          }
+        }
+      },
+      "Amazon.Ec2/0.21.1": {
+        "dependencies": {
+          "Amazon.Core": "0.21.0"
+        },
+        "runtime": {
+          "lib/net5.0/Amazon.Ec2.dll": {
+            "assemblyVersion": "0.21.1.0",
+            "fileVersion": "0.21.1.0"
+          }
+        }
+      },
+      "AWSSDK/2.3.55.2": {
+        "runtime": {
+          "lib/net45/AWSSDK.dll": {
+            "assemblyVersion": "2.3.55.2",
+            "fileVersion": "2.3.55.2"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EC2CreateSecGroup/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Amazon.Core/0.21.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yDJ1BTTIdwmG/CeySsB1SqDrc2Dl5EPbwZbSyOe9m5uvYEowb6L5ODGakGTotpVensCbo29JL9Npca9+51T3FA==",
+      "path": "amazon.core/0.21.0",
+      "hashPath": "amazon.core.0.21.0.nupkg.sha512"
+    },
+    "Amazon.Ec2/0.21.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0aiNwBzrvcGYzrrhfGchskPBviV9fnRNMPJfeN27PKnWWnzYMb5/CdZgG9pIgs5x48jT6+yr2xG7N76BjYkJ0w==",
+      "path": "amazon.ec2/0.21.1",
+      "hashPath": "amazon.ec2.0.21.1.nupkg.sha512"
+    },
+    "AWSSDK/2.3.55.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zy/6psTOx9c8LaZqL1tUtiGKMpd35b16TNRctz/N6Qc6hqFeOjyZ5WVhn89szJkkZtotcMFyfq58Y2RfyRxxUg==",
+      "path": "awssdk/2.3.55.2",
+      "hashPath": "awssdk.2.3.55.2.nupkg.sha512"
+    }
+  }
+}

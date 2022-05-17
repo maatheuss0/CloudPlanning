@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 
 namespace testandooooooooooooo
@@ -8,7 +9,7 @@ namespace testandooooooooooooo
         static void Main(string[] args)
         {
             string sourceDir = @"C:\Users\47503739827.INFOSCS\Desktop\CloudPlanning\API\Teste-Funcionalidades\testandooooooooooooo\script\";
-            string destinoDir = @"C:\Users\47503739827.INFOSCS\Desktop\";
+            string destinoDir = @"C:\Users\47503739827.INFOSCS\Desktop\CloudPlanning\API\Teste-Funcionalidades\testandooooooooooooo\Script-Usuario\";
 
             void criandoEC2()
             {
@@ -139,7 +140,7 @@ namespace testandooooooooooooo
 
             void criandoSubnet()
             {
-                string[] txtList = Directory.GetFiles(sourceDir, "main.tf");
+                string[] txtList = Directory.GetFiles(sourceDir, "subnets.tf");
 
                 foreach (string f in txtList)
                 {
@@ -164,7 +165,11 @@ namespace testandooooooooooooo
 
             criandoRoute();
             criandoEC2();
+            criandoVPC();
             criandoMain();
+            criandoSubnet();
+           
+
         }
     }
 }

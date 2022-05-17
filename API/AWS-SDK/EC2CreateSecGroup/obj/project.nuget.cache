@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "P3tv11N8SN2inCVcmjI1vdk3w8pxCCsaNdgaNqhwnkR6pdZ/HEIlquuYNbEBgTX89FuLQtcUHx8Z/nICicOc6g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\47503739827.INFOSCS\\Desktop\\CloudPlanning\\API\\AWS-SDK\\EC2CreateSecGroup\\EC2CreateSecGroup.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\47503739827.INFOSCS\\.nuget\\packages\\amazon.core\\0.21.0\\amazon.core.0.21.0.nupkg.sha512",
+    "C:\\Users\\47503739827.INFOSCS\\.nuget\\packages\\amazon.ec2\\0.21.1\\amazon.ec2.0.21.1.nupkg.sha512",
+    "C:\\Users\\47503739827.INFOSCS\\.nuget\\packages\\awssdk\\2.3.55.2\\awssdk.2.3.55.2.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'AWSSDK 2.3.55.2' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto 'net5.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "AWSSDK",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
+}
