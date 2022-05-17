@@ -2,6 +2,7 @@ import '../../assets/css/budge.css'
 import { Component } from 'react';
 import { Link } from 'react-router-dom'
 import React from 'react'
+import { parseJwt, usuarioAutenticado } from '../../services/auth'
 
 
 
@@ -23,12 +24,7 @@ function App() {
                         <img className="imgLogo" src={logo_laranja} alt="logo_CloudPlanning" />
                         <p className="logo_diagramasss">CloudPlanning</p>
                         <div className="perfil_redirencionarr">
-                            <form>
-                                <p>Username</p>
-                                <a href="http://localhost:3000/alterar_usuario">
-                                    <img className="botao_perfil" src={woman}></img>
-                                </a>
-                            </form>
+                            <Link to="/alterar_usuario" className="butao_perfil_laranja">Perfil</Link>
                         </div>
                     </div>
                 </div>

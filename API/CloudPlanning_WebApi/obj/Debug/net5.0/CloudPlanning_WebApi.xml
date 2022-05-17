@@ -12,6 +12,13 @@
             <returns>Retorna um token com as informações do usuário</returns>
             dominio/api/Login
         </member>
+        <member name="M:CloudPlanning_WebApi.Controllers.UsuariosController.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um usuário pelo id
+            </summary>
+            <param name="idUsuario">id do usuário a ser buscado</param>
+            <returns>Um usuário encontrado com status code - 200</returns>
+        </member>
         <member name="M:CloudPlanning_WebApi.Interfaces.IDiagramaRepository.Listar">
             <summary>
             Lista todos os Diagramas

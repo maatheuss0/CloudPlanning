@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import React from 'react';
 import axios from 'axios';
 import logo from '../../assets/img/logo.png'
+import { parseJwt, usuarioAutenticado } from '../../services/auth';
 
 
 export default class Login extends Component {

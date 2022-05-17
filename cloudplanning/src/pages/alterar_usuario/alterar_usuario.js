@@ -50,9 +50,9 @@ export default class Listar_Usuarios extends Component {
                 }
             })
             .catch((erro) => console.log(erro));
-    // }
-    // componentDidMount() {
-    //     this.buscarDados();
+        // }
+        // componentDidMount() {
+        //     this.buscarDados();
     }
 
 
@@ -79,32 +79,28 @@ export default class Listar_Usuarios extends Component {
                         <hr></hr>
                     </div>
 
-                    {this.state.listaUsuarios.map((Usuarios) => {
-                            
-                                    <div className="quadro_perfil_geral">
-                                        <div>
-                                            <img className="imagem_usuario" src={woman}></img>
-                                        </div>
-                                        <div className="info_geral">
-                                            <div className="name_usuario">
-                                                <p>{Usuarios.nomeUsuario}</p>
-                                                <input></input>
-                                            </div>
-                                            <div className="email_usuario">
-                                                <p>{Usuarios.email}</p>
-                                                <input></input>
-                                            </div>
-                                            <div className="senha_usuario">
-                                                <p>{Usuarios.senha}</p>
-                                                <input></input>
-                                            </div>
 
-                                            <Link to="/" className="botao1_usuario">Alterar informações</Link>
-                                        </div>
-                                    </div>
-                                                                
-                        })
-                    }
+                    <div className="quadro_perfil_geral">
+                        <div>
+                            <img className="imagem_usuario" src={woman}></img>
+                        </div>
+                        <div className="info_geral">
+                            <div className="name_usuario">
+                                <p>Nome de usuário</p>
+                                <input></input>
+                            </div>
+                            <div className="email_usuario">
+                                <p>Email</p>
+                                <input></input>
+                            </div>
+                            <div className="senha_usuario">
+                                <p>Senha</p>
+                                <input></input>
+                            </div>
+
+                            <Link to="/" className="botao1_usuario">Alterar informações</Link>
+                        </div>
+                    </div>
                 </main >
                 <footer className="">
                     <span>© 2022 Copyright - Programador</span>

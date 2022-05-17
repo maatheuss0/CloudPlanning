@@ -6,6 +6,8 @@ import {
   Redirect,
   Switch,
 } from 'react-router-dom';
+import { parseJwt, usuarioAutenticado } from './services/auth';
+
 
 import './index.css';
 
@@ -21,6 +23,21 @@ import alterar_usuario from './pages/alterar_usuario/alterar_usuario'
 import reportWebVitals from './reportWebVitals';
 
 
+
+
+const PermissaoF = ({ component: Component }) => (
+  <Route
+    render={(props) =>
+      usuarioAutenticado() && parseJwt().role === '1' ? (
+        <Component {...props} />
+      ) : (
+        <Redirect to="/" />
+      )
+    }
+  />
+);
+
+
 const routing = (
   <Router>
     <div>
@@ -28,9 +45,9 @@ const routing = (
         <Route exact path="/" component={Home} /> {/* Home */}
         <Route path="/Login" component={Login} /> {/* Login */}
         <Route path="/cadastro" component={cadastro} /> {/* Cadastro */}
-        <Route path="/diagramas" component={diagramas} /> {/* Diagramas */}
-        <Route path="/budge" component={Budge} /> {/* Diagramas */}
-        <Route path="/alterar_usuario" component={alterar_usuario} /> {/* Diagramas */}
+        <Route  path="/diagramas" component={diagramas} /> {/* Diagramas */}
+        <Route  path="/budge" component={Budge} /> {/* Diagramas */}
+        <Route  path="/alterar_usuario" component={alterar_usuario} /> {/* Diagramas */}
         {/* <Route path="/esqueciSenha" component={esqueciSenha} /> esqueciSenha */}
 
         <Route path="/notFound" component={NotFound} /> {/* Not Found */}

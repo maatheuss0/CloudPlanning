@@ -14,12 +14,14 @@ import internet from '../../assets/img/internet-gateway.png'
 import nat from '../../assets/img/nat-gateway.png'
 import vpc from '../../assets/img/vpc.png'
 import acl from '../../assets/img/ACL.png'
+import mais from '../../assets/img/more.png'
+import excluir from '../../assets/img/excluir.png'
 
 
 export default class Diagramas extends Component {
     constructor(props) {
         super(props);
-        this.state = {  
+        this.state = {
             nomeUsuario: '',
             arquivo: '',
         };
@@ -38,11 +40,7 @@ export default class Diagramas extends Component {
                             <p className="logo_diagramass">CloudPlanning</p>
                         </div>
                         <div className="perfil_redirencionar">
-                                {/* <p>Username</p> */}
-                                <span className="">{}</span>
-                                <a href="http://localhost:3000/alterar_usuario">
-                                    <img className="botao_perfil" src={woman}></img>
-                                </a>
+                            <Link to="/alterar_usuario" className="butao_perfil">Perfil</Link>
                         </div>
                     </div>
 
@@ -95,6 +93,21 @@ export default class Diagramas extends Component {
                                     <input className='titulo' placeholder='Meu primerio diagrama'></input>
                                 </form>
                                 <hr></hr>
+                            </div>
+                            <div className="formata">
+                                <Link to="" className="butao_perfil">Blibioteca</Link>
+                            </div>
+                            <div className="simbols">
+                                <div>
+                                    <a>
+                                        <img className="more" src={mais} alt="logo_CloudPlanning" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a>
+                                        <img className="" src={excluir} alt="logo_CloudPlanning" />
+                                    </a>
+                                </div>
                             </div>
                             {/* <div className="diagramaa">
                             <img className='diagrama_fundu' src={diagrama_fundo} alt="" />

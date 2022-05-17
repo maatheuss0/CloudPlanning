@@ -152,6 +152,26 @@
     outline: unset;
 }
 
+.butao_perfil {
+  border: none;
+  margin-left: -90px;
+  margin-top: 20px;
+  width: 200px;
+  height: 50px;
+  background-color: #3F9FE4;
+  color: #FFFFFF;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px; 
+  padding: 16px 60px;
+}
+
+.formata {
+    margin-top: -35px;
+    margin-left: 200px;
+}
+
 .componente_principal {
     background: #3F9FE4;
     color: #FFFFFF;
@@ -264,7 +284,7 @@
 
 .perfil_redirencionar {
     margin-left: 1500px;
-    margin-top: 50px;
+    margin-top: 15px;
     position: absolute;
 }
 
@@ -272,6 +292,21 @@
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
     margin-left: -90px;
     
+}
+
+.simbols {
+    display: flex;
+    margin-top: -50px;
+    margin-left: 1200px;
+}
+
+.simbols img {
+    height: 50px;
+    width: 50px ;
+}
+
+.more {
+    margin-right: 10px;
 }
 
 #drag-2 {

@@ -44,8 +44,8 @@
 }
 
 .perfil_redirencionarr {
-    margin-left: 1090px;
-    margin-top: 50px;
+    margin-left: 980px;
+    margin-top: 15px;
     position: absolute;
 }
 
@@ -53,6 +53,19 @@
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
     margin-left: -90px;
     
+}
+
+.butao_perfil_laranja    {
+    border: none;
+    width: 200px;
+    height: 50px;
+    background-color: #f37e1f;
+    color: #FFFFFF;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px; 
+    padding: 16px 60px;
 }
 
 .container_header {
