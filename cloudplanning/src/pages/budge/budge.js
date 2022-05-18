@@ -101,6 +101,8 @@ function App() {
                             </div>
                             <div className='retangulo2'>
                             </div>
+                            <div className='retangulo3'>
+                            </div>
                         </div>
                     </section>
 

@@ -257,6 +257,7 @@
 .teste {
     height: 750px;
     width: 1400px;
+    margin-left: 40px;
     position: relative;
     z-index: 1;
 }
@@ -273,8 +274,10 @@
 }
 
 .retangulo3 {
-    width: 42px;
-    height: 100%;
+    width: 53px;
+    margin-top: -686px;
+    height: 641px;
+    margin-right: -26px;
     background-color: rgb(255, 255, 255);
     position: absolute;
     z-index: 99;
