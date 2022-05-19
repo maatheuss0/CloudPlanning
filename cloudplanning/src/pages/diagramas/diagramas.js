@@ -92,7 +92,19 @@ function Diagramas() {
                                         </div>
                                         {isModalVisible ? (
                                             <Modal onClose={() => setIsModalVisible(false)}>
-
+                                                <form>
+                                                    <div className='inputs_vpc'>
+                                                        <span>Instância</span>
+                                                        <input className='inp'></input>
+                                                        <span>Grupo de segurança</span>
+                                                        <input className='inp'></input>
+                                                        <span>IP elástico</span>
+                                                        <input className='inp'></input>
+                                                        <span>Tipo de instância</span>
+                                                        <input className='inp'></input>
+                                                    </div>
+                                                    <button className='but_vpc'>Enviar</button>
+                                                </form>
                                             </Modal>
                                         ) : null}
 
@@ -106,7 +118,19 @@ function Diagramas() {
                                         <p className='int_get'>VPC é uma demanda configurável de recursos compartilhados de computação alocados dentro de um ambiente de nuvem pública</p>
                                         {isModalVisibleV ? (
                                             <ModalVpc onClose={() => setIsModalVisibleV(false)}>
-
+                                                <form>
+                                                    <div className='inputs_vpc'>
+                                                        <span>aaaa</span>
+                                                        <input className='inp'></input>
+                                                        <span>aaaa</span>
+                                                        <input className='inp'></input>
+                                                        <span>aaaa</span>
+                                                        <input className='inp'></input>
+                                                        <span>aaaa</span>
+                                                        <input className='inp'></input>
+                                                    </div>
+                                                    <button className='but_vpc'>Enviar</button>
+                                                </form>
                                             </ModalVpc>
                                         ) : null}
                                         {/* <button className="componentes_bt"><span>Subrede</span></button> */}

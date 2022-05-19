@@ -9,6 +9,7 @@
     "@types/react-modal": "^3.13.1",
     "axios": "^0.26.1",
     "cors": "^2.8.5",
+    "diagram-library-react": "^1.0.0",
     "dragula": "^3.7.3",
     "interact": "^0.0.3",
     "interact.js": "^1.2.8",

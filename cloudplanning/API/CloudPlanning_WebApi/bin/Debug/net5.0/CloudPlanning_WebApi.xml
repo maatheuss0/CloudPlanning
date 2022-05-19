@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CloudPlanning_WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:CloudPlanning_WebApi.Controllers.LoginController.Login(CloudPlanning_WebApi.ViewModels.LoginViewModel)">
+            <summary>
+            Valida o usuário
+            </summary>
+            <param name="login">Objeto login que contém o e-mail e a senha do usuário</param>
+            <returns>Retorna um token com as informações do usuário</returns>
+            dominio/api/Login
+        </member>
+        <member name="M:CloudPlanning_WebApi.Interfaces.IDiagramaRepository.Listar">
+            <summary>
+            Lista todos os Diagramas
+            </summary>
+            <returns>Uma lista de Diagramas</returns>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Interfaces.IDiagramaRepository.Cadastrar(CloudPlanning_WebApi.Domains.Diagrama)">
+            <summary>
+            Cadastra um novo Diagrama
+            </summary>
+            <param name="novaDiagrama">Objeto novaDiagrama que será cadastrado</param>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Interfaces.IDiagramaRepository.Atualizar(System.Int32,CloudPlanning_WebApi.Domains.Diagrama)">
+            <summary>
+            Atualiza um Diagrama existente
+            </summary>
+            <param name="id">ID da Diagrama que será atualizado</param>
+            <param name="DiagramaAtualizado">Objeto com as novas informações</param>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Interfaces.IDiagramaRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um Diagrama existente
+            </summary>
+            <param name="id">ID do Diagrama que será deletada</param>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Interfaces.IDiagramaRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um Diagrama através do ID
+            </summary>
+            <param name="id">ID da Diagrama que será buscada</param>
+            <returns>Uma Diagrama buscada</returns>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Interfaces.IUsuarioRepository.Login(System.String,System.String)">
+            <summary>
+            Valida o usuário
+            </summary>
+            <param name="email">E-mail do usuário</param>
+            <param name="senha">Senha do usuário</param>
+            <returns>Um objeto do tipo Usuario que foi encontrado</returns>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Interfaces.IUsuarioRepository.Listar">
+            <summary>
+            Lista todos os usuários
+            </summary>
+            <returns>Uma lista de usuários</returns>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Interfaces.IUsuarioRepository.Atualizar(System.Int32,CloudPlanning_WebApi.Domains.Usuario)">
+            <summary>
+            Atualiza um usuário existente
+            </summary>
+            <param name="id">ID do usuário que será atualizado</param>
+            <param name="usuarioAtualizado">Objeto com as novas informações</param>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Interfaces.IUsuarioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um usuário existente
+            </summary>
+            <param name="id">ID do usuário que será deletado</param>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Interfaces.IUsuarioRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um usuário através do ID
+            </summary>
+            <param name="id">ID do usuário que será buscado</param>
+            <returns>Um usuário buscado</returns>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Interfaces.IUsuarioRepository.Cadastrar(CloudPlanning_WebApi.Domains.Usuario)">
+            <summary>
+            Cadastra um usuario
+            </summary>
+            <param name="user">usuário que será cadastrado</param>
+            <returns>Um usuário cadastrado</returns>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Utils.Upload.UploadFile(Microsoft.AspNetCore.Http.IFormFile,System.String[])">
+            <summary>
+            Faz o upload do arquivo para o servidor
+            </summary>
+            <param name="arquivo">Arquivo vindo de um formulário</param>
+            <param name="extensoesPermitidas">Array com extensões permitidas apenas</param>
+            <returns>Nome do arquivo salvo</returns>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Utils.Upload.ValidarExtensao(System.String[],System.String)">
+            <summary>
+            Valida o uso de enxtensões permitidas apenas
+            </summary>
+            <param name="extensoes">Array de extensões permitidas</param>
+            <param name="nomeDoArquivo">Nome do arquivo</param>
+            <returns>Verdadeiro/Falso</returns>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Utils.Upload.RemoverArquivo(System.String)">
+            <summary>
+            Remove um arquivo do servidor
+            </summary>
+            <param name="nomeDoArquivo">Nome do Arquivo</param>
+        </member>
+        <member name="M:CloudPlanning_WebApi.Utils.Upload.RetornarExtensao(System.String)">
+            <summary>
+            Retorna a extensão de um arquivo
+            </summary>
+            <param name="nomeDoArquivo">Nome do Arquivo</param>
+            <returns>Retorna a extensão de um arquivo</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300&display=swap');
+
+/*Grid*/
+
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/*Header*/
+
+header {
+    background-color: #1F2429;
+    height: 100px;
+    width: 100%;
+}
+
+
+.container_header {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+
+}
+
+.cabeçalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 590px;
+}
+
+header img {
+    width: 82px;
+    height: 91px;
+    margin-top: -11px;
+}
+
+nav{
+    width: 465px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+nav button {
+    border: none;
+    margin-left: -90px;
+    padding: 10px;
+    width: 150px;
+    height: 50px;
+    background-color: #3F9FE4;
+    color: #FFFFFF;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px; 
+
+} 
+.login {
+    font-weight: bold; 
+    margin-left: 30px;
+}
+
+
+header p {
+    font-family: 'Red Hat Mono', monospace;    
+    color: white;
+    text-decoration:double;
+    margin-right: 340px;
+    font-size: 22px;
+    font-weight:unset;
+    width: 196px;
+    color: #3F9FE4;
+}
+
+
+/*Banner*/
+
+
+
+.container_banner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    background-color: #120D0B;
+}
+
+.banner {
+    background-image: url(../img/image_fundo.png);
+    background-size: 2300px;
+    width: 100%;
+}
+
+
+.fundo {
+    background-color: #0a0a0a;
+    width: 100%;
+}
+
+.conteudo_banner {
+    display: flex;
+    justify-content: space-between;
+    width: 950px;
+    padding: 80px 1px
+}
+
+.img1 {
+    height: 131px;
+    width: 268px;
+}
+
+.img2 {
+    width: 140px;
+    height: 140px;
+}
+
+
+.caixa {
+    width: 445px;
+    height: 626px;
+    background: #1F2429;
+    box-shadow: 1px 3px 4px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -65;
+    border-radius: 10%;
+    padding: 10px  30px;
+}
+
+.caixa p {
+    font-size: 21px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+    font-weight: 100;
+    color: white;
+    margin-top: 40px;
+}
+
+.alinhar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+.diagramas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 150px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.diagramas h2 {
+    font-weight:normal;
+    font-size: 45px;
+}
+
+.diagramas h3 {
+    margin-top: 12px;
+    font-size: 30px;
+    font-weight:normal;
+}
+
+.diagramas hr {
+    border-top: 1px solid rgb(0, 0, 0);
+    margin-top: 30px;
+    width: 100%;
+}
+
+.diagramas button {
+    border: n   one;
+    width: 300px;
+    height: 50px;
+    background-color: #3F9FE4;
+    color: #FFFFFF;
+    font-size: 20px;
+    border: none;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 31px;
+    cursor: pointer;
+}
+
+.infra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -124px;
+}
+
+.infra2 {
+    margin-top: 400px;
+}
+
+
+.fundo2 {
+    background-color: #1F2429;
+    border-radius: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 28px;
+    height: 500px;
+    margin-top: 160px;
+    width: 1375px;
+    margin-bottom: 20px;
+}
+
+.fundo2 img {
+    margin-left: -14px;
+}
+
+.quem_somos{
+    display: flex;
+    flex-direction: column;
+    margin-left: 22px;
+}
+
+.quem_somos span {
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+    font-weight: 100;
+    color: white;
+    margin-top: 40px;
+}
+
+
+.quem_somos button {
+    border: none;
+    width: 300px;
+    height: 50px;
+    background-color: #3F9FE4;
+    color: #FFFFFF;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 55px;
+    margin-left: 235px;
+}
+
+footer{
+    background-color: #1F2429;
+    height: 50px;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer span {
+    color: white;
+}
+
+@media (max-width: 524px) {
+    
+
+    .login {
+        font-size: 16px;
+        display: none;
+    }
+
+    .alinhamento {
+        display: none;
+    }
+
+    .container_header p {
+        margin-right: 181px;
+        font-size: 20px;
+    }
+
+    .cabeçalho button {
+        margin-right: 68px;
+        height: 40px;
+        width: 146px;
+        font-size: 17px;
+    }
+
+    .container_header {
+        width: 545px;
+    }
+
+    .container_header img {
+        width: 54px;
+        height: 59px;
+        margin-left: 44px;
+    }
+
+    .conteudo_banner {
+        width: 904px;
+        height: 1236px
+    }
+
+    .conteudo_banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 43px;
+        margin-top: -15px;
+    }
+
+    .caixa {
+        margin-top: 34px;
+
+    }
+
+    .diagramas {
+        margin-left: -344px;
+        margin-top: 112px;
+    }
+
+    .diagramas h2 {
+        font-size: 31px;
+    }
+
+    .diagramas h3 {
+        font-size: 25px;
+    }
+
+    .diagramas hr {
+        width: 456px;
+    }
+
+    .diagramas img {
+        margin-top: 200px; 
+    }
+
+    .infra2 {
+        display: none;
+    }
+
+    .fundo2 {
+        display: flex;
+        flex-direction: column;
+        height: 957px;
+        width: 483px;
+    }
+
+    .fundo2 img {
+        height: 330px;
+        width: 422px;
+        margin-left: 10px;
+    }
+
+    .quem_somos button {
+        margin-left: 47px;
+    }
+
+}
