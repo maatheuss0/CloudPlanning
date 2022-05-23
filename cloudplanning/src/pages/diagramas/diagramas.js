@@ -94,19 +94,20 @@ function Diagramas() {
                                             <Modal onClose={() => setIsModalVisible(false)}>
                                                 <form>
                                                     <div className='inputs_vpc'>
-                                                        <span>Instância</span>
-                                                        <input className='inp'></input>
-                                                        <span>Grupo de segurança</span>
-                                                        <input className='inp'></input>
-                                                        <span>IP elástico</span>
-                                                        <input className='inp'></input>
-                                                        <span>Tipo de instância</span>
-                                                        <input className='inp'></input>
+                                                        <span>Tipo da Instância</span>
+                                                        <input className='inpp'></input>
+                                                        <span>Keyname</span>
+                                                        <input className='inpp'></input>
+                                                        <span>Id iso</span>
+                                                        <input className='inpp'></input>
                                                     </div>
                                                     <button className='but_vpc'>Enviar</button>
                                                 </form>
                                             </Modal>
                                         ) : null}
+
+                                        <button className="componentes_bt"><span>Security Groups</span></button>
+                                        <p className="int_get">Um grupo de segurança atua como firewall virtual para as instâncias do EC2 visando controlar o tráfego de entrada e de saída</p>
 
                                         <button className="componentes_bt"><span>Sistema Operacional</span></button>
                                         <p className='int_get'>Sistema operativo ou operacional é um programa ou um conjunto de programas cuja função é gerenciar os recursos do sistema</p>
@@ -120,14 +121,20 @@ function Diagramas() {
                                             <ModalVpc onClose={() => setIsModalVisibleV(false)}>
                                                 <form>
                                                     <div className='inputs_vpc'>
-                                                        <span>aaaa</span>
+                                                        <span>Keyname</span>
                                                         <input className='inp'></input>
-                                                        <span>aaaa</span>
+                                                        <span>Tipo de Instância</span>
                                                         <input className='inp'></input>
-                                                        <span>aaaa</span>
+                                                        <span>Id da Iso</span>
                                                         <input className='inp'></input>
-                                                        <span>aaaa</span>
-                                                        <input className='inp'></input>
+                                                        <div className='inp2'>
+                                                            <span>Ip Subnet Pública</span>
+                                                            <input className='inp'></input>
+                                                            <span>Ip Subnet Privada</span>
+                                                            <input className='inp'></input>
+                                                            <span>Ip Vpc</span>
+                                                            <input className='inp'></input>
+                                                        </div>
                                                     </div>
                                                     <button className='but_vpc'>Enviar</button>
                                                 </form>
@@ -168,7 +175,7 @@ function Diagramas() {
                         {/* <div className="diagramaa">
                             <img className='diagrama_fundu' src={diagrama_fundo} alt="" />
                         </div> */}
-                        <div id="drag-2" className="draggable">
+                        {/* <div id="drag-2" className="draggable">
 
                         </div>
 
@@ -193,7 +200,7 @@ function Diagramas() {
 
                         <div id="drag-8" className="draggable">
 
-                        </div>
+                        </div> */}
                     </section>
 
                 </div>

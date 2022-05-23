@@ -311,6 +311,14 @@
     flex-direction: column;
 }
 
+.inp2 {
+    display: flex;
+    padding: 25px 50px;
+    flex-direction: column;
+    margin-left: 400px;
+    margin-top: -338px;
+}
+
 .inputs_vpc span {
     font-family: 'Open Sans', sans-serif;
     font-weight:lighter;
@@ -320,7 +328,21 @@
 }
 
 .inp {
-    width: 85%;
+    width: 322px;
+    padding: 4px;
+    border: none;
+    border-bottom: 1.07527px solid #000000;
+    margin: 12px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.83);
+    margin-bottom: 25px;
+}
+
+.inpp {
+    width: 100%;
     padding: 4px;
     border: none;
     border-bottom: 1.07527px solid #000000;
