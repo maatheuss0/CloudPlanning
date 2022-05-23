@@ -25,32 +25,10 @@ namespace CloudPlanning_WebApi.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()  
+        public IActionResult Get()
         {
-            {
-                try
-                {
-                    return Ok(_usuarioRepository.Listar());
-                }
-                catch (Exception erro)
-                {
-                    return BadRequest(erro);
-                }
-            }
-
-        }
-
-
-        [HttpGet("{idUsuario}")]
-        public IActionResult BuscarPorId(int idUsuario)
-        {
-            Usuario usuarioBuscado = _usuarioRepository.BuscarPorId(idUsuario);
-
-            if (usuarioBuscado == null)
-            {
-                return NotFound("O Usuário informado não existe!");
-            }
-            return Ok(usuarioBuscado);
+            int idUsuario = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
+            return Ok(_usuarioRepository.BuscarPorId(idUsuario));
         }
 
 

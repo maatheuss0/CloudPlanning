@@ -25,7 +25,7 @@ export default class Login extends Component {
 
         this.setState({ erroMensagem: '', isLoading: true });
 
-        axios.post('https://localhost:5001/api/Login', {
+        axios.post('https://localhost:5003/api/Login', {
             email: this.state.email,
             senha: this.state.senha
         })
