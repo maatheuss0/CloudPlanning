@@ -46,7 +46,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -110px;
+    /* margin-top: -110px; */
 }
 
 
@@ -320,7 +320,7 @@
     display: flex;
     padding: 25px 50px;
     flex-direction: column;
-    margin-left: 400px;
+    margin-left: 370px;
     margin-top: -385px;
 }
 
@@ -333,7 +333,7 @@
 }
 
 .inp {
-    width: 322px;
+    width: 383px;
     padding: 2px;
     border: none;
     border-bottom: 1.07527px solid #000000;
@@ -382,6 +382,14 @@
     outline: unset;
 }
 
+.inp_:focus-visible {
+    outline: unset;
+}
+
+.inpp:focus-visible {
+    outline: unset;
+}
+
 .but_vpc {
     border: none;
     width: 200px;
@@ -392,7 +400,7 @@
     text-decoration: none;
     cursor: pointer;
     border-radius: 10px;
-    margin-left: 340px;
+    margin-left: 352px;
 }
 
 .but_ec2 {
@@ -405,7 +413,7 @@
     text-decoration: none;
     cursor: pointer;
     border-radius: 10px;
-    margin-left: 340px;
+    margin-left: 352px;
     margin-top: 20px;
 }
 

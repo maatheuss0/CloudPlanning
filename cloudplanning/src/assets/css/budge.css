@@ -245,7 +245,7 @@
 
 .retangulo {
     height: 55px;
-    width: 100%;
+    width: 1405px;
     background-color: rgb(255, 255, 255);
     position: absolute;
     z-index: 99;
@@ -264,7 +264,7 @@
 
 .retangulo2 {
     height: 42px;
-    width: 100%;
+    width: 1405px;
     background-color: rgb(255, 255, 255);
     position: absolute;
     z-index: 99;
@@ -274,7 +274,7 @@
 }
 
 .retangulo3 {
-    width: 53px;
+    width: 56px;
     margin-top: -686px;
     height: 641px;
     margin-right: -26px;

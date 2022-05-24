@@ -130,11 +130,11 @@ export default class Diagramas extends Component {
             <div>
                 <header className="header_diagrama">
                     <div className="containerr container_headerr">
-                        <div>
+                        {/* <div>
                             <a>
                                 <img className="livro" src={livro} alt="logo_CloudPlanning" />
                             </a>
-                        </div>
+                        </div> */}
                         <div className="redirencionarr_diagrma">
                             <img className="logo_azul" src={logo1} alt="logo_CloudPlanning" />
                             <p className="logo_diagramass">CloudPlanning</p>
