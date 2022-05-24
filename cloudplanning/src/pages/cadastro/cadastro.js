@@ -17,33 +17,37 @@ export default function Cadastro() {
 
 
 
-    const CadastrarCliente = async (event) => {
+    const Cadastrar = (event) => {
+
         event.preventDefault();
-
-        setIsLoading(true)
-
-
-        await axios.post('https://localhost:5001/api/Usuarios')
-            .then(response => {
-                if (response.status == 201) {
-                    console.log('cadastrado')
-                    this.props.history.push('/diagramas');
-                    setIsLoading(false)
-                }
-            }).catch(erro => {
-                console.log(erro);
-
-                setEmail('')
-                setSenha('')
-                setNome('')
-                setArquivo('')
-                setDataNascimento('')
-
-                setIsLoading(false)
-
-            })
-
-    }
+        setIsLoading(true);
+        var formData = new FormData();
+    
+        const target = document.getElementById('arquivo')
+        const file = target.files[0]
+        formData.append('arquivo', file, file.name)
+    
+        formData.append('nome', Nome);
+        formData.append('email', email);
+        formData.append('senha', Senha);
+    
+        axios({
+          method: "post",
+          url: "http://localhost:5000/api/Usuarios",
+          data: formData,
+          headers: { "Content-Type": "multipart/form-data" },
+        })
+          .then(function (response) {
+            console.log(response);
+            setIsLoading(false);
+          })
+          .catch(function (response) {
+            //handle error
+            console.log(response);
+            setIsLoading(false);
+          });
+      }
+    
 
             
 
@@ -67,7 +71,7 @@ export default function Cadastro() {
 
                         {/* <button onClick={() => this.botaoDoMenu()}>a</button> */}
 
-                        <form className="form-cadastro" action="submit" onSubmit={CadastrarCliente}>
+                        <form className="form-cadastro" action="submit">
 
                             {/* <input className="input-login" type="file" placeholder="arquivo"
                                 name='arquivo'

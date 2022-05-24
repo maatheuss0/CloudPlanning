@@ -3,7 +3,6 @@ import '../assets/css/modal.css'
 import X from '../assets/img/x.png'
 
 const ModalVpc = ({ onClose = () => { }, children }) => {
-
     return (
         <div className='modal'>
             <div className='container_modal'>

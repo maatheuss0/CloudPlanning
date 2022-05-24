@@ -42,10 +42,11 @@
 }
 
 .redirencionarr_diagrma {
-    margin-left: 410px;
+    margin-left: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -110px;
 }
 
 
@@ -304,10 +305,14 @@
     outline: 0;
 }
 
+.keyname {
+    margin-left: 361px;
+}
+
 .inputs_vpc {
     display: flex;
     justify-content: center;
-    padding: 25px 50px;
+    padding: 0px 50px;
     flex-direction: column;
 }
 
@@ -316,20 +321,20 @@
     padding: 25px 50px;
     flex-direction: column;
     margin-left: 400px;
-    margin-top: -338px;
+    margin-top: -385px;
 }
 
 .inputs_vpc span {
     font-family: 'Open Sans', sans-serif;
     font-weight:lighter;
-    font-size: 25px;
+    font-size: 17px;
     color: black;
     font-weight:lighter;
 }
 
 .inp {
     width: 322px;
-    padding: 4px;
+    padding: 2px;
     border: none;
     border-bottom: 1.07527px solid #000000;
     margin: 12px 0;
@@ -355,6 +360,24 @@
     margin-bottom: 25px;
 }
 
+.inp_ {
+    width: 100%;
+    padding: 4px;
+    border: none;
+    border-bottom: 1.07527px solid #000000;
+    margin: 12px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.83);
+    margin-bottom: 25px;
+}
+
+.span_diag{
+    font-size: 2px;
+}
+ 
 .inp:focus-visible {
     outline: unset;
 }
@@ -370,6 +393,20 @@
     cursor: pointer;
     border-radius: 10px;
     margin-left: 340px;
+}
+
+.but_ec2 {
+    border: none;
+    width: 200px;
+    height: 50px;
+    background-color: #3F9FE4;
+    color: #FFFFFF;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 340px;
+    margin-top: 20px;
 }
 
 .botao_perfil {

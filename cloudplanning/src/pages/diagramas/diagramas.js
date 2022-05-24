@@ -22,6 +22,7 @@ import excluir from '../../assets/img/excluir.png'
 import livro from '../../assets/img/book.png'
 import Modal from '../../components/Modal';
 import ModalVpc from '../../components/ModalVpc';
+import ModalPerfil from '../../components/ModalPerfil';
 
 
 export default class Diagramas extends Component {
@@ -37,8 +38,13 @@ export default class Diagramas extends Component {
             nomevpc: '',
             nomesubnet1: '',
             nomesubnet2: '',
+            isModalVisible: false,
+            isModalVisibleP: false,
+            isModalVisibleV: false,
         };
+
     };
+
 
     cadastrarEC2 = (event) => {
         event.preventDefault();
@@ -113,10 +119,11 @@ export default class Diagramas extends Component {
         })
     };
 
-    // const[isModalVisibleV, setIsModalVisibleV] = (false);
-    // const[isModalVisible, setIsModalVisible] = (false);
+
+
 
     render() {
+
 
         document.title = 'Diagramas | CloudPlanning'
         return (
@@ -133,7 +140,16 @@ export default class Diagramas extends Component {
                             <p className="logo_diagramass">CloudPlanning</p>
                         </div>
                         <div className="perfil_redirencionar">
-                            <Link to="/alterar_usuario" className="butao_perfil">Perfil</Link>
+                            <button className="butao_perfil" onClick={() => this.setState({ isModalVisibleP: true })}>Perfil</button>
+                            {this.state.isModalVisibleP ? (
+                                <ModalPerfil onClose={() => this.setState({ isModalVisibleP: false })}>
+                                    <form>
+                                        <div className='inputs_vpc'>
+
+                                        </div>
+                                    </form>
+                                </ModalPerfil>
+                            ) : null}
                         </div>
                     </div>
 
@@ -175,40 +191,38 @@ export default class Diagramas extends Component {
                                         <div className="componentess">
 
                                             <div>
-                                                <button className="componentes_bt" /*onClick={() => setIsModalVisible(true)}*/><span>EC2</span></button>
+                                                <button className="componentes_bt" onClick={() => this.setState({ isModalVisible: true })}><span>EC2</span></button>
                                                 <p className='int_get'>O EC2 permite que você adquira esse conjunto de recursos (memória, disco, CPU e rede) atráves do pagamento por uso</p>
                                             </div>
-                                            {/* {isModalVisible ? (
-                                            <Modal onClose={() => setIsModalVisible(false)}> */}
-                                            {/* <form onSubmit={this.cadastrarEC2}>
-                                                    <div className='inputs_vpc'>
-                                                        <span>Tipo da Instância</span>
-                                                        <input className='inpp'
-                                                            type="text"
-                                                            placeholder=""
-                                                            name=''
-                                                            onChange={this.TipoInstancia}
-                                                            value={this.state.TipoInstancia}
-                                                            required></input>
-                                                        <span>Keyname</span>
-                                                        <input className='inpp'
-                                                            type="text"
-                                                            placeholder=""
-                                                            name='keyname'
-                                                            onChange={this.Keyname}
-                                                            value={this.state.Keyname}></input>
-                                                        <span>Id iso</span>
-                                                        <input className='inpp'
-                                                            type="text"
-                                                            placeholder=""
-                                                            name='IdIso'
-                                                            onChange={this.IdIso}
-                                                            value={this.state.IdIso}></input>
-                                                    </div>
-                                                    <button className='but_vpc' type="submit">Enviar</button>
-                                                </form> */}
-                                            {/* </Modal>
-                                        ) : null} */}
+                                            {this.state.isModalVisible ? (
+                                                <Modal onClose={() => this.setState({ isModalVisible: false })}>
+                                                    <form onSubmit={this.cadastrarEC2}>
+                                                        <div className='inputs_vpc'>
+                                                            <span>Tipo da Instância</span>
+                                                            <input className='inpp'
+                                                                type="text"
+                                                                name='tipoinstancia'
+                                                                onChange={this.atualizaStateCampo}
+                                                                value={this.state.tipoinstancia}
+                                                                required></input>
+                                                            <span>Keyname</span>
+                                                            <input className='inpp'
+                                                                type="text"
+                                                                name='keyname'
+                                                                onChange={this.atualizaStateCampo}
+                                                                value={this.state.keyname}
+                                                                required></input>
+                                                            <span>Id iso</span>
+                                                            <input className='inpp'
+                                                                type="text"
+                                                                name='idiso'
+                                                                onChange={this.atualizaStateCampo}
+                                                                value={this.state.idiso}></input>
+                                                        </div>
+                                                        <button className='but_ec2' type="submit">Enviar</button>
+                                                    </form>
+                                                </Modal>
+                                            ) : null}
 
                                             <button className="componentes_bt"><span>Security Groups</span></button>
                                             <p className="int_get">Um grupo de segurança atua como firewall virtual para as instâncias do EC2 visando controlar o tráfego de entrada e de saída</p>
@@ -219,31 +233,84 @@ export default class Diagramas extends Component {
                                             <button className="componentes_bt"><span>Zona de disponibilidade</span></button>
                                             <p className='int_get'>As zonas de disponibilidade são vários locais isolados dentro de cada região</p>
 
-                                            <button className="componentes_bt"/* onClick={() => setIsModalVisibleV(true)}*/ ><span>VPC</span></button>
+                                            <button className="componentes_bt" onClick={() => this.setState({ isModalVisibleV: true })} ><span>VPC</span></button>
                                             <p className='int_get'>VPC é uma demanda configurável de recursos compartilhados de computação alocados dentro de um ambiente de nuvem pública</p>
-                                            {/* {isModalVisibleV ? (
-                                            <ModalVpc onClose={() => setIsModalVisibleV(false)}> */}
-                                            {/* <form>
-                                                    <div className='inputs_vpc'>
-                                                        <span>Keyname</span>
-                                                        <input className='inp'></input>
-                                                        <span>Tipo de Instância</span>
-                                                        <input className='inp'></input>
-                                                        <span>Id da Iso</span>
-                                                        <input className='inp'></input>
-                                                        <div className='inp2'>
-                                                            <span>Ip Subnet Pública</span>
-                                                            <input className='inp'></input>
-                                                            <span>Ip Subnet Privada</span>
-                                                            <input className='inp'></input>
-                                                            <span>Ip Vpc</span>
-                                                            <input className='inp'></input>
+                                            {this.state.isModalVisibleV ? (
+                                                <ModalVpc onClose={() => this.setState({ isModalVisibleV: false })}>
+                                                    <form onSubmit={this.cadastrarVPC}>
+                                                        <div className='inputs_vpc'>
+                                                            <div className='keyname'>
+                                                                <span>Keyname</span>
+                                                            </div>
+                                                            <input className='inp_'
+                                                                type="text"
+                                                                name='keyname'
+                                                                onChange={this.atualizaStateCampo}
+                                                                value={this.state.keyname}
+                                                                required></input>
+                                                            <span cla>Tipo da Instância</span>
+                                                            <input className='inp'
+                                                                type="text"
+                                                                name='tipoinstancia'
+                                                                onChange={this.atualizaStateCampo}
+                                                                value={this.state.tipoinstancia}
+                                                                required></input>
+                                                            <span>Id iso</span>
+                                                            <input className='inp'
+                                                                type="text"
+                                                                name='idiso'
+                                                                onChange={this.atualizaStateCampo}
+                                                                value={this.state.idiso}
+                                                                required></input>
+                                                            <span>Nome VPC</span>
+                                                            <input className='inp'
+                                                                type="text"
+                                                                name='nomevpc'
+                                                                onChange={this.atualizaStateCampo}
+                                                                value={this.state.nomevpc}
+                                                                required></input>
+                                                            <span>Nome Subnet Pública</span>
+                                                            <input className='inp'
+                                                                type="text"
+                                                                name='nomesubnet1'
+                                                                onChange={this.atualizaStateCampo}
+                                                                value={this.state.nomesubnet1}
+                                                                required></input>
+                                                            <div className='inp2'>
+                                                                <span>Nome Subnet Privada</span>
+                                                                <input className='inp'
+                                                                    type="text"
+                                                                    name='nomesubnet2'
+                                                                    onChange={this.atualizaStateCampo}
+                                                                    value={this.state.nomesubnet2}
+                                                                    required></input>
+                                                                <span>Ip Subnet Pública</span>
+                                                                <input className='inp'
+                                                                    type="text"
+                                                                    name='ipsubnet1'
+                                                                    onChange={this.atualizaStateCampo}
+                                                                    value={this.state.ipsubnet1}
+                                                                    required></input>
+                                                                <span>Ip Subnet Privada</span>
+                                                                <input className='inp'
+                                                                    type="text"
+                                                                    name='ipsubnet2'
+                                                                    onChange={this.atualizaStateCampo}
+                                                                    value={this.state.ipsubnet2}
+                                                                    required></input>
+                                                                <span>Ip Vpc</span>
+                                                                <input className='inp'
+                                                                    type="text"
+                                                                    name='ipVpc'
+                                                                    onChange={this.atualizaStateCampo}
+                                                                    value={this.state.ipVpc}
+                                                                    required></input>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <button className='but_vpc'>Enviar</button>
-                                                </form> */}
-                                            {/* </ModalVpc>
-                                        ) : null} */}
+                                                        <button className='but_vpc' type='submit'>Enviar</button>
+                                                    </form>
+                                                </ModalVpc>
+                                            ) : null}
                                             {/* <button className="componentes_bt"><span>Subrede</span></button> */}
                                             {/* <button className="componentes_bt"><span>Auto Assign para IP</span></button> */}
                                             {/* <button className="componentes_bt"><span>Security Group</span></button> */}
@@ -305,95 +372,9 @@ export default class Diagramas extends Component {
                         <div id="drag-8" className="draggable">
                         
                     </div> */}
-                            <form onSubmit={this.cadastrarEC2}>
-                                <div className='inputs_vpc'>
-                                    <span>Tipo da Instância</span>
-                                    <input className='inpp'
-                                        type="text"
-                                        name='tipoinstancia'
-                                        onChange={this.atualizaStateCampo}
-                                        value={this.state.tipoinstancia}
-                                        required></input>
-                                    <span>Keyname</span>
-                                    <input className='inpp'
-                                        type="text"
-                                        name='keyname'
-                                        onChange={this.atualizaStateCampo}
-                                        value={this.state.keyname}
-                                        required></input>
-                                    <span>Id iso</span>
-                                    <input className='inpp'
-                                        type="text"
-                                        name='idiso'
-                                        onChange={this.atualizaStateCampo}
-                                        value={this.state.idiso}></input>
-                                </div>
-                                <button className='but_vpc' type="submit">Enviar</button>
-                            </form>
 
-                            <form onSubmit={this.cadastrarVPC}>
-                                <div className='inputs_vpc'>
-                                <span>Tipo da Instância</span>
-                                    <input className='inp'
-                                        type="text"
-                                        name='tipoinstancia'
-                                        onChange={this.atualizaStateCampo}
-                                        value={this.state.tipoinstancia}
-                                        required></input>
-                                    <span>Keyname</span>
-                                    <input className='inp'
-                                        type="text"
-                                        name='keyname'
-                                        onChange={this.atualizaStateCampo}
-                                        value={this.state.keyname}
-                                        required></input>
-                                    <span>Id iso</span>
-                                    <input className='inp'
-                                        type="text"
-                                        name='idiso'
-                                        onChange={this.atualizaStateCampo}
-                                        value={this.state.idiso}></input>
-                                    <span>Nome VPC</span>
-                                    <input className='inp'
-                                        type="text"
-                                        name='nomevpc'
-                                        onChange={this.atualizaStateCampo}
-                                        value={this.state.nomevpc}></input>
-                                    <span>Nome Subnet Pública</span>
-                                    <input className='inp'
-                                        type="text"
-                                        name='nomesubnet1'
-                                        onChange={this.atualizaStateCampo}
-                                        value={this.state.nomesubnet1}></input>
-                                    <span>Nome Subnet Privada</span>
-                                    <input className='inp'
-                                        type="text"
-                                        name='nomesubnet2'
-                                        onChange={this.atualizaStateCampo}
-                                        value={this.state.nomesubnet2}></input>
-                                    <div className='inp2'>
-                                        <span>Ip Subnet Pública</span>
-                                        <input className='inp'
-                                            type="text"
-                                            name='ipsubnet1'
-                                            onChange={this.atualizaStateCampo}
-                                            value={this.state.ipsubnet1}></input>
-                                        <span>Ip Subnet Privada</span>
-                                        <input className='inp'
-                                            type="text"
-                                            name='ipsubnet2'
-                                            onChange={this.atualizaStateCampo}
-                                            value={this.state.ipsubnet2}></input>
-                                        <span>Ip Vpc</span>
-                                        <input className='inp'
-                                            type="text"
-                                            name='ipVpc'
-                                            onChange={this.atualizaStateCampo}
-                                            value={this.state.ipVpc}></input>
-                                    </div>
-                                </div>
-                                <button className='but_vpc' type='submit'>Enviar</button>
-                            </form>
+
+
                         </section>
 
                     </div>
