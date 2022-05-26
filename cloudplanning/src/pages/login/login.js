@@ -63,8 +63,8 @@ export default class Login extends Component {
                         <a href="http://localhost:3000/">
                             <img className="logo" src={logo} alt="logo" />
                         </a>
-                            <p className="titulo-inputt">Realize login no sistema</p>
-                            <hr className='hr_login'/>
+                        <p className="titulo-inputt">Realize login no sistema</p>
+                        <hr className='hr_login' />
                         <form onSubmit={this.efetuaLogin} className="form-login">
                             <input
                                 className="input-login"
@@ -89,10 +89,7 @@ export default class Login extends Component {
                                 placeholder="Senha"
                             />
 
-                            {/* <a class="esqueceu-senha"> Esqueceu sua senha?</a> */}
-                            <Link to="/esqueciSenha" className="esqueceu-senha">Esqueceu sua senha?</Link>
-
-                            {   
+                            {
                                 this.state.isLoading === true &&
                                 <button className="btn-entrar" type="submit" disabled>Loading...</button>
                             }

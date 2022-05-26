@@ -275,7 +275,7 @@ footer span {
     color: white;
 }
 
-@media (max-width: 524px) {
+@media (max-width: 1000px) {
     
 
     .login {

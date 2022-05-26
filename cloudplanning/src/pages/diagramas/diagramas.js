@@ -138,9 +138,12 @@ export default class Diagramas extends Component {
                         <div className="redirencionarr_diagrma">
                             <img className="logo_azul" src={logo1} alt="logo_CloudPlanning" />
                             <p className="logo_diagramass">CloudPlanning</p>
+                            <div className="perfil_redirencionar">
+                                <button className="butao_perfil" onClick={() => this.setState({ isModalVisibleP: true })}>Perfil</button>
+                            </div>
                         </div>
-                        <div className="perfil_redirencionar">
-                            <button className="butao_perfil" onClick={() => this.setState({ isModalVisibleP: true })}>Perfil</button>
+                        <div>
+
                             {this.state.isModalVisibleP ? (
                                 <ModalPerfil onClose={() => this.setState({ isModalVisibleP: false })}>
                                     <form>
@@ -322,10 +325,8 @@ export default class Diagramas extends Component {
                         </section>
 
                         <section className="intens_todo">
-                            <div className='tittle_diagrama'>
-                                <form>
-                                    <input className='titulo' placeholder='Meu primerio diagrama'></input>
-                                </form>
+                            <div className='tittlee'>
+                                <h1>Crie sua diagrama inteligente</h1>
                                 <hr></hr>
                             </div>
                             {/* <div className="formata">
@@ -334,12 +335,7 @@ export default class Diagramas extends Component {
                             <div className="simbols">
                                 <div>
                                     <a>
-                                        <img className="more" src={mais} alt="logo_CloudPlanning" />
-                                    </a>
-                                </div>
-                                <div>
-                                    <a>
-                                        <img className="" src={excluir} alt="logo_CloudPlanning" />
+                                    <button className="more" type="button"><img src={excluir} /></button>
                                     </a>
                                 </div>
                             </div>

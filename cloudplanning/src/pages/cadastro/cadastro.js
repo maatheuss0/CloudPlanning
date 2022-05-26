@@ -13,33 +13,26 @@ export default class Cadastro extends Component {
             Email: '',
             Senha: '',
             Nome: '',
-            arquivo: '',
             DataNascimento: '',
+            Imagem: "ttttt"
         };
     };
 
 
     cadastrarUsuario = (event) => {
 
-        var formData = new FormData();
-
-        const target = document.getElementById('arquivo')
-        const file = target.files[0]
-
-        formData.append('arquivo', file, file.name)
         event.preventDefault();
 
-        this.setState({ erroMensagem: "" })
+        this.setState({ erroMensagem: "", isLoading: true })
 
-        let Usuario = {
+        axios.post('https://localhost:5003/api/Usuarios', {
             Email: this.state.Email,
             Senha: this.state.Senha,
             Nome: this.state.Nome,
-            arquivo: this.state.arquivo,
             DataNascimento: this.state.DataNascimento,
-        }
+            Imagem: this.state.Imagem
 
-        axios.post('https://localhost:5003/api/Usuarios', Usuario)
+        })
 
             .then(resposta => {
                 if (resposta.status === 201) {
@@ -49,7 +42,7 @@ export default class Cadastro extends Component {
                 }
             })
             .catch(() => {
-                this.setState({ erroMensagem: "Dados inseridos são inválidos!", isLoading: false });
+                this.setState({ erroMensagem: "Email já cadastrado, tente novamente!", isLoading: false });
             })
     }
 
@@ -64,9 +57,8 @@ export default class Cadastro extends Component {
             Email: '',
             Senha: '',
             Nome: '',
-            arquivo: '',
-            arquivo: '',
             DataNascimento: '',
+            Imagem: '',
         })
     };
 
@@ -93,12 +85,6 @@ export default class Cadastro extends Component {
                             {/* <button onClick={() => this.botaoDoMenu()}>a</button> */}
 
                             <form className="form-cadastro" action="submit" onSubmit={this.cadastrarUsuario}>
-                                <input className='input-login'
-                                    type="file"
-                                    name='arquivo'
-                                    placeholder="arquivo"
-                                    onChange={this.atualizaStateCampo}
-                                    value={this.state.arquivo} required></input>
 
                                 <input className='input-login'
                                     type="text"
@@ -128,7 +114,7 @@ export default class Cadastro extends Component {
                                     onChange={this.atualizaStateCampo}
                                     value={this.state.Senha} required></input>
 
-                                <button className='btn-entrar' type="submit">Cadastrar</button>
+                                <button class="btn-entrar" type="submit">Cadastrar-se</button>
 
                             </form>
                             <div className="cadastrar2">

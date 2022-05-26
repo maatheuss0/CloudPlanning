@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -51,12 +51,12 @@
 
 
 .logo_diagramass {
-    font-family: 'Red Hat Mono', monospace;    
+    font-family: 'Red Hat Mono', monospace;
     color: white;
-    text-decoration:double;
+    text-decoration: double;
     margin-right: 340px;
     font-size: 25px;
-    font-weight:unset;
+    font-weight: unset;
     width: 196px;
     color: #3F9FE4;
     margin-top: 10px;
@@ -72,7 +72,7 @@
     width: 505px;
     height: 750px;
     overflow: hidden;
-    overflow-y: scroll;  
+    overflow-y: scroll;
 }
 
 .quadro::-webkit-scrollbar {
@@ -80,7 +80,7 @@
     border: none;
 }
 
-.quadro::-webkit-scrollbar-thumb{
+.quadro::-webkit-scrollbar-thumb {
     background-color: #3981b4;
 }
 
@@ -160,23 +160,45 @@
     color: rgba(0, 0, 0, 0.83);
 }
 
-.comp_pesquisar input:focus-visible{
+.comp_pesquisar input:focus-visible {
     outline: unset;
 }
 
 .butao_perfil {
-  border: none;
-  margin-left: -90px;
-  margin-top: 20px;
-  width: 200px;
-  height: 50px;
-  background-color: #3F9FE4;
-  color: #FFFFFF;
-  font-size: 20px;
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 10px; 
-  padding: 16px 60px;
+    border: none;
+    width: 210px;
+    height: 54px;
+    margin-top: -5px;
+    margin-left: -360px;
+    background-color: #3F9FE4;
+    color: #FFFFFF;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+    /* padding: 13px 79px; */
+}
+
+.tittlee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-left: -40px;
+}
+
+.tittlee h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight:lighter;
+    font-size: 30px;
+    color: black;
+}
+
+.tittlee hr {
+    border-top: 1px solid rgb(0, 0, 0);
+    margin-top: 19px;
+    width: 610px;
 }
 
 .formata {
@@ -237,18 +259,18 @@
     display: flex;
     margin-left: 30px;
     color: #584646;
-    font-family: "Open Sans", sans-serif ;
+    font-family: "Open Sans", sans-serif;
 }
 
 .all_itens {
     display: flex;
-    
+
 }
 
 .diagrama_fundu {
     margin-left: 300px;
     width: 680px;
-    height: 900px;  
+    height: 900px;
     margin-top: -90px;
     transform: rotate(90deg);
 }
@@ -262,14 +284,14 @@
     color: white;
     font-size: 20px;
     font-family: sans-serif;
-  
+
     touch-action: none;
-  
+
     /* This makes things *much* easier */
     box-sizing: border-box;
-  }
+}
 
-  .tittle_diagrama {
+.tittle_diagrama {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -277,10 +299,10 @@
     flex-direction: column;
     margin-top: 20px;
 }
-    
+
 .tittle_diagrama h1 {
     font-family: 'Open Sans', sans-serif;
-    font-weight:lighter;
+    font-weight: lighter;
     font-size: 30px;
 }
 
@@ -326,10 +348,10 @@
 
 .inputs_vpc span {
     font-family: 'Open Sans', sans-serif;
-    font-weight:lighter;
+    font-weight: lighter;
     font-size: 17px;
     color: black;
-    font-weight:lighter;
+    font-weight: lighter;
 }
 
 .inp {
@@ -374,10 +396,10 @@
     margin-bottom: 25px;
 }
 
-.span_diag{
+.span_diag {
     font-size: 2px;
 }
- 
+
 .inp:focus-visible {
     outline: unset;
 }
@@ -430,9 +452,9 @@
 }
 
 .perfil_redirencionar p {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-left: -90px;
-    
+
 }
 
 .simbols {
@@ -443,11 +465,14 @@
 
 .simbols img {
     height: 50px;
-    width: 50px ;
+    width: 50px;
 }
 
 .more {
     margin-right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .livro {
@@ -466,9 +491,9 @@
     transform: translate(0px, 0px);
     background-image: url(../img/ACL.png);
     background-repeat: no-repeat;
-  }
+}
 
-  #drag-3 {
+#drag-3 {
     height: 492px;
     width: 492px;
     min-height: 6.5em;
@@ -477,8 +502,9 @@
     transform: translate(0px, 0px);
     background-image: url(../img/disponibilidade.png);
     background-repeat: no-repeat;
-  }
-  #drag-4 {
+}
+
+#drag-4 {
     height: 520px;
     width: 520px;
     min-height: 6.5em;
@@ -487,8 +513,9 @@
     transform: translate(0px, 0px);
     background-image: url(../img/internet-gateway.png);
     background-repeat: no-repeat;
-  }
-  #drag-5 {
+}
+
+#drag-5 {
     height: 395px;
     width: 395px;
     min-height: 6.5em;
@@ -497,8 +524,9 @@
     transform: translate(0px, 0px);
     background-image: url(../img/nat-gateway.png);
     background-repeat: no-repeat;
-  }
-  #drag-6 {
+}
+
+#drag-6 {
     height: 479px;
     width: 514px;
     min-height: 6.5em;
@@ -507,9 +535,9 @@
     transform: translate(0px, 0px);
     background-image: url(../img/vpc.png);
     background-repeat: no-repeat;
-  }
+}
 
-  #drag-8 {
+#drag-8 {
     height: 293px;
     width: 290px;
     min-height: 6.5em;
@@ -518,8 +546,8 @@
     transform: translate(0px, 0px);
     background-image: url(../img/teste.png);
     background-repeat: no-repeat;
-  }
+}
 
 .intens_todo {
     width: 100%;
-  } 
+}

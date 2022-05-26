@@ -2,6 +2,7 @@
 using CloudPlanning_WebApi.Domains;
 using CloudPlanning_WebApi.Interfaces;
 using CloudPlanning_WebApi.Utils;
+using CloudPlanning_WebApi.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -33,11 +34,11 @@ namespace CloudPlanning_WebApi.Controllers
 
 
         [HttpPost]
-        public IActionResult Cadastrar([FromForm] Usuario usuarionovo, IFormFile arquivo)
+        public IActionResult Cadastrar(UsuarioViewModel usuarionovo)
         {
             try
             {
-                string[] extensoesPermitidas = { "jpg", "png", "jpeg" };
+                /*string[] extensoesPermitidas = { "jpg", "png", "jpeg" };
                 string uploadResultado = Upload.UploadFile(arquivo, extensoesPermitidas);
 
                 if (uploadResultado == "")
@@ -50,9 +51,16 @@ namespace CloudPlanning_WebApi.Controllers
                     return BadRequest("Extensão de arquivo não permitida");
                 }
 
-                usuarionovo.Imagem = uploadResultado;
+                usuarionovo.Imagem = uploadResultado;*/
 
-                _usuarioRepository.Cadastrar(usuarionovo);
+                Usuario u = new();
+                u.Nome = usuarionovo.Nome;
+                u.Senha = usuarionovo.Senha;
+                u.Email = usuarionovo.Email;
+                u.DataNascimento = usuarionovo.DataNascimento;
+
+
+                _usuarioRepository.Cadastrar(u);
 
                 return StatusCode(201);
             }
