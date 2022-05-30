@@ -658,7 +658,7 @@
 #drag-4 {
     margin-left: 30px;
     min-height: 6.5em;
-    touch-action: none;
+    /* touch-action: none; */
     user-select: none;
     transform: translate(0px, 0px);
     background-image: url(../img/internet-gateway.png);

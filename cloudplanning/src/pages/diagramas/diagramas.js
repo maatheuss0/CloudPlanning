@@ -41,6 +41,7 @@ export default class Diagramas extends Component {
             nomevpc: '',
             nomesubnet1: '',
             nomesubnet2: '',
+            erroMensagem: '',
             isModalVisible: false,
             isModalVisibleP: false,
             isModalVisibleV: false,
@@ -84,7 +85,6 @@ export default class Diagramas extends Component {
                 if (resposta.status === 201) {
                     localStorage.setItem('diagrama-cadastro', resposta.data.token);
                     this.setState({ isLoading: false });
-                    this.props.history.push('/');
                 }
             })
             .catch(() => {
@@ -113,7 +113,6 @@ export default class Diagramas extends Component {
                 if (resposta.status === 201) {
                     localStorage.setItem('diagrama-cadastro', resposta.data.token);
                     this.setState({ isLoading: false });
-                    this.props.history.push('/');
                 }
             })
             .catch(() => {
@@ -343,7 +342,10 @@ export default class Diagramas extends Component {
                                                                     onChange={this.atualizaStateCampo}
                                                                     value={this.state.idiso}></input>
                                                             </div>
-                                                            <button className='but_ec2' type="submit" onClick={(e) => (this.setState({ isModalVisibleW: false }))}>Enviar</button>
+
+                                                            <button className='but_ec2' type="submit">Enviar</button>
+
+
                                                         </form>
                                                     </Modal>
                                                 ) : null}

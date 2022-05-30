@@ -14,7 +14,7 @@ def create_ec2_instance():
     try:
         keyname = request.json['keyname']
         tipoinstancia = request.json['tipoinstancia']
-        idiso = request.json['id-iso']
+        idiso = request.json['idiso']
 
         resource_ec2 = boto3.client("ec2")
         resource_ec2.run_instances(
