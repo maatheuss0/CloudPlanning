@@ -91,6 +91,24 @@
     outline: unset;
 }
 
+.input-login_data {
+    width: 65%;
+    padding: 8px;
+    border: none;
+    border-bottom: 1.07527px solid #000000;
+    margin: 12px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.83);
+}
+
+.input-login_data:focus-visible {
+    outline: unset;
+}
+
+
 .esqueceu-senha {
     width: 65%;
     font-family: 'Open Sans';
@@ -144,6 +162,11 @@
 
 @media (max-width: 460px) {
 
+    .input-login_data {
+        background-color: #197cc200;
+        margin-top: 25px;
+    }
+
     .container-fundo {
         display: none;
     }
@@ -178,15 +201,15 @@
         margin-left: unset;
         background-color: #ffffff;
         width: 90%;
-        box-shadow:0px 0px 10px -3px #000000;
+        box-shadow: 0px 0px 10px -3px #000000;
         padding: 28px 0px;
         /* margin-top: -50px; */
         margin: 0 auto;
     }
 
     .form-cadastro input {
-      width: 80%;
-      font-size: 15px;
+        width: 80%;
+        font-size: 15px;
     }
 
 
@@ -199,7 +222,7 @@
         height: 117vh;
     }
 
-} 
+}
 
 /* 
 @media (max-width: 460px) {

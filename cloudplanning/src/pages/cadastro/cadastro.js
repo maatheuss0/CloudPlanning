@@ -92,7 +92,7 @@ export default class Cadastro extends Component {
                                     onChange={this.atualizaStateCampo}
                                     value={this.state.Nome} required></input>
 
-                                <input className='input-login'
+                                <input className='input-login_data'
                                     type="date"
                                     name='DataNascimento'
                                     placeholder="Data de nascimento"
