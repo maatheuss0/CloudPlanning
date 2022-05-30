@@ -298,6 +298,8 @@
     box-sizing: border-box;
 }
 
+
+
 .tittle_diagrama {
     display: flex;
     justify-content: center;
@@ -406,7 +408,6 @@
 
 .setas1 {
     margin-left: 120px;
-    margin-top: -65px;
     display: flex;
     justify-content: space-between;
 }
@@ -489,9 +490,14 @@
 
 .more {
     margin-right: 10px;
-    background: none;
+    margin-top: 60px;
+    background-color: #FFFEFF;
+    box-shadow: 2px 9px 11px -1px rgba(0, 0, 0, 0.288);
+    border-radius: 30px;
     border: none;
     cursor: pointer;
+    height: 50px;
+    width: 50px;
 }
 
 .oTodo {
@@ -909,7 +915,7 @@
 
 #drag-26 {
     margin-left: 30px;
-    background-size: 100px;
+    background-size: 65px;
     min-height: 6.5em;
     touch-action: none;
     user-select: none;
@@ -921,7 +927,7 @@
 
 #drag-27 {
     margin-left: 30px;
-    background-size: 100px;
+    background-size: 65px;
     min-height: 6.5em;
     touch-action: none;
     user-select: none;
@@ -933,7 +939,7 @@
 
 #drag-28 {
     margin-left: 30px;
-    background-size: 100px;
+    background-size: 65px;
     min-height: 6.5em;
     touch-action: none;
     user-select: none;
@@ -945,7 +951,7 @@
 
 #drag-29 {
     margin-left: 30px;
-    background-size: 100px;
+    background-size: 65px;
     min-height: 6.5em;
     touch-action: none;
     user-select: none;
@@ -957,7 +963,7 @@
 
 #drag-30 {
     margin-left: 30px;
-    background-size: 100px;
+    background-size: 65px;
     min-height: 6.5em;
     touch-action: none;
     user-select: none;
@@ -969,7 +975,7 @@
 
 #drag-31 {
     margin-left: 30px;
-    background-size: 100px;
+    background-size: 65px;
     min-height: 6.5em;
     touch-action: none;
     user-select: none;
@@ -981,7 +987,7 @@
 
 #drag-32 {
     margin-left: 30px;
-    background-size: 100px;
+    background-size: 65px;
     min-height: 6.5em;
     touch-action: none;
     user-select: none;
@@ -993,7 +999,7 @@
 
 #drag-33 {
     margin-left: 30px;
-    background-size: 100px;
+    background-size: 65px;
     min-height: 6.5em;
     touch-action: none;
     user-select: none;
@@ -1003,100 +1009,8 @@
     width: 105px;
 }
 
-/* double setas */
+@media (max-width: 1000px) {
+   
+    
 
-#drag-34 {
-    margin-left: 30px;
-    background-size: 70px;
-    min-height: 6.5em;
-    touch-action: none;
-    user-select: none;
-    transform: translate(0px, 0px);
-    background-image: url(../img/double-arrow.png);
-    background-repeat: no-repeat;
-    width: 105px;
-}
-
-#drag-35 {
-    margin-left: 30px;
-    background-size: 70px;
-    min-height: 6.5em;
-    touch-action: none;
-    user-select: none;
-    transform: translate(0px, 0px);
-    background-image: url(../img/double-arrow.png);
-    background-repeat: no-repeat;
-    width: 105px;
-}
-
-#drag-36 {
-    margin-left: 30px;
-    background-size: 70px;
-    min-height: 6.5em;
-    touch-action: none;
-    user-select: none;
-    transform: translate(0px, 0px);
-    background-image: url(../img/double-arrow.png);
-    background-repeat: no-repeat;
-    width: 105px;
-}
-
-#drag-37 {
-    margin-left: 30px;
-    background-size: 70px;
-    min-height: 6.5em;
-    touch-action: none;
-    user-select: none;
-    transform: translate(0px, 0px);
-    background-image: url(../img/double-arrow.png);
-    background-repeat: no-repeat;
-    width: 105px;
-}
-
-#drag-38 {
-    margin-left: 30px;
-    background-size: 70px;
-    min-height: 6.5em;
-    touch-action: none;
-    user-select: none;
-    transform: translate(0px, 0px);
-    background-image: url(../img/double-arrow.png);
-    background-repeat: no-repeat;
-    width: 105px;
-}
-
-#drag-39 {
-    margin-left: 30px;
-    background-size: 70px;
-    min-height: 6.5em;
-    touch-action: none;
-    user-select: none;
-    transform: translate(0px, 0px);
-    background-image: url(../img/double-arrow.png);
-    background-repeat: no-repeat;
-    width: 105px;
-}
-
-#drag-40 {
-    margin-left: 30px;
-    background-size: 70px;
-    min-height: 6.5em;
-    touch-action: none;
-    user-select: none;
-    transform: translate(0px, 0px);
-    background-image: url(../img/double-arrow.png);
-    background-repeat: no-repeat;
-    width: 105px;
-}
-
-#drag-41 {
-    margin-left: 30px;
-    background-size: 70px;
-    min-height: 6.5em;
-    touch-action: none;
-    user-select: none;
-    transform: translate(0px, 0px);
-    background-image: url(../img/double-arrow.png);
-    background-repeat: no-repeat;
-    width: 105px;
 }

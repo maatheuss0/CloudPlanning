@@ -285,34 +285,7 @@ export default class Diagramas extends Component {
                                                                     </div>
                                                                 </div>
 
-                                                                <div className='setas1'>
-                                                                    <div className='seta_Redirencionar'>
-                                                                        <a>
-                                                                            <button className="img_system" type="button" onClick={(e) => (this.setState({ isModalVisibleP: false }), this.ListarTodos(e, "drag-34"))}><img className='fomas' src={seta2} /></button>
-                                                                        </a>
-                                                                        <a>
-                                                                            <button className="img_system" type="button" onClick={(e) => (this.setState({ isModalVisibleP: false }), this.ListarTodos(e, "drag-35"))}><img className='fomas1' src={seta2} /></button>
-                                                                        </a>
-                                                                        <a>
-                                                                            <button className="img_system" type="button" onClick={(e) => (this.setState({ isModalVisibleP: false }), this.ListarTodos(e, "drag-36"))}><img className='fomas2' src={seta2} /></button>
-                                                                        </a>
-                                                                        <a>
-                                                                            <button className="img_system" type="button" onClick={(e) => (this.setState({ isModalVisibleP: false }), this.ListarTodos(e, "drag-37"))}><img className='fomas3' src={seta2} /></button>
-                                                                        </a>
-                                                                        <a>
-                                                                            <button className="img_system" type="button" onClick={(e) => (this.setState({ isModalVisibleP: false }), this.ListarTodos(e, "drag-38"))}><img className='fomas4' src={seta2} /></button>
-                                                                        </a>
-                                                                        <a>
-                                                                            <button className="img_system" type="button" onClick={(e) => (this.setState({ isModalVisibleP: false }), this.ListarTodos(e, "drag-39"))}><img className='fomas5' src={seta2} /></button>
-                                                                        </a>
-                                                                        <a>
-                                                                            <button className="img_system" type="button" onClick={(e) => (this.setState({ isModalVisibleP: false }), this.ListarTodos(e, "drag-40"))}><img className='fomas6' src={seta2} /></button>
-                                                                        </a>
-                                                                        <a>
-                                                                            <button className="img_system" type="button" onClick={(e) => (this.setState({ isModalVisibleP: false }), this.ListarTodos(e, "drag-41"))}><img className='fomas7' src={seta2} /></button>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
+
 
                                                             </div>
                                                         </ModalPerfil>
@@ -485,8 +458,6 @@ export default class Diagramas extends Component {
 
                             <section className="intens_todo">
                                 <div className='tittlee'>
-                                    <h1>Crie sua diagrama inteligente</h1>
-                                    <hr className='h4di'></hr>
                                     <div className="simbols">
                                         <div>
                                             <a>

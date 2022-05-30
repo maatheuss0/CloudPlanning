@@ -6,11 +6,8 @@ import {
   Redirect,
   Switch,
 } from 'react-router-dom';
-import { parseJwt, usuarioAutenticado } from './services/auth';
-
-
+import { usuarioAutenticado } from './services/auth';
 import './index.css';
-
 import Home from './pages/home/App';
 import Login from './pages/login/login';
 import cadastro from './pages/cadastro/cadastro';
@@ -29,8 +26,8 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
       usuarioAutenticado() ? (
         <Component {...props} />
       ) : (
-        <Redirect to={{ pathname: "/", state: { from: props.location } }} />
-    )
+        <Redirect to={{ pathname: "/Login", state: { from: props.location } }} />
+      )
     }
   />
 );
