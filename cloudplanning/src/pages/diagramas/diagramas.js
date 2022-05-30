@@ -52,6 +52,8 @@ export default class Diagramas extends Component {
     };
 
 
+
+
     ListarTodos = (event, imagem) => {
 
         event.preventDefault();
@@ -65,7 +67,6 @@ export default class Diagramas extends Component {
         console.log(this.state.listarTodos)
 
     }
-
 
 
     cadastrarEC2 = (event) => {
@@ -140,8 +141,6 @@ export default class Diagramas extends Component {
             nomesubnet2: '',
         })
     };
-
-
 
 
     render() {
@@ -466,7 +465,7 @@ export default class Diagramas extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                    {this.state.listarTodos.map((c) => (<div key={c.id} id={c.imagem} className="draggable"></div>))}
+                                {this.state.listarTodos.map((c) => (<div key={c.id} id={c.imagem} className="draggable"></div>))}
 
                             </section>
 

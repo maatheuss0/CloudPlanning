@@ -59,7 +59,7 @@ export default class Login extends Component {
 
                     </div>
 
-                    <div className="container-input">
+                    <div className="container-input-login">
                         <a href="http://localhost:3000/">
                             <img className="logo" src={logo} alt="logo" />
                         </a>

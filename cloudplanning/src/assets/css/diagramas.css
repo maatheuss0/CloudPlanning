@@ -22,8 +22,9 @@
 
 .body_diagrama {
     background-image: url(../img/tela_diagrama.png);
-    width: 100%;
-    height: 1600px;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 
@@ -640,7 +641,6 @@
     background-repeat: no-repeat;
     background-size: 104px;
     width: 105px;
-
 }
 
 #drag-3 {
@@ -665,6 +665,7 @@
     background-repeat: no-repeat;
     background-size: 104px;
     width: 105px;
+    z-index: auto;
 }
 
 #drag-5 {

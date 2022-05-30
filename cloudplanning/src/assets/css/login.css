@@ -33,9 +33,8 @@
     background-position: center;
 }
 
-.container-input {
+.container-input-login {
     width: 50%;
-    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -133,20 +132,32 @@
     font-weight: 100;
 }
 
-@media (max-width: 1000px) {
+
+@media (max-width: 460px) {
+
     .container-fundo {
-        width: 35%;
+        display: none;
     }
 
-    
+    .container-input-login {
+        margin-left: 35px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-right: unset;
+    }
+
     .logo {
-        width: 411px;
-        height: 145px;
+        /* margin-left: 245px; */
+        width: 300px;
+        height: 100px;
     }
 
-    .titulo-input_cad {
-        font-size: 30px;
-        margin-top: 0px;
+    .titulo-inputt {
+        font-size: 22px;
+        margin-left: unset;
+        margin: 15px 0;
     }
 
     .hr_login {
@@ -154,33 +165,33 @@
     }
 
     .form-login {
+        margin-left: unset;
         background-color: #ffffff;
-        width: 456px;
+        width: 90%;
         box-shadow:0px 0px 10px -3px #000000;
-        padding: 25px 0px;
+        padding: 28px 0px;
         margin-top: -30px;
+        margin: 0 auto;
     }
 
     .form-login input {
-      width: 400px;
+      width: 80%;
       font-size: 15px;
     }
 
-    .cadastrar2 {
-        width: 350px;
-        font-size: 15px;
+
+    .cadastrar {
+        margin-left: unset;
+        width: 425px;
     }
 
-    .cadastrar3 {
-        width: 613px;
-        font-size: 15px;
-        margin-top: -12px;
-        margin-bottom: 10px;
+    .main-login {
+        height: 117vh;
     }
 
-}
-
-/* @media (max-width: 524px) {
+} 
+/* 
+@media (max-width: 460px) {
 
     .container-fundo {
         display: none;
@@ -229,4 +240,4 @@
         height: 117vh;
     }
 
-} */
+}  */
