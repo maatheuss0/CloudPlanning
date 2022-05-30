@@ -33,6 +33,8 @@ namespace CloudPlanning_WebApi.Controllers
         }
 
 
+
+
         [HttpPost]
         public IActionResult Cadastrar(UsuarioViewModel usuarionovo)
         {

@@ -14,7 +14,7 @@ export default class Cadastro extends Component {
             Senha: '',
             Nome: '',
             DataNascimento: '',
-            Imagem: "ttttt"
+            // Imagem: "ttttt"
         };
     };
 
@@ -30,8 +30,7 @@ export default class Cadastro extends Component {
             Senha: this.state.Senha,
             Nome: this.state.Nome,
             DataNascimento: this.state.DataNascimento,
-            Imagem: this.state.Imagem
-
+            // Imagem: this.state.Imagem
         })
 
             .then(resposta => {
@@ -58,7 +57,7 @@ export default class Cadastro extends Component {
             Senha: '',
             Nome: '',
             DataNascimento: '',
-            Imagem: '',
+            // Imagem: '',
         })
     };
 

@@ -1,35 +1,79 @@
 .modal {
     width: 100%;
-    height: 100vh;
+    height: 1600px;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.474);
+    background-color: rgba(0, 0, 0, 0.134);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.container_modal::-webkit-scrollbar {
+    width: 10px;
+    border: none;
+}
+
+.container_modal::-webkit-scrollbar-thumb {
+    background-color: #3981b4;
+}
+
+
 .container_modal {
     background-color: #fff;
     color: #000;
     width: 900px;
-    height: 700px; 
-    border-radius: 30px;
+    height: 700px;
+    border-radius: 20px;
+    margin-top: -500px;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
-.container_modal h1 {
+
+.sis {
     font-family: 'Open Sans', sans-serif;
-    font-weight:lighter;
+    font-weight: lighter;
     font-size: 50px;
     color: black;
     margin-top: 40px;
-    font-weight:lighter;
+    font-weight: lighter;
+    margin-left: 200px;
+}
+
+.sis1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 50px;
+    color: black;
+    margin-top: 40px;
+    font-weight: lighter;
     margin-left: 400px;
 }
 
-#close-position{
+.sis2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 50px;
+    color: black;
+    margin-top: 40px;
+    font-weight: lighter;
+    margin-left: 400px;
+}
+
+.sis3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 50px;
+    color: black;
+    margin-top: 40px;
+    font-weight: lighter;
+    margin-left: 400px;
+}
+
+#close-position {
     display: flex;
     align-self: flex-start;
     margin: 30px 0px 0px 30px;
@@ -46,4 +90,3 @@
     margin-top: -90px;
     cursor: pointer;
 }
-
