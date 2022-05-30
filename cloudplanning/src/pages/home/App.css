@@ -28,6 +28,8 @@ header {
 }
 
 
+
+
 .container_header {
   display: flex;
   justify-content: space-between;
@@ -84,7 +86,7 @@ nav a{
 .nome_home {
   font-family: 'Red Hat Mono', monospace;    
   text-decoration:double;
-  margin-right: 340px;
+  margin-right: 726px;
   font-size: 22px;
   font-weight:unset;
   width: 196px;
@@ -314,7 +316,7 @@ nav a{
   .login1 {
       font-size: 16px;
       /* display: none; */
-      margin-left: -248px;
+      margin-left: 248px;
   }
 
   .butao {

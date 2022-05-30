@@ -14,7 +14,7 @@
 
 .containerr {
     width: 1200px;
-    height: 100vh;
+    width: 100vh;
     margin: 0 auto;
 }
 
@@ -271,6 +271,9 @@
 
 .all_itens {
     display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .diagrama_fundu {
@@ -526,6 +529,7 @@
     height: 200px;
     width: 200px;
 }
+
 
 .linux {
     height: 200px;

@@ -222,7 +222,7 @@ export default class Diagramas extends Component {
 
                                                 <div className=''>
                                                     <button className="componentes_bt" onClick={(e) => (this.setState({ isModalVisibleP: true }))}><span>Setas</span></button>
-                                                    <p className="int_get">Utilize setas, para evidenciar os componentes de seu diagrama</p>
+                                                    <p className="int_get">Utilize setas para evidenciar os componentes de seu diagrama</p>
                                                 </div>
                                                 <div>
                                                     {this.state.isModalVisibleP ? (
@@ -466,15 +466,7 @@ export default class Diagramas extends Component {
                                         </div>
                                     </div>
                                 </div>
-
-
-                                {/* <div className="diagramaa">
-                                <img className='diagrama_fundu' src={diagrama_fundo} alt="" />
-                            </div> */}
-
-                                {this.state.listarTodos.map((c) => (<div key={c.id} id={c.imagem} className="draggable"></div>))}
-
-
+                                    {this.state.listarTodos.map((c) => (<div key={c.id} id={c.imagem} className="draggable"></div>))}
 
                             </section>
 

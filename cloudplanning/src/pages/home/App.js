@@ -22,13 +22,13 @@ function App() {
           <img className="logo_home" src={logo} alt="logo_CloudPlanning" />
           <p className="nome_home">CloudPlanning</p>
           <nav className="cabeçalho">
-            <a className="alinhamento" href="#início">INÍCIO</a>
+            {/* <a className="alinhamento" href="#início">INÍCIO</a> */}
             {/* <a className="alinhamento" href="#sobre nós">SOLUÇÕES</a> */}
-            <a className="alinhamento" href="#tips">SOLUÇÕES</a>
+            {/* <a className="alinhamento" href="#tips">SOLUÇÕES</a> */}
             {/* <a className="login" href="#login">LOGIN</a> */}
-            <Link to="/login" className="login1">LOGIN</Link>
+              <Link to="/login" className="login1">LOGIN</Link>
+              <Link to="/cadastro" className="butao">Cadastrar</Link>
             {/* <button className="butao" >Cadastrar</button> */}
-            <Link to="/cadastro" className="butao">Cadastrar</Link>
           </nav>
           <a href="">
             <i className="fa-solid fa-bars"></i>
