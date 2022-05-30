@@ -174,7 +174,7 @@ export default class Diagramas extends Component {
                                     </div>
                                     <div className="butão">
                                         <div>
-                                            <button className="componente_principal">Comúm</button>
+                                            <button className="componente_principal">Itens</button>
                                             <div className="componentess">
                                                 <div>
                                                     <button className="componentes_bt" onClick={(e) => (this.setState({ isModalVisibleF: true }))}><span>Formas</span></button>

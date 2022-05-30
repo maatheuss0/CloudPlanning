@@ -24,6 +24,11 @@
     align-items: center;
 }
 
+.margin-to {
+    /* margin-top: -275px; */
+    margin-bottom: 100px;
+}
+
 .container-fundo {
     width: 50%;
     height: 100vh;
@@ -33,7 +38,7 @@
     background-position: center;
 }
 
-.container-input-login {
+.container-input {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -139,7 +144,7 @@
         display: none;
     }
 
-    .container-input-login {
+    .container-input {
         margin-left: 35px;
         width: 100%;
         display: flex;

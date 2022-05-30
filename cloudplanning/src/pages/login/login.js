@@ -59,12 +59,12 @@ export default class Login extends Component {
 
                     </div>
 
-                    <div className="container-input-login">
-                        <a href="http://localhost:3000/">
-                            <img className="logo" src={logo} alt="logo" />
-                        </a>
-                        <p className="titulo-inputt">Realize login no sistema</p>
-                        <hr className='hr_login' />
+                    <div className="container-input">
+                            <a href="http://localhost:3000/">
+                                <img className="logo" src={logo} alt="logo" />
+                            </a>
+                            <p className="titulo-inputt">Realize login no sistema</p>
+                            <hr className='hr_login' />
                         <form onSubmit={this.efetuaLogin} className="form-login">
                             <input
                                 className="input-login"

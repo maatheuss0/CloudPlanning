@@ -43,7 +43,7 @@
 }
 
 .logo {
-    max-width: 490px;
+    max-width: 100%;
 }
 
 .hr_cadastro {
@@ -183,8 +183,8 @@
 
     .logo {
         /* margin-left: 245px; */
-        width: 300px;
-        height: 100px;
+        width: 400px;
+        height: 145px;
     }
 
     .titulo-input_cad {

@@ -236,7 +236,6 @@ nav a{
 }
 
 .fundo2 img {
-  margin-left: 30px;
   width: 596px;
   height: 425px;
   margin-top: 20px;
@@ -302,29 +301,31 @@ nav a{
   color: white;
 }
 
-@media (max-width: 524px) {
+@media (max-width: 460px) {
+
+
+  
+.nome_home {
+  font-family: 'Red Hat Mono', monospace;    
+  text-decoration:double;
+  font-size: 25px;
+  font-weight:unset;
+  width: 196px;
+  color: #3F9FE4;
+}
   
 
   .banner {
     width: 100%;
   }
 
-  /* .cabeçalho a {
-    display: none;
-  } */
 
   .login1 {
-      font-size: 16px;
-      /* display: none; */
-      margin-left: 248px;
+      display: none;
   }
 
   .butao {
-    margin-right: 96px;
-    width: 94px;
-    padding: 9px 18px;
-    height: 34px;
-    font-size: 13px;
+    display: none;
   }
 
   .alinhamento {
@@ -348,9 +349,9 @@ nav a{
   }
 
   .container_header img {
-      width: 54px;
-      height: 59px;
-      margin-left: 83px;
+      width: 90px;
+      height: 90px;
+      margin-left: 620px;
   }
 
   .conteudo_banner {
@@ -372,34 +373,38 @@ nav a{
 
   .caixa {
       margin-top: 34px;
-      width: 445px;
-      height: 626px;
+      width: 380px;
+      height: 568px;
+  }
+
+  .caixa p {
+    font-size: 18px;
   }
 
   .diagramas {
-      margin-left: -344px;
+      margin-left: -373px;
       margin-top: 112px;
   }
 
   .diagramas h2 {
-      font-size: 31px;
+      font-size: 26px;
       color: black;
   }
 
   .diagramas h3 {
-      font-size: 25px;
+      font-size: 20px;
       color: black;
   }
 
   .diagramas hr {
-      width: 456px;
+      width: 400px;
   }
 
   .diagramas img {
       margin-top: 100px;
       margin-bottom: -93px; 
-      height: 272px;
-      width: 438px;
+      height: 276px;
+      width: 387px;
   }
 
   .infra2 {
@@ -410,7 +415,7 @@ nav a{
       display: flex;
       flex-direction: column;
       height: 685px;
-      width: 483px;
+      width: 391px;
   }
 
   .fundo2 img {
@@ -418,7 +423,7 @@ nav a{
   }
 
   .botao1 {
-    margin-left: 57px;
+    margin-left: 0px;
     margin-top: 42px;
   }
 
@@ -428,8 +433,13 @@ nav a{
 
   .quem_somos h1 {
     margin-top: 20px;
+    font-size: 30px;
     display: flex;
     justify-content: center;
+  }
+
+  .quem_somos span {
+    font-size: 15px;
   }
 
   footer {
