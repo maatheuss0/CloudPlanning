@@ -41,7 +41,11 @@ export default class Diagramas extends Component {
             nomevpc: '',
             nomesubnet1: '',
             nomesubnet2: '',
+            mensagemExito: '',
+            mensagemExitoV: '',
             erroMensagem: '',
+            erroMensagemV: '',
+            isLoading: false,
             isModalVisible: false,
             isModalVisibleP: false,
             isModalVisibleV: false,
@@ -85,6 +89,8 @@ export default class Diagramas extends Component {
                 if (resposta.status === 201) {
                     localStorage.setItem('diagrama-cadastro', resposta.data.token);
                     this.setState({ isLoading: false });
+                    console.log('EC2 Criada com êxito')
+                    this.setState({ mensagemExito: "Instância Criada com êxito", isLoading: false });
                 }
             })
             .catch(() => {
@@ -95,7 +101,7 @@ export default class Diagramas extends Component {
     cadastrarVPC = (event) => {
         event.preventDefault();
 
-        this.setState({ erroMensagem: "", isLoading: true })
+        this.setState({ erroMensagemV: "", isLoading: true })
 
         axios.post('http://localhost:5000/api/vpc', {
             tipoinstancia: this.state.tipoinstancia,
@@ -113,10 +119,12 @@ export default class Diagramas extends Component {
                 if (resposta.status === 201) {
                     localStorage.setItem('diagrama-cadastro', resposta.data.token);
                     this.setState({ isLoading: false });
+                    console.log('VPC Criada com êxito')
+                    this.setState({ mensagemExitoV: "Instância Criada com êxito", isLoading: false });
                 }
             })
             .catch(() => {
-                this.setState({ erroMensagem: "Dados inseridos são inválidos!", isLoading: false });
+                this.setState({ erroMensagemV: "Dados inseridos são inválidos!", isLoading: false });
             })
     }
 
@@ -345,6 +353,11 @@ export default class Diagramas extends Component {
 
                                                             <button className='but_ec2' type="submit">Enviar</button>
 
+                                                            <p className="exito" style={{ color: 'green' }}>{this.state.mensagemExito}</p>
+
+                                                            <p className="exitoo" style={{ color: 'red' }}>{this.state.erroMensagem}</p>
+
+
 
                                                         </form>
                                                     </Modal>
@@ -446,7 +459,14 @@ export default class Diagramas extends Component {
                                                                         required></input>
                                                                 </div>
                                                             </div>
+
                                                             <button className='but_vpc' type='submit' onClick={(e) => (this.setState({ isModalVisibleW: false }))}>Enviar</button>
+
+                                                            <p className="exito" style={{ color: 'green' }}>{this.state.mensagemExitoV}</p>
+
+                                                            <p className="exitooo" style={{ color: 'red' }}>{this.state.erroMensagemV}</p>
+
+
                                                         </form>
                                                     </ModalVpc>
                                                 ) : null}
@@ -467,7 +487,8 @@ export default class Diagramas extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                {this.state.listarTodos.map((c) => (<div key={c.id} id={c.imagem} className="draggable"></div>))}
+
+                                {this.state.listarTodos.map((c) => (<div  key={c.id} id={c.imagem} className="draggable"></div>))}
 
                             </section>
 

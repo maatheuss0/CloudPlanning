@@ -357,7 +357,7 @@
     padding: 25px 50px;
     flex-direction: column;
     margin-left: 370px;
-    margin-top: -385px;
+    margin-top: -381px;
 }
 
 .inputs_vpc span {
@@ -446,7 +446,8 @@
     text-decoration: none;
     cursor: pointer;
     border-radius: 10px;
-    margin-left: 352px;
+    margin-left: 345px;
+    margin-top: -10px;
 }
 
 .but_ec2 {
@@ -459,7 +460,7 @@
     text-decoration: none;
     cursor: pointer;
     border-radius: 10px;
-    margin-left: 352px;
+    margin-left: 345px;
     margin-top: 20px;
 }
 
@@ -617,6 +618,27 @@
     font-weight: lighter;
     margin-left: 40px;
     margin-top: 15px;
+}
+
+.exito {
+    margin-top: 20px;
+    text-align: center;
+    /* margin-left: 340px; */
+    font-size: 17px;
+}
+
+.exitoo {
+    margin-top: 20px;
+    text-align: center;
+    /* margin-left: 340px; */
+    font-size: 17px;
+}
+
+.exitooo {
+    margin-top: -10px;
+    text-align: center;
+    /* margin-left: 340px; */
+    font-size: 17px;
 }
 
 .livro {

@@ -162,6 +162,10 @@
 
 @media (max-width: 460px) {
 
+    .container {
+        width: unset;
+      }
+
     .input-login_data {
         background-color: #197cc200;
         margin-top: 25px;
