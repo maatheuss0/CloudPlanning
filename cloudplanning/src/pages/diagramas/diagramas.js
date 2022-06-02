@@ -226,6 +226,8 @@ export default class Diagramas extends Component {
                                                 </div>
 
 
+
+
                                                 <div className=''>
                                                     <button className="componentes_bt" onClick={(e) => (this.setState({ isModalVisibleP: true }))}><span>Setas</span></button>
                                                     <p className="int_get">Utilize setas para evidenciar os componentes de seu diagrama</p>
@@ -297,6 +299,12 @@ export default class Diagramas extends Component {
                                                         </ModalPerfil>
                                                     ) : null}
                                                 </div>
+
+                                                <div className=''>
+                                                    <button className="componentes_bt" onClick={(e) => this.ListarTodos(e, "drag-34")}><span>Usuário</span></button>
+                                                    <p className="int_get">Usuário do sistema</p>
+                                                </div>
+
                                             </div>
                                         </div>
 
@@ -330,12 +338,59 @@ export default class Diagramas extends Component {
                                                         <form onSubmit={this.cadastrarEC2}>
                                                             <div className='inputs_vpc'>
                                                                 <span>Tipo da Instância</span>
-                                                                <input className='inpp'
+                                                                {/* <input className='inpp'
                                                                     type="text"
                                                                     name='tipoinstancia'
                                                                     onChange={this.atualizaStateCampo}
                                                                     value={this.state.tipoinstancia}
-                                                                    required></input>
+                                                                    required></input> */}
+
+                                                                <select className='inppp'
+                                                                    name="tipoinstancia"
+                                                                    onChange={this.atualizaStateCampo}
+                                                                    value={this.state.tipoinstancia}
+                                                                    required>
+                                                                    <option value=""></option>
+                                                                    <option value="t2.micro">t1.micro</option>
+                                                                    <option value="t2.nano">t2.nano</option>
+                                                                    <option value="t2.small">t2.small</option>
+                                                                    <option value="t2.medium">t2.medium</option>
+                                                                    <option value="t2.large">t2.large</option>
+                                                                    <option value="t2.xlarge">t2.xlarge</option>
+                                                                    <option value="t2.2xlarge">t2.2xlarge</option>
+                                                                    <option value="t3.micro">t3.micro</option>
+                                                                    <option value="t3.small">t3.small</option>
+                                                                    <option value="t3.medium">t3.medium</option>
+                                                                    <option value="t3.large">t3.large</option>
+                                                                    <option value="t3.xlarge">t3.xlarge</option>
+                                                                    <option value="t3.2xlarge">t3.2xlarge</option>
+                                                                    <option value="c1.medium">c1.medium</option>
+                                                                    <option value="c3.large">c3.large</option>
+                                                                    <option value="c3.xlarge">c3.xlarge</option>
+                                                                    <option value="c3.2xlarge">c3.2xlarge</option>
+                                                                    <option value="c3.4xlarge">c3.4xlarge</option>
+                                                                    <option value="c3.8xlarge">c3.8xlarge</option>
+                                                                    <option value="c4.large">c4.large</option>
+                                                                    <option value="c4.xlarge">c4.xlarge</option>
+                                                                    <option value="c4.2xlarge">c4.2xlarge</option>
+                                                                    <option value="c4.4xlarge">c4.4xlarge</option>
+                                                                    <option value="c4.8xlarge">c4.8xlarge</option>
+                                                                    <option value="c5.large">c5.large</option>
+                                                                    <option value="c5.xlarge">c5.xlarge</option>
+                                                                    <option value="c5.2xlarge">c5.2xlarge</option>
+                                                                    <option value="c5.4xlarge">c5.4xlarge</option>
+                                                                    <option value="c5.9xlarge">c5.9xlarge</option>
+                                                                    <option value="c5.12xlarge">c5.12xlarge</option>
+                                                                    <option value="c5.18xlarge">c5.18xlarge</option>
+                                                                    <option value="c5.24xlarge">c5.24xlarge</option>
+                                                                    <option value="c5.metal">c5.metal</option>
+                                                                    <option value="c5a.large">c5a.large</option>
+                                                                    <option value="c5a.xlarge">c5a.xlarge</option>
+                                                                    <option value="c5a.2xlarge">c5a.2xlarge</option>
+                                                                    <option value="c5a.4xlarge">c5a.4xlarge</option>
+                                                                    <option value="c5a.8xlarge">c5a.8xlarge</option>
+                                                                </select>
+
                                                                 <span>Keyname</span>
                                                                 <input className='inpp'
                                                                     type="text"
@@ -343,6 +398,7 @@ export default class Diagramas extends Component {
                                                                     onChange={this.atualizaStateCampo}
                                                                     value={this.state.keyname}
                                                                     required></input>
+
                                                                 <span>Id iso</span>
                                                                 <input className='inpp'
                                                                     type="text"
@@ -394,6 +450,7 @@ export default class Diagramas extends Component {
                                                                 <div className='keyname'>
                                                                     <span>Keyname</span>
                                                                 </div>
+
                                                                 <input className='inp_'
                                                                     type="text"
                                                                     name='keyname'
@@ -401,12 +458,35 @@ export default class Diagramas extends Component {
                                                                     value={this.state.keyname}
                                                                     required></input>
                                                                 <span cla>Tipo da Instância</span>
-                                                                <input className='inp'
+
+                                                                {/* <input className='inp'
                                                                     type="text"
                                                                     name='tipoinstancia'
                                                                     onChange={this.atualizaStateCampo}
                                                                     value={this.state.tipoinstancia}
-                                                                    required></input>
+                                                                    required></input> */}
+
+                                                                <select className='inpppp'
+                                                                    name="tipoinstancia"
+                                                                    onChange={this.atualizaStateCampo}
+                                                                    value={this.state.tipoinstancia}
+                                                                    required>
+                                                                    <option value=""></option>
+                                                                    <option value="t2.micro">t1.micro</option>
+                                                                    <option value="t2.nano">t2.nano</option>
+                                                                    <option value="t2.small">t2.small</option>
+                                                                    <option value="t2.medium">t2.medium</option>
+                                                                    <option value="t2.large">t2.large</option>
+                                                                    <option value="t2.xlarge">t2.xlarge</option>
+                                                                    <option value="t2.2xlarge">t2.2xlarge</option>
+                                                                    <option value="t3.micro">t3.micro</option>
+                                                                    <option value="t3.small">t3.small</option>
+                                                                    <option value="t3.medium">t3.medium</option>
+                                                                    <option value="t3.large">t3.large</option>
+                                                                    <option value="t3.xlarge">t3.xlarge</option>
+                                                                    <option value="t3.2xlarge">t3.2xlarge</option>
+                                                                </select>
+
                                                                 <span>Id iso</span>
                                                                 <input className='inp'
                                                                     type="text"
@@ -414,6 +494,7 @@ export default class Diagramas extends Component {
                                                                     onChange={this.atualizaStateCampo}
                                                                     value={this.state.idiso}
                                                                     required></input>
+
                                                                 <span>Nome VPC</span>
                                                                 <input className='inp'
                                                                     type="text"
@@ -421,6 +502,7 @@ export default class Diagramas extends Component {
                                                                     onChange={this.atualizaStateCampo}
                                                                     value={this.state.nomevpc}
                                                                     required></input>
+
                                                                 <span>Nome Subnet Pública</span>
                                                                 <input className='inp'
                                                                     type="text"
@@ -428,6 +510,7 @@ export default class Diagramas extends Component {
                                                                     onChange={this.atualizaStateCampo}
                                                                     value={this.state.nomesubnet1}
                                                                     required></input>
+
                                                                 <div className='inp2'>
                                                                     <span>Nome Subnet Privada</span>
                                                                     <input className='inp'
@@ -436,6 +519,7 @@ export default class Diagramas extends Component {
                                                                         onChange={this.atualizaStateCampo}
                                                                         value={this.state.nomesubnet2}
                                                                         required></input>
+
                                                                     <span>Ip Subnet Pública</span>
                                                                     <input className='inp'
                                                                         type="text"
@@ -443,6 +527,7 @@ export default class Diagramas extends Component {
                                                                         onChange={this.atualizaStateCampo}
                                                                         value={this.state.ipsubnet1}
                                                                         required></input>
+
                                                                     <span>Ip Subnet Privada</span>
                                                                     <input className='inp'
                                                                         type="text"
@@ -450,6 +535,7 @@ export default class Diagramas extends Component {
                                                                         onChange={this.atualizaStateCampo}
                                                                         value={this.state.ipsubnet2}
                                                                         required></input>
+
                                                                     <span>Ip Vpc</span>
                                                                     <input className='inp'
                                                                         type="text"
@@ -488,7 +574,7 @@ export default class Diagramas extends Component {
                                     </div>
                                 </div>
 
-                                {this.state.listarTodos.map((c) => (<div  key={c.id} id={c.imagem} className="draggable"></div>))}
+                                {this.state.listarTodos.map((c) => (<div key={c.id} id={c.imagem} className="draggable"></div>))}
 
                             </section>
 
