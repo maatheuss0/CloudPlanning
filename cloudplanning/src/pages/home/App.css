@@ -48,6 +48,7 @@ header {
 .logo_home {
   width: 82px;
   height: 91px;
+  margin-left: 480px;
 }
 
 nav{
@@ -86,7 +87,7 @@ nav a{
 .nome_home {
   font-family: 'Red Hat Mono', monospace;    
   text-decoration:double;
-  margin-right: 726px;
+  margin-right: 250px;
   font-size: 22px;
   font-weight:unset;
   width: 196px;
@@ -353,7 +354,7 @@ nav a{
   .container_header img {
       width: 90px;
       height: 90px;
-      margin-left: 730px;
+      margin-left: 240px;
   }
 
   .conteudo_banner {
@@ -369,14 +370,15 @@ nav a{
       display: flex;
       flex-direction: column;
       justify-content: center;
-      margin-left: 43px;
+      align-items: center;
       margin-top: -40px;
   }
 
   .caixa {
       margin-top: 34px;
       width: 380px;
-      height: 568px;
+      height: 608px;
+      padding-bottom: 30px;
   }
 
   .caixa p {
@@ -428,8 +430,12 @@ nav a{
     margin-top: 42px;
   }
 
+  .quem_somos {
+    margin-left: unset;
+  }
+
   .quem_somos button {
-      margin-left: 47px;
+      /* margin-left: 47px; */
   }
 
   .quem_somos h1 {
