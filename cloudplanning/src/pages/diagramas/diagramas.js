@@ -155,8 +155,7 @@ export default class Diagramas extends Component {
 
         document.title = 'Diagramas | CloudPlanning'
         return (
-            <div className='diagrama_tela_fundo'>
-                <body className='body_diagrama'>
+            <div className='diagrama_tela_fundo body_diagrama'>
                     <header className="header_diagrama">
                         <div className="containerr container_headerr">
                             <div className="redirencionarr_diagrma">
@@ -580,7 +579,6 @@ export default class Diagramas extends Component {
 
                         </div>
                     </main>
-                </body>
             </div>
         )
     }

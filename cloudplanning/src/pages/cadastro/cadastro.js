@@ -113,7 +113,7 @@ export default class Cadastro extends Component {
                                     onChange={this.atualizaStateCampo}
                                     value={this.state.Senha} required></input>
 
-                                <button class="btn-entrar" type="submit">Cadastrar-se</button>
+                                <button className="btn-entrar" type="submit">Cadastrar-se</button>
 
                             </form>
                             <div className="cadastrar2">
