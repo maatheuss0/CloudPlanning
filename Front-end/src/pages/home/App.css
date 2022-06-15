@@ -1,0 +1,456 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300&display=swap');
+
+/*Grid*/
+
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*Header*/
+
+header {
+  background-color: #1F2429;
+  height: 120px;
+  width: 100%;
+}
+
+
+
+
+.container_header {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+
+}
+
+.cabeçalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 590px;
+}
+
+.logo_home {
+  width: 82px;
+  height: 91px;
+  margin-left: 480px;
+}
+
+nav{
+  width: 465px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav a{
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+.butao {
+  border: none;
+  margin-left: -90px;
+  padding: 10px;
+  width: 150px;
+  height: 50px;
+  background-color: #3F9FE4;
+  color: #FFFFFF;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px; 
+  padding: 10px 30px;
+} 
+.login {
+  font-weight: bold; 
+  margin-left: 17px;
+}
+
+
+.nome_home {
+  font-family: 'Red Hat Mono', monospace;    
+  text-decoration:double;
+  margin-right: 250px;
+  font-size: 22px;
+  font-weight:unset;
+  width: 196px;
+  color: #3F9FE4;
+}
+
+
+/*Banner*/
+
+
+
+.container_banner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  background-color: #120D0B;
+}
+
+.banner {
+  background-image: url(../../assets/img/image_fundo.png);
+  background-size: 2300px;
+  width: 100%;
+}
+
+
+.fundo {
+  background-color: #0a0a0a;
+  width: 100%;
+}
+
+.conteudo_banner {
+  display: flex;
+  justify-content: space-between;
+  width: 950px;
+  padding: 80px 1px
+}
+
+.img1 {
+  height: 131px;
+  width: 268px;
+}
+
+.img2 {
+  width: 140px;
+  height: 140px;
+}
+
+
+
+.caixa {
+  width: 445px;
+  height: 626px;
+  background: #1F2429;
+  box-shadow: 1px 3px 4px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -65;
+  border-radius: 10%;
+  padding: 10px  30px;
+}
+
+.caixa p {
+  font-size: 21px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: justify;
+  font-weight: 100;
+  color: white;
+  margin-top: 40px;
+}
+
+.alinhar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+
+.diagramas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 150px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.diagramas h2 {
+  font-weight:normal;
+  font-size: 45px;
+  color: black;
+
+}
+
+.diagramas h3 {
+  margin-top: 12px;
+  font-size: 30px;
+  color: black;
+  font-weight:normal;
+}
+
+.diagramas hr {
+  border-top: 1px solid rgb(0, 0, 0);
+  margin-top: 30px;
+  width: 100%;
+}
+
+.botao {
+  border: none;
+  width: 300px;
+  height: 50px;
+  background-color: #3F9FE4;
+  color: #FFFFFF;
+  font-size: 20px;
+  border: none;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-top: 31px;
+  padding: 10px 68px;
+  font-weight: 100;
+}
+
+.infra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -50px;
+}
+
+.infra2 {
+  margin-top: 300px;
+}
+
+
+.fundo2 {
+  background-color: #1F2429;
+  border-radius: 60px;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 28px;
+  height: 500px;
+  margin-top: 160px;
+  width: 1375px;
+  margin-bottom: 60px;
+}
+
+.fundo2 img {
+  width: 596px;
+  height: 425px;
+  margin-top: 20px;
+}
+
+.quem_somos{
+  display: flex;
+  flex-direction: column;
+  margin-left: 22px;
+}
+
+.quem_somos span {
+  font-family: 'Open Sans', sans-serif;
+  text-align: justify;
+  font-weight: 100;
+  color: white;
+  margin-top: 30px;
+}
+
+.fundo2 hr {
+  border-top: 1px solid rgb(0, 0, 0);
+  margin-top: 20px;
+  width: 100%;
+}
+
+.fundo2 h1 {
+  font-size: 40px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: justify;
+  font-weight: 100;
+  color: white;
+  margin-top: 0px;
+}
+
+
+.botao1 {
+  border: none;
+  width: 310px;
+  height: 50px;
+  background-color: #3F9FE4;
+  color: #FFFFFF;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-left: 365px;
+  margin-top: 20px;
+  font-weight: lighter;
+  padding: 10px 88px;
+}
+
+.header_home{
+  background-color: #1F2429;
+  height: 50px;
+  width: 100%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header_home span {
+  color: white;
+}
+
+@media (max-width: 460px) {
+
+
+  
+.nome_home {
+  font-family: 'Red Hat Mono', monospace;    
+  text-decoration:double;
+  font-size: 25px;
+  font-weight:unset;
+  width: 196px;
+  color: #3F9FE4;
+}
+  
+
+  .banner {
+    width: 100%;
+  }
+
+
+  .login1 {
+      display: none;
+  }
+
+  .butao {
+    display: none;
+  }
+
+  .alinhamento {
+      display: none;
+  }
+
+  /* .container_header p {
+      margin-right: 181px;
+      font-size: 20px;
+  } */
+
+  .cabeçalho button {
+      margin-right: 68px;
+      height: 40px;
+      width: 146px;
+      font-size: 17px;
+  }
+
+  .container_header {
+      width: 545px;
+  }
+
+
+  .container_header img {
+      width: 90px;
+      height: 90px;
+      margin-left: 240px;
+  }
+
+  .conteudo_banner {
+      width: 904px;
+      height: 1236px
+  }
+
+  .fundo {
+    height: 1281px;
+  }
+
+  .conteudo_banner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: -40px;
+  }
+
+  .caixa {
+      margin-top: 34px;
+      width: 380px;
+      height: 608px;
+      padding-bottom: 30px;
+  }
+
+  .caixa p {
+    font-size: 18px;
+  }
+
+  .diagramas {
+      margin-top: 112px;
+  }
+
+  .diagramas h2 {
+      font-size: 26px;
+      color: black;
+  }
+
+  .diagramas h3 {
+      font-size: 20px;
+      color: black;
+  }
+
+  .diagramas hr {
+      width: 400px;
+  }
+
+  .diagramas img {
+      margin-top: 100px;
+      margin-bottom: -93px; 
+      height: 276px;
+      width: 387px;
+  }
+
+  .infra2 {
+      display: none;
+  }
+
+  .fundo2 {
+      display: flex;
+      flex-direction: column;
+      height: 685px;
+      width: 391px;
+  }
+
+  .fundo2 img {
+      display: none;
+  }
+
+  .botao1 {
+    margin-left: 30px;
+    margin-top: 42px;
+  }
+
+  .quem_somos {
+    margin-left: unset;
+  }
+
+  .quem_somos button {
+      /* margin-left: 47px; */
+  }
+
+  .quem_somos h1 {
+    margin-top: 20px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .quem_somos span {
+    font-size: 15px;
+  }
+
+  footer {
+    width: 100%;
+  }
+
+}

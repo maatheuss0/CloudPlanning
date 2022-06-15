@@ -1,0 +1,331 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300&display=swap');
+/* @import 'node_modules/dragula/dragula'; */
+
+
+/*Grid*/
+
+
+.containerr {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+/*Header*/
+
+.header_diagrama {
+    background: #FFFEFF;
+    box-shadow: 0px 3.35311px 7.5445px rgba(0, 0, 0, 0.13);
+    height: 125px;
+    width: 100%;
+    z-index: 99;
+}
+
+
+.imgLogo {
+    width: 75px;
+    height: 106px;
+    margin-top: 10px;
+}
+
+.perfil_redirencionarr {
+    margin-left: 980px;
+    margin-top: 15px;
+    position: absolute;
+}
+
+.perfil_redirencionarr p {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    margin-left: -90px;
+    
+}
+
+.butao_perfil_laranja    {
+    border: none;
+    width: 200px;
+    height: 50px;
+    background-color: #f37e1f;
+    color: #FFFFFF;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px; 
+    padding: 13px 85px;
+}
+
+.container_header {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+.redirencionarrr {
+    margin-left: 410px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo_diagramasss {
+    font-family: 'Red Hat Mono', monospace;    
+    color: white;
+    text-decoration:double;
+    margin-right: 340px;
+    font-size: 25px;
+    font-weight:unset;
+    width: 196px;
+    margin-top: 12px;
+    margin-left: 20px;
+    color: #f37e1f;
+}
+
+/* Diagramas */
+
+.quadroo {
+    background: #FFFEFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin-top: 50px;
+    width: 400px;
+    height: 750px;
+    overflow: hidden;
+    overflow-y: scroll;  
+}
+
+.quadroo::-webkit-scrollbar {
+    width: 10px;
+    border: none;
+}
+
+.quadroo::-webkit-scrollbar-thumb{
+    background-color: #ec7211;
+}
+
+
+.but_desingg {
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: rgba(88, 70, 70, 0.61);
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    width: 200px;
+    height: 60px;
+    font-size: 21px;
+    font-weight: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.but_budgee {
+    background: #f37e1f;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.but_desingg:hover {
+    background-color: #3F9FE4;
+    color: #FFFFFF;
+}
+
+.but {
+    display: flex;
+}
+
+.comp_pesquisar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px 28px;
+}
+
+.comp_pesquisar span {
+    font-family: 'Open Sans', sans-serif;
+    color: #5f5f5f;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.comp_pesquisar input {
+    width: 100%;
+    border: none;
+    border-bottom: 1.07527px solid #000000;
+    margin: 12px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.83);
+}
+
+.comp_pesquisar input:focus-visible{
+    outline: unset;
+}
+
+.componente_principall {
+    background: #f37e1f;
+    color: #FFFFFF;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 0;
+}
+
+.componentess {
+    display: flex;
+    flex-direction: column;
+    margin-top: 14px;
+}
+
+.componentes_bt {
+    background: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 0;
+    margin-top: 2px;
+    margin-bottom: 9px;
+}
+
+.componentes_bt span {
+    display: flex;
+    margin-left: 30px;
+    color: #584646;
+    font-family: "Open Sans", sans-serif ;
+}
+
+.all_itens {
+    display: flex;
+}
+
+.iframe {
+    height: 735px;
+    width: 1400px;
+    margin-left: 30px;
+    border: none;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 22%, rgba(255,255,255,1) 100%);
+}
+
+
+.retangulo {
+    height: 55px;
+    width: 1405px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    margin-top: 62px;
+    margin-left: 30px;
+}
+
+.teste {
+    height: 750px;
+    width: 1400px;
+    margin-left: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.retangulo2 {
+    height: 42px;
+    width: 1405px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    margin-top: 757px;
+    margin-left: 30px;
+}
+
+.retangulo3 {
+    width: 56px;
+    margin-top: -686px;
+    height: 641px;
+    margin-right: -26px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    z-index: 99;
+    right: 0;
+    /* margin-top: 768px; */    
+}
+
+.formatação {
+    font-family: 'Open Sans', sans-serif;
+    color: #000000;
+    font-weight: 100;
+    font-size: 14px;
+    text-align: center;
+    text-align: justify;
+    padding: 0px 15px;
+}
+
+.formatação_aws {
+    font-family: 'Open Sans', sans-serif;
+    color: #000000;
+    font-weight: 100;
+    font-size: 14px;
+    text-align: center;
+    text-align: justify;
+    padding: 0px 15px;
+    margin-bottom: 40px;
+}
+
+.tittle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.tittle h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight:lighter;
+    font-size: 30px;
+    color: black;
+}
+
+.tittle hr {
+    border-top: 1px solid rgb(0, 0, 0);
+    margin-top: 19px;
+    width: 610px;
+}
+
+
+
